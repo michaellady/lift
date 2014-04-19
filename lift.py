@@ -1,3 +1,4 @@
+import sys
 import sqlite3
 import pprint
 import scipy
@@ -32,7 +33,7 @@ def get_all_sets(cur):
 def get_set_reps(cur, sets):
    set_rep_dict = {}
    for set in sets:
-      cur.execute('SELECT * FROM rep_table WHERE set_id = ?', set[0])
+      cur.execute('SELECT * FROM rep_table WHERE set_id = ?', (set[0],))
       set_rep_dict[set] = cur.fetchall()
 
 #   pprint.pprint(set_rep_dict)
@@ -42,7 +43,9 @@ def get_set_reps(cur, sets):
 #get all of the moments that map to a given rep
 def get_rep_moments(cur, reps):
    rep_moment_dict = {}
-   for rep in reps:
+   for rep in reps[0]:
+#      pprint.pprint(reps)
+#      pprint.pprint(rep)
       cur.execute('SELECT * FROM moment_table WHERE rep_id = ?', (rep[0],))
       rep_moment_dict[rep] = cur.fetchall()
 
@@ -59,8 +62,9 @@ def get_rep_features(rep_moment_dict):
 
 #mean, variance, standard deviation, max, min, amplitude, kurtosis and skewness
 def get_features(moments):
+#   pprint.pprint(moments)
    feature_dict = {}
 
 
 if __name__ == '__main__':
-   main(sys.argv)`
+   main(sys.argv)
