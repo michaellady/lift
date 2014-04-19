@@ -1,8 +1,13 @@
 import sqlite3
 import pprint
+import scipy
 
 def main(argv):
    cur = setup_db_cursor(argv[1])
+   sets = get_exercise_sets(cur, 0)
+   set_rep_dict = get_set_reps(cur, sets)
+   rep_moment_dict = get_rep_moments(cur, set_rep_dict.values())
+   rep_features_dict = get_rep_features(rep_moment_dict)
 
 def setup_db_cursor(db_name):
    conn = sqlite3.connect('db.sqlite')
