@@ -11,6 +11,8 @@ def main(argv):
    rep_moment_dict = get_rep_moments(cur, set_rep_dict.values())
    rep_features_dict = get_rep_features(rep_moment_dict)
 
+   pprint.pprint(rep_features_dict)
+
 
 def setup_db_cursor(db_name):
    conn = sqlite3.connect('db.sqlite')
@@ -70,13 +72,25 @@ def rms(x, axis=None):
 measure_index_dict = {'ox' : 3, 'oy' : 4, 'oz' : 5, 'lx' : 6, 'ly' : 7,
       'lz' : 8}
 #mean, variance, standard deviation, max, min, amplitude, kurtosis and skewness
-feature_functions = {np.mean, np.var, np.std, np.amax, np.amin, rms,
-      sp.stats.kurtosis, sp.stats.skew} 
-def get_feature_set(moments):
-   pprint.pprint(moments)
-   feature_set_dict = {}
-   for dimension in measure_index_dict.values(): 
+feature_function_dict = {'mean' : np.mean, 'var' : np.var, 'std' : np.std, 
+   'max' : np.amax, 'min' : np.amin, 'rms' : rms, 
+   'kurtosis' : sp.stats.kurtosis, 'skew' : sp.stats.skew} 
 
+def get_feature_set(moments):
+#   pprint.pprint(moments)
+   feature_set_dict = {}
+   for dimension in measure_index_dict.keys(): 
+      feature_set_dict[dimension] = {}
+      idx = measure_index_dict[dimension]
+      col = []
+      for moment in moments:
+         col.insert(moment[idx],0)
+      a = np.array(col)
+      for function in feature_function_dict:
+         feature_set_dict[dimension][function] = 
+            feature_function_dict[function](a) 
+      
+   return feature_set_dict
 
 
 
