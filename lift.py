@@ -2,7 +2,9 @@ import sys
 import sqlite3
 import pprint
 import scipy as sp
+from scipy import stats
 import numpy as np
+
 
 def main(argv):
    cur = setup_db_cursor(argv[1])
@@ -11,7 +13,7 @@ def main(argv):
    rep_moment_dict = get_rep_moments(cur, set_rep_dict.values())
    rep_features_dict = get_rep_features(rep_moment_dict)
 
-   pprint.pprint(rep_features_dict)
+#   pprint.pprint(rep_features_dict)
 
 
 def setup_db_cursor(db_name):
@@ -84,15 +86,14 @@ def get_feature_set(moments):
       idx = measure_index_dict[dimension]
       col = []
       for moment in moments:
-         col.insert(moment[idx],0)
+         col.append(moment[idx])
       a = np.array(col)
       for function in feature_function_dict:
-         feature_set_dict[dimension][function] = 
-            feature_function_dict[function](a) 
+         feature_set_dict[dimension][function] = feature_function_dict[function](a) 
       
    return feature_set_dict
 
 
 
-      if __name__ == '__main__':
-         main(sys.argv)
+if __name__ == '__main__':
+   main(sys.argv)
