@@ -1,7 +1,8 @@
 import sys
 import sqlite3
 import pprint
-import scipy
+import scipy as sp
+import numpy as np
 
 def main(argv):
    cur = setup_db_cursor(argv[1])
@@ -9,6 +10,7 @@ def main(argv):
    set_rep_dict = get_set_reps(cur, sets)
    rep_moment_dict = get_rep_moments(cur, set_rep_dict.values())
    rep_features_dict = get_rep_features(rep_moment_dict)
+
 
 def setup_db_cursor(db_name):
    conn = sqlite3.connect('db.sqlite')
@@ -43,8 +45,9 @@ def get_set_reps(cur, sets):
 #get all of the moments that map to a given rep
 def get_rep_moments(cur, reps):
    rep_moment_dict = {}
+   #reps has an extra array enclosing it
    for rep in reps[0]:
-#      pprint.pprint(reps)
+      #      pprint.pprint(reps)
 #      pprint.pprint(rep)
       cur.execute('SELECT * FROM moment_table WHERE rep_id = ?', (rep[0],))
       rep_moment_dict[rep] = cur.fetchall()
@@ -56,15 +59,26 @@ def get_rep_moments(cur, reps):
 def get_rep_features(rep_moment_dict):
    rep_feature_dict = {}
    for rep in rep_moment_dict.keys():
-      rep_feature_dict[rep] = get_features(rep_moment_dict[rep])
+      rep_feature_dict[rep] = get_feature_set(rep_moment_dict[rep])
 
    return rep_feature_dict
 
+def rms(x, axis=None):
+       return np.sqrt(np.mean(x**2, axis=axis))
+
+#orientation index: 3, 4, 5 linacc index: 6, 7, 8
+measure_index_dict = {'ox' : 3, 'oy' : 4, 'oz' : 5, 'lx' : 6, 'ly' : 7,
+      'lz' : 8}
 #mean, variance, standard deviation, max, min, amplitude, kurtosis and skewness
-def get_features(moments):
-#   pprint.pprint(moments)
-   feature_dict = {}
+feature_functions = {np.mean, np.var, np.std, np.amax, np.amin, rms,
+      sp.stats.kurtosis, sp.stats.skew} 
+def get_feature_set(moments):
+   pprint.pprint(moments)
+   feature_set_dict = {}
+   for dimension in measure_index_dict.values(): 
 
 
-if __name__ == '__main__':
-   main(sys.argv)
+
+
+      if __name__ == '__main__':
+         main(sys.argv)
