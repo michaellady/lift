@@ -5,25 +5,27 @@ import scipy as sp
 from scipy import stats
 import numpy as np
 
+exercises = {'press': 0, 'bench' : 1, 'squat' : 2}
 
 def main(argv):
    cur = setup_db_cursor(argv[1])
-   sets = get_exercise_sets(cur, 0)
+   sets = get_exercise_sets(cur, 1)
+   print 'num sets: '+str(len(sets))
    set_rep_dict = get_set_reps(cur, sets)
+   print 'set_rep_dict'
+   pprint.pprint(set_rep_dict)
    rep_moment_dict = get_rep_moments(cur, set_rep_dict.values())
    rep_features_dict = get_rep_features(rep_moment_dict)
-
-#   pprint.pprint(rep_features_dict)
-
+   data_array = get_data_array(rep_features_dict)
+#   pprint.pprint(data_array)
 
 def setup_db_cursor(db_name):
    conn = sqlite3.connect('db.sqlite')
    return conn.cursor()
 
-exercises = {'press': 0, 'bench' : 1, 'squat' : 2}
 #get all of the sets that map to a given exercise
 def get_exercise_sets(cur, exercise_id):
-   cur.execute('SELECT * FROM set_table WHERE exercise_id = ?', (0,))
+   cur.execute('SELECT * FROM set_table WHERE exercise_id = ?', (exercise_id,))
    sets = cur.fetchall()
    return sets
 
@@ -34,27 +36,29 @@ def get_all_sets(cur):
       exercise_set_dict[exercise_id] = get_exercise_sets(cur, exercise_id)
    return exercise_set_dict 
 
-
 #get all of the reps that map to a given set
 def get_set_reps(cur, sets):
    set_rep_dict = {}
    for set in sets:
       cur.execute('SELECT * FROM rep_table WHERE set_id = ?', (set[0],))
       set_rep_dict[set] = cur.fetchall()
+      print 'set: '+str(set[0])
+      pprint.pprint(set_rep_dict[set])
 
 #   pprint.pprint(set_rep_dict)
    return set_rep_dict 
-
 
 #get all of the moments that map to a given rep
 def get_rep_moments(cur, reps):
    rep_moment_dict = {}
    #reps has an extra array enclosing it
-   for rep in reps[0]:
+   print 'reps'
+   pprint.pprint(reps)
+   for rep in reps:
       #      pprint.pprint(reps)
 #      pprint.pprint(rep)
       cur.execute('SELECT * FROM moment_table WHERE rep_id = ?', (rep[0],))
-      rep_moment_dict[rep] = cur.fetchall()
+      rep_moment_dict[rep[0]] = cur.fetchall()
 
    #pprint.pprint(rep_moment_dict)
    return rep_moment_dict
@@ -87,13 +91,24 @@ def get_feature_set(moments):
       col = []
       for moment in moments:
          col.append(moment[idx])
+#      print('col for dimension '+dimension)
+#      pprint.pprint(col)
       a = np.array(col)
       for function in feature_function_dict:
-         feature_set_dict[dimension][function] = feature_function_dict[function](a) 
-      
+         feature_set_dict[dimension][function] =feature_function_dict[function](a) 
+#         print('dimension: '+dimension)
+#         pprint.pprint(feature_set_dict[dimension]) 
    return feature_set_dict
 
-
+def get_data_array(rep_features_dict): 
+   data_array = []
+   print 'len(rep_features_dict.keys()): '+str(len(rep_features_dict.keys()))
+   for rep in rep_features_dict.keys():
+      data_array.append([])
+      for dimension in rep_features_dict[rep].keys():
+         for function in rep_features_dict[rep][dimension].keys():
+            data_array[len(data_array) - 1].append(rep_features_dict[rep][dimension][function])
+   return data_array
 
 if __name__ == '__main__':
    main(sys.argv)
