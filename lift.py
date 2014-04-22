@@ -4,20 +4,34 @@ import pprint
 import scipy as sp
 from scipy import stats
 import numpy as np
+from sklearn.svm import SVC
+from sklearn.cross_validation import StratifiedKFold
+from sklearn.feature_selection import RFECV
 
 exercises = {'press': 0, 'bench' : 1, 'squat' : 2}
+
+# sql mega query select * from set_table s inner join rep_table r on s._id = r.set_id inner join moment_table m on r._id = m.rep_id where exercise_id = ?;
 
 def main(argv):
    cur = setup_db_cursor(argv[1])
    sets = get_exercise_sets(cur, 1)
-   print 'num sets: '+str(len(sets))
+#   print 'num sets: '+str(len(sets))
    set_rep_dict = get_set_reps(cur, sets)
-   print 'set_rep_dict'
-   pprint.pprint(set_rep_dict)
+#   print 'set_rep_dict'
+#   pprint.pprint(set_rep_dict)
    rep_moment_dict = get_rep_moments(cur, set_rep_dict.values())
+#   print 'rep_moment_dict'
+#   pprint.pprint(rep_moment_dict)
+
    rep_features_dict = get_rep_features(rep_moment_dict)
    data_array = get_data_array(rep_features_dict)
 #   pprint.pprint(data_array)
+   print 'len(data_array): '+str(len(data_array))
+   target_array = get_target_array(set_rep_dict)
+   print 'len(target_array): '+str(len(target_array))
+ #  pprint.pprint(target_array)
+
+   classify(data_array, target_array)
 
 def setup_db_cursor(db_name):
    conn = sqlite3.connect('db.sqlite')
@@ -42,23 +56,26 @@ def get_set_reps(cur, sets):
    for set in sets:
       cur.execute('SELECT * FROM rep_table WHERE set_id = ?', (set[0],))
       set_rep_dict[set] = cur.fetchall()
-      print 'set: '+str(set[0])
-      pprint.pprint(set_rep_dict[set])
+#      print 'set: '+str(set[0])
+#      pprint.pprint(set_rep_dict[set])
 
 #   pprint.pprint(set_rep_dict)
    return set_rep_dict 
 
 #get all of the moments that map to a given rep
-def get_rep_moments(cur, reps):
+def get_rep_moments(cur, sets):
    rep_moment_dict = {}
    #reps has an extra array enclosing it
-   print 'reps'
-   pprint.pprint(reps)
-   for rep in reps:
-      #      pprint.pprint(reps)
-#      pprint.pprint(rep)
-      cur.execute('SELECT * FROM moment_table WHERE rep_id = ?', (rep[0],))
-      rep_moment_dict[rep[0]] = cur.fetchall()
+#   print 'sets'
+#   pprint.pprint(sets)
+   for set in sets:
+#      print 'set'
+#      pprint.pprint(set)
+      for rep in set:
+#         print 'rep'
+#         pprint.pprint(rep)
+         cur.execute('SELECT * FROM moment_table WHERE rep_id = ?', (rep[0],))
+         rep_moment_dict[rep[0]] = cur.fetchall()
 
    #pprint.pprint(rep_moment_dict)
    return rep_moment_dict
@@ -67,7 +84,8 @@ def get_rep_moments(cur, reps):
 def get_rep_features(rep_moment_dict):
    rep_feature_dict = {}
    for rep in rep_moment_dict.keys():
-      rep_feature_dict[rep] = get_feature_set(rep_moment_dict[rep])
+         if len(rep_moment_dict[rep]) > 0:
+            rep_feature_dict[rep] = get_feature_set(rep_moment_dict[rep])
 
    return rep_feature_dict
 
@@ -102,13 +120,42 @@ def get_feature_set(moments):
 
 def get_data_array(rep_features_dict): 
    data_array = []
-   print 'len(rep_features_dict.keys()): '+str(len(rep_features_dict.keys()))
+#   print 'len(rep_features_dict.keys()): '+str(len(rep_features_dict.keys()))
+#   pprint.pprint(rep_features_dict)
    for rep in rep_features_dict.keys():
       data_array.append([])
       for dimension in rep_features_dict[rep].keys():
          for function in rep_features_dict[rep][dimension].keys():
             data_array[len(data_array) - 1].append(rep_features_dict[rep][dimension][function])
    return data_array
+
+def get_target_array(set_rep_dict):
+   target_array = []
+   for set in set_rep_dict:
+      for rep in set_rep_dict[set]:
+#         pprint.pprint(rep)
+         target = rep[len(rep) - 1].split('-')
+#         print 'target: '
+#         pprint.pprint(target)
+         if(len(target[0]) > 0):
+            target_array.append(target[0])
+   return target_array
+
+def classify(data_array, target_array):
+   # Create the RFE object and compute a cross-validated score.
+   svc = SVC(kernel="linear")
+   rfecv = RFECV(estimator=svc, step=1, cv=StratifiedKFold(target_array, 2),
+                       scoring='accuracy')
+   rfecv.fit(data_array, target_array)
+
+   print("Optimal number of features : %d" % rfecv.n_features_)
+   
+   import pylab as pl
+   pl.figure()
+   pl.xlabel("Number of features selected")
+   pl.ylabel("Cross validation score (nb of misclassifications)")
+   pl.plot(range(1, len(rfecv.grid_scores_) + 1), rfecv.grid_scores_)
+   pl.show()
 
 if __name__ == '__main__':
    main(sys.argv)
