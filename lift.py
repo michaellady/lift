@@ -10,7 +10,6 @@ from sklearn.feature_selection import RFECV
 
 exercises = {'press': 0, 'bench' : 1, 'squat' : 2}
 
-
 # sql mega query select * from set_table s inner join rep_table r on s._id = r.set_id inner join moment_table m on r._id = m.rep_id where exercise_id = ?;
 
 def main(argv):
