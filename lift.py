@@ -6,7 +6,12 @@ from scipy import stats
 import numpy as np
 from sklearn.svm import SVC
 from sklearn.cross_validation import StratifiedKFold
+from sklearn.cross_validation import cross_val_score
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.ensemble import ExtraTreesClassifier
+from sklearn.tree import DecisionTreeClassifier
 from sklearn.feature_selection import RFECV
+from sklearn.metrics import confusion_matrix
 
 exercises = {'press': 0, 'bench' : 1, 'squat' : 2}
 
@@ -33,9 +38,9 @@ def main(argv):
 #   print 'len(target_array): '+str(len(target_array))
  #  pprint.pprint(target_array)
 
-   moments = get_moments(cur, exercises['bench'])
+   moments = get_moments(cur, exercises['press'])
    print 'moments'
-   pprint.pprint(moments)
+#   pprint.pprint(moments)
    print 'len moments: '+str(len(moments))
 
    data_target_list = get_data_target_list(moments)
@@ -43,10 +48,10 @@ def main(argv):
 
    data_array = np.array(data_target_list[0])  
    print 'data_array'
-   pprint.pprint(data_array)
+#   pprint.pprint(data_array)
    target_array = np.array(data_target_list[1])
    print 'target array'
-   pprint.pprint(target_array)
+#   pprint.pprint(target_array)
    classify(data_array, target_array)
 
 def setup_db_cursor(db_name):
@@ -143,8 +148,8 @@ def get_data_target_list(moments):
          if moment[1] == rep_id:
             for index, dimension in enumerate(dimension_list):
                rep_dimensions_list[index].append(moment[dimension])
-      print 'rep_dimensions_list'
-      pprint.pprint(rep_dimensions_list)
+#      print 'rep_dimensions_list'
+#      pprint.pprint(rep_dimensions_list)
       rep_feature_set = []
       for col in rep_dimensions_list:
          col_feature_set = get_feature_set(col)
@@ -170,16 +175,16 @@ def prune_data_target_list(data_target_list):
       if target not in target_count:
          target_count[target] = 0
       target_count[target] += 1
-   print 'target_count'
-   pprint.pprint(target_count)
+#   print 'target_count'
+#   pprint.pprint(target_count)
    for target in target_count.keys():
       if target_count[target] < 2:
-         print 'remove target '+target
+#         print 'remove target '+target
          index = target_list.index(target)
          target_list.remove(target)
          data_list.pop(index)
-   print 'target_list'
-   pprint.pprint(target_list)
+#   print 'target_list'
+#   pprint.pprint(target_list)
 
    pruned_list = [data_list, target_list]
 #   print 'pruned list'
@@ -258,19 +263,35 @@ def get_target_array(set_rep_dict):
 
 def classify(data_array, target_array):
    # Create the RFE object and compute a cross-validated score.
-   svc = SVC(kernel="linear")
-   rfecv = RFECV(estimator=svc, step=1, cv=StratifiedKFold(target_array, 2),
-                       scoring='accuracy')
-   rfecv.fit(data_array, target_array)
+   X = data_array
+   y = target_array
 
-   print("Optimal number of features : %d" % rfecv.n_features_)
+   svc = SVC(kernel="linear")
+#   rfecv = RFECV(estimator=svc, step=1, cv=StratifiedKFold(y, 2),
+#                       scoring='accuracy')
+#   rfecv.fit(X, y)
+
+#   print("Optimal number of features : %d" % rfecv.n_features_)
    
-   import pylab as pl
-   pl.figure()
-   pl.xlabel("Number of features selected")
-   pl.ylabel("Cross validation score (nb of misclassifications)")
-   pl.plot(range(1, len(rfecv.grid_scores_) + 1), rfecv.grid_scores_)
-   pl.show()
+#   import pylab as pl
+#   pl.figure()
+#   pl.xlabel("Number of features selected")
+#   pl.ylabel("Cross validation score (nb of misclassifications)")
+#   pl.plot(range(1, len(rfecv.grid_scores_) + 1), rfecv.grid_scores_)
+#   pl.show()
+
+
+   clf = DecisionTreeClassifier(max_depth=None, min_samples_split=1, random_state=0)
+   scores = cross_val_score(clf, X, y, cv = 10)
+   print 'DecisionTreeClassifier scores.mean(): '+str(scores.mean()) 
+
+   clf = RandomForestClassifier(n_estimators=10, max_depth=None, min_samples_split=1, random_state=0)
+   scores = cross_val_score(clf, X, y, cv = 10)
+   print 'RandomForestClassifier scores.mean(): '+str(scores.mean())                         
+
+   clf = ExtraTreesClassifier(n_estimators=10, max_depth=None, min_samples_split=1, random_state=0)
+   scores = cross_val_score(clf, X, y, cv = 10)
+   print 'ExtraTreesClassifier scores.mean(): '+str(scores.mean())
 
 if __name__ == '__main__':
    main(sys.argv)

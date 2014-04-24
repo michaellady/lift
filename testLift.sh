@@ -1,1 +1,1 @@
-python lift.py ./db/test2.sqlite
+python lift.py ./db/mike2.sqlite
