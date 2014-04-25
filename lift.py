@@ -18,7 +18,7 @@ exercises = {'press': 0, 'bench' : 1, 'squat' : 2}
 # sql mega query select * from set_table s inner join rep_table r on s._id = r.set_id inner join moment_table m on r._id = m.rep_id where exercise_id = ?;
 
 def main(argv):
-   cur = setup_db_cursor(argv[1])
+   cur, conn = setup_db_cursor(argv[1])
    
 #   sets = get_exercise_sets(cur, 1)
 #   print 'num sets: '+str(len(sets))
@@ -38,7 +38,7 @@ def main(argv):
 #   print 'len(target_array): '+str(len(target_array))
  #  pprint.pprint(target_array)
 
-   moments = get_moments(cur, exercises['press'])
+   moments = get_moments(cur, conn, exercises['press'])
    print 'moments'
 #   pprint.pprint(moments)
    print 'len moments: '+str(len(moments))
@@ -56,13 +56,19 @@ def main(argv):
 
 def setup_db_cursor(db_name):
    conn = sqlite3.connect(db_name)
-   return conn.cursor()
+   return conn.cursor(), conn
 
-def get_moments(cur, exercise_id):
+IGNORE_SETS = [1, 2, 5, 8, 13, 14, 15, 16, 17, 24]
+def get_moments(cur, conn, exercise_id):
+   #delete ignored sets from db
+   for set_id in IGNORE_SETS:
+      cur.execute('delete from set_table where _id = ?;', (set_id,)) 
+   print 'conn.total_changes after del: '+str(conn.total_changes)
+
+   #retrieve rest of sets for particular exercise from db
    cur.execute('select s.exercise_id, r._id, r.category, m.timestamp, m.euler_angle_X, m.euler_angle_Y, m.euler_angle_Z, m.lin_acc_X, m.lin_acc_Y, m.lin_acc_Z  from set_table s inner join rep_table r on s._id = r.set_id inner join moment_table m on r._id = m.rep_id where s.exercise_id = ?;', (exercise_id,))
    moments = cur.fetchall()
    return moments 
-
 
 
 #get all of the sets that map to a given exercise
