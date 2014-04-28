@@ -1,6 +1,7 @@
 import sys
 import sqlite3
 import pprint
+import pylab as pl
 import scipy as sp
 from scipy import stats
 import numpy as np
@@ -11,7 +12,9 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.ensemble import ExtraTreesClassifier
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.feature_selection import RFECV
+from sklearn.feature_selection import RFE
 from sklearn.metrics import confusion_matrix
+from sklearn.cross_validation import train_test_split
 
 exercises = {'press': 0, 'bench' : 1, 'squat' : 2}
 
@@ -19,7 +22,7 @@ exercises = {'press': 0, 'bench' : 1, 'squat' : 2}
 
 def main(argv):
    cur, conn = setup_db_cursor(argv[1])
-   
+
 #   sets = get_exercise_sets(cur, 1)
 #   print 'num sets: '+str(len(sets))
 #   set_rep_dict = get_set_reps(cur, sets)
@@ -33,7 +36,7 @@ def main(argv):
 #   data_array = get_data_array(rep_features_dict)
 #   pprint.pprint(data_array)
 #   print 'len(data_array): '+str(len(data_array))
-   
+
 #   target_array = get_target_array(set_rep_dict)
 #   print 'len(target_array): '+str(len(target_array))
  #  pprint.pprint(target_array)
@@ -103,10 +106,10 @@ def get_rep_moments(cur, sets):
 #   print 'sets'
 #   pprint.pprint(sets)
    for set in sets:
-#      print 'set'
+      #      print 'set'
 #      pprint.pprint(set)
       for rep in set:
-#         print 'rep'
+         #         print 'rep'
 #         pprint.pprint(rep)
          cur.execute('SELECT * FROM moment_table WHERE rep_id = ?', (rep[0],))
          rep_moment_dict[rep[0]] = cur.fetchall()
@@ -118,13 +121,13 @@ def get_rep_moments(cur, sets):
 def get_rep_features(rep_moment_dict):
    rep_feature_dict = {}
    for rep in rep_moment_dict.keys():
-         if len(rep_moment_dict[rep]) > 0:
-            rep_feature_dict[rep] = get_feature_set(rep_moment_dict[rep])
+      if len(rep_moment_dict[rep]) > 0:
+         rep_feature_dict[rep] = get_feature_set(rep_moment_dict[rep])
 
    return rep_feature_dict
 
 def rms(x, axis=None):
-       return np.sqrt(np.mean(x**2, axis=axis))
+   return np.sqrt(np.mean(x**2, axis=axis))
 
 #orientation index: 3, 4, 5 linacc index: 6, 7, 8
 measure_index_dict = {'ox' : 4, 'oy' : 5, 'oz' : 6, 'lx' : 7, 'ly' : 8,
@@ -132,8 +135,8 @@ measure_index_dict = {'ox' : 4, 'oy' : 5, 'oz' : 6, 'lx' : 7, 'ly' : 8,
 dimension_list = range(4,10) 
 #mean, variance, standard deviation, max, min, amplitude, kurtosis and skewness
 feature_function_dict = {'mean' : np.mean, 'var' : np.var, 'std' : np.std, 
-   'max' : np.amax, 'min' : np.amin, 'rms' : rms, 
-   'kurtosis' : sp.stats.kurtosis, 'skew' : sp.stats.skew} 
+      'max' : np.amax, 'min' : np.amin, 'rms' : rms, 
+      'kurtosis' : sp.stats.kurtosis, 'skew' : sp.stats.skew} 
 
 feature_function_list = [np.mean, np.var, np.std, np.amax, np.amin, rms, 
       sp.stats.kurtosis, sp.stats.skew] 
@@ -142,7 +145,7 @@ def get_data_target_list(moments):
    data_target_list = [[], []]
 
    rep_id_label_tuple = get_rep_id_label_tuple(moments) 
-    
+
    for repIdx, rep_id in enumerate(rep_id_label_tuple[0]):
 
       #make target part of data_target_list
@@ -166,15 +169,18 @@ def get_data_target_list(moments):
 
 
       data_target_list[0].append(rep_feature_set)
-      data_target_list[1].append(target_list[0]) # only works for single labels for now
-      
+      if len(target_list) > 0:
+         data_target_list[1].append(target_list[0]) # only works for single labels for now
+      else:
+         data_target_list[1].append('correct')
+
    return data_target_list
 
 #removes labels that are only used once
 def prune_data_target_list(data_target_list):
    data_list = data_target_list[0]
    target_list = data_target_list[1]
-   
+
    target_count = {}
 
    for target in target_list:
@@ -185,7 +191,7 @@ def prune_data_target_list(data_target_list):
 #   pprint.pprint(target_count)
    for target in target_count.keys():
       if target_count[target] < 2:
-#         print 'remove target '+target
+         #         print 'remove target '+target
          index = target_list.index(target)
          target_list.remove(target)
          data_list.pop(index)
@@ -216,7 +222,7 @@ def get_rep_dimensions_list():
 def get_feature_set(col):
    feature_set = [] 
    a = np.array(col)
-   
+
    for function in feature_function_list:
       feature_set.append(function(a))
 
@@ -241,7 +247,7 @@ def get_feature_set(moments):
 #         print('dimension: '+dimension)
 #         pprint.pprint(feature_set_dict[dimension]) 
    return feature_set_dict
-   
+
 
 def get_data_array(rep_features_dict): 
    data_array = []
@@ -267,37 +273,77 @@ def get_target_array(set_rep_dict):
    return target_array
 """
 
+show_graphs = False 
 def classify(data_array, target_array):
    # Create the RFE object and compute a cross-validated score.
    X = data_array
    y = target_array
 
-   svc = SVC(kernel="linear")
-#   rfecv = RFECV(estimator=svc, step=1, cv=StratifiedKFold(y, 2),
-#                       scoring='accuracy')
-#   rfecv.fit(X, y)
-
-#   print("Optimal number of features : %d" % rfecv.n_features_)
-   
-#   import pylab as pl
-#   pl.figure()
-#   pl.xlabel("Number of features selected")
-#   pl.ylabel("Cross validation score (nb of misclassifications)")
-#   pl.plot(range(1, len(rfecv.grid_scores_) + 1), rfecv.grid_scores_)
-#   pl.show()
+   print 'target_array'
+   pprint.pprint(target_array)
 
 
-   clf = DecisionTreeClassifier(max_depth=None, min_samples_split=1, random_state=0)
-   scores = cross_val_score(clf, X, y, cv = 10)
+   clf0 = DecisionTreeClassifier(max_depth=None, min_samples_split=1, random_state=0)
+   scores = cross_val_score(clf0, X, y, cv = 10)
    print 'DecisionTreeClassifier scores.mean(): '+str(scores.mean()) 
 
-   clf = RandomForestClassifier(n_estimators=10, max_depth=None, min_samples_split=1, random_state=0)
-   scores = cross_val_score(clf, X, y, cv = 10)
+   clf1 = RandomForestClassifier(n_estimators=10, max_depth=None, min_samples_split=1, random_state=0)
+   scores = cross_val_score(clf1, X, y, cv = 10)
    print 'RandomForestClassifier scores.mean(): '+str(scores.mean())                         
 
-   clf = ExtraTreesClassifier(n_estimators=10, max_depth=None, min_samples_split=1, random_state=0)
-   scores = cross_val_score(clf, X, y, cv = 10)
+   clf2 = ExtraTreesClassifier(n_estimators=10, max_depth=None, min_samples_split=1, random_state=0)
+   scores = cross_val_score(clf2, X, y, cv = 10)
+   print 'ExtraTreesClassifier scores:'
+   pprint.pprint(scores)
    print 'ExtraTreesClassifier scores.mean(): '+str(scores.mean())
+   
+   clf_list = [clf0, clf1, clf2]
+
+   if show_graphs:
+      for clf in clf_list:
+         # Split the data into a training set and a test set
+         X_train, X_test, y_train, y_test = train_test_split(X, y, random_state=0)
+         y_pred = clf.fit(X_train, y_train).predict(X_test)
+
+         # Compute confusion matrix
+         cm = confusion_matrix(y_test, y_pred)
+         print(cm)
+
+         # Show confusion matrix in a separate window
+         pl.matshow(cm)
+         pl.title('Confusion matrix')
+         pl.colorbar()
+         pl.ylabel('True label')
+         pl.xlabel('Predicted label')
+         pl.show()
+
+         #svc = SVC(kernel="linear")
+         #rfe = RFE(estimator=svc, n_features_to_select=1, step=1)
+         #rfe.fit(X, y)
+         #ranking = rfe.ranking_
+         #print 'ranking'
+         #pprint.pprint(ranking)
+
+         # Plot pixel ranking
+#         import pylab as pl
+         #pl.matshow(ranking)
+         #pl.colorbar()
+         #pl.title("Ranking of pixels with RFE")
+         #pl.show()
+      #   rfecv = RFECV(estimator=svc, step=1, cv=StratifiedKFold(y, 2),
+      #                       scoring='accuracy')
+      #   rfecv.fit(X, y)
+
+      #   print("Optimal number of features : %d" % rfecv.n_features_)
+
+      #   pl.figure()
+      #   pl.xlabel("Number of features selected")
+      #   pl.ylabel("Cross validation score (nb of misclassifications)")
+      #   pl.plot(range(1, len(rfecv.grid_scores_) + 1), rfecv.grid_scores_)
+      #   pl.show()
+      
+
+
 
 if __name__ == '__main__':
    main(sys.argv)
