@@ -1,11 +1,12 @@
 import sys
+import pickle
 import sqlite3
 import pprint
 import pylab as pl
 import scipy as sp
 from scipy import stats
 import numpy as np
-from sklearn.svm import SVC
+from sklearn.svm import SVC, LinearSVC
 from sklearn.cross_validation import StratifiedKFold
 from sklearn.cross_validation import cross_val_score
 from sklearn.ensemble import RandomForestClassifier
@@ -15,6 +16,14 @@ from sklearn.feature_selection import RFECV
 from sklearn.feature_selection import RFE
 from sklearn.metrics import confusion_matrix
 from sklearn.cross_validation import train_test_split
+from sklearn.ensemble import AdaBoostClassifier
+from sklearn.ensemble import GradientBoostingClassifier
+from sklearn.naive_bayes import GaussianNB
+from sklearn.naive_bayes import MultinomialNB
+from sklearn.naive_bayes import BernoulliNB
+from sklearn.neighbors import KNeighborsClassifier
+from sklearn.linear_model import SGDClassifier
+from sklearn.metrics import classification_report
 
 exercises = {'press': 0, 'bench' : 1, 'squat' : 2}
 
@@ -228,52 +237,7 @@ def get_feature_set(col):
 
    return feature_set
 
-
-"""
-def get_feature_set(moments):
-#   pprint.pprint(moments)
-   feature_set_dict = {}
-   for dimension in measure_index_dict.keys(): 
-      feature_set_dict[dimension] = {}
-      idx = measure_index_dict[dimension]
-      col = []
-      for moment in moments:
-         col.append(moment[idx])
-#      print('col for dimension '+dimension)
-#      pprint.pprint(col)
-      a = np.array(col)
-      for function in feature_function_dict:
-         feature_set_dict[dimension][function] =feature_function_dict[function](a) 
-#         print('dimension: '+dimension)
-#         pprint.pprint(feature_set_dict[dimension]) 
-   return feature_set_dict
-
-
-def get_data_array(rep_features_dict): 
-   data_array = []
-#   print 'len(rep_features_dict.keys()): '+str(len(rep_features_dict.keys()))
-#   pprint.pprint(rep_features_dict)
-   for rep in rep_features_dict.keys():
-      data_array.append([])
-      for dimension in rep_features_dict[rep].keys():
-         for function in rep_features_dict[rep][dimension].keys():
-            data_array[len(data_array) - 1].append(rep_features_dict[rep][dimension][function])
-   return data_array
-
-def get_target_array(set_rep_dict):
-   target_array = []
-   for set in set_rep_dict:
-      for rep in set_rep_dict[set]:
-#         pprint.pprint(rep)
-         target = rep[len(rep) - 1].split('-')
-#         print 'target: '
-#         pprint.pprint(target)
-         if(len(target[0]) > 0):
-            target_array.append(target[0])
-   return target_array
-"""
-
-show_graphs = False 
+show_graphs = True 
 def classify(data_array, target_array):
    # Create the RFE object and compute a cross-validated score.
    X = data_array
@@ -283,21 +247,81 @@ def classify(data_array, target_array):
    pprint.pprint(target_array)
 
 
-   clf0 = DecisionTreeClassifier(max_depth=None, min_samples_split=1, random_state=0)
-   scores = cross_val_score(clf0, X, y, cv = 10)
-   print 'DecisionTreeClassifier scores.mean(): '+str(scores.mean()) 
+#   clf0 = DecisionTreeClassifier(max_depth=None, min_samples_split=1, random_state=0)
+#   scores = cross_val_score(clf0, X, y, cv = 10)
+#   print 'DecisionTreeClassifier scores.mean(): '+str(scores.mean()) 
 
    clf1 = RandomForestClassifier(n_estimators=10, max_depth=None, min_samples_split=1, random_state=0)
    scores = cross_val_score(clf1, X, y, cv = 10)
    print 'RandomForestClassifier scores.mean(): '+str(scores.mean())                         
-
-   clf2 = ExtraTreesClassifier(n_estimators=10, max_depth=None, min_samples_split=1, random_state=0)
+   clf2 = ExtraTreesClassifier(n_estimators=100, max_depth=None, min_samples_split=
+         1, random_state=0, n_jobs=-1, criterion='entropy')
    scores = cross_val_score(clf2, X, y, cv = 10)
-   print 'ExtraTreesClassifier scores:'
-   pprint.pprint(scores)
+#   print 'ExtraTreesClassifier scores:'
+#   pprint.pprint(scores)
    print 'ExtraTreesClassifier scores.mean(): '+str(scores.mean())
    
-   clf_list = [clf0, clf1, clf2]
+   scores = cross_val_score(clf2, X, y, scoring='precision')
+   print 'ExtraTreesClassifier precision: '+str(scores.mean())
+   pprint.pprint(scores)
+
+#   scores = cross_val_score(clf2, X, y, scoring='average_precision')
+#   print 'ExtraTreesClassifier average precision: '+str(scores.mean())
+   scores = cross_val_score(clf2, X, y, scoring='recall')
+   print 'ExtraTreesClassifier recall: '+str(scores.mean())
+   pprint.pprint(scores)
+#   s = pickle.dumps(clf2)
+#   clf2 = pickle.loads(s)
+#   clf2.predict(X[0])
+
+#   clf3 = AdaBoostClassifier(n_estimators=10)
+#   scores = cross_val_score(clf3, X, y, cv = 10)
+#   print 'AdaBoostClassifier scores.mean(): '+str(scores.mean())
+
+#   clf4 = GradientBoostingClassifier(n_estimators=10, learning_rate=1.0,
+#              max_depth=1, random_state=0)
+#   scores = cross_val_score(clf4, X, y, cv = 10)
+#   print 'GradientBoostingClassifier scores.mean(): '+str(scores.mean())
+
+   C = 1.5
+#   clf5 = SVC(kernel="linear", C=C)
+#   scores = cross_val_score(clf5, X, y, cv = 10)
+#   print 'SVC linear scores.mean(): '+str(scores.mean())
+
+#  clf6 = SVC(kernel='rbf', gamma=0.7, C=C)
+#   scores = cross_val_score(clf6, X, y, cv = 10)
+#   print 'SVC rbf scores.mean(): '+str(scores.mean())
+
+#   clf7 = SVC(kernel='poly', degree=3, C=C) 
+#   scores = cross_val_score(clf7, X, y, cv = 10)
+#   print 'SVC poly scores.mean(): '+str(scores.mean())
+
+#   clf8 = LinearSVC(C=C) 
+#   scores = cross_val_score(clf8, X, y, cv = 10)
+#   print 'LinearSVC scores.mean(): '+str(scores.mean())
+
+#   clf9 = GaussianNB()
+#   scores = cross_val_score(clf9, X, y, cv = 10)
+#   print 'GaussianNB scores.mean(): '+str(scores.mean())
+
+#   clf10 = MultinomialNB() 
+#   scores = cross_val_score(clf10, X, y, cv = 10)
+#   print 'MultinomialNB scores.mean(): '+str(scores.mean())
+
+#   clf11 = BernoulliNB()
+#   scores = cross_val_score(clf11, X, y, cv = 10)
+#   print 'BernoulliNB scores.mean(): '+str(scores.mean())
+
+#   clf12 = KNeighborsClassifier() 
+#   scores = cross_val_score(clf12, X, y, cv = 10)
+#   print 'KNeighborsClassifier scores.mean(): '+str(scores.mean())
+
+
+#   clf13 = SGDClassifier(loss="hinge", penalty="l2") 
+#   scores = cross_val_score(clf13, X, y, cv = 10)
+#   print 'SGDClassifier scores.mean(): '+str(scores.mean())
+   
+   clf_list = [clf2] #clf0, clf1
 
    if show_graphs:
       for clf in clf_list:
@@ -305,6 +329,8 @@ def classify(data_array, target_array):
          X_train, X_test, y_train, y_test = train_test_split(X, y, random_state=0)
          y_pred = clf.fit(X_train, y_train).predict(X_test)
 
+#         print(classification_report(y_true, y_pred, target_names=target_names))
+         
          # Compute confusion matrix
          cm = confusion_matrix(y_test, y_pred)
          print(cm)
