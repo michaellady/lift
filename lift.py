@@ -30,7 +30,7 @@ exercises = {'press': 0, 'bench' : 1, 'squat' : 2}
 # sql mega query select * from set_table s inner join rep_table r on s._id = r.set_id inner join moment_table m on r._id = m.rep_id where exercise_id = ?;
 
 def main(argv):
-   cur, conn = setup_db_cursor(argv[1])
+   cur, conn = setup_db_cursor(argv[2])
 
 #   sets = get_exercise_sets(cur, 1)
 #   print 'num sets: '+str(len(sets))
@@ -50,7 +50,7 @@ def main(argv):
 #   print 'len(target_array): '+str(len(target_array))
  #  pprint.pprint(target_array)
 
-   moments = get_moments(cur, conn, exercises['press'])
+   moments = get_moments(cur, conn, argv[1])
    print 'moments'
 #   pprint.pprint(moments)
    print 'len moments: '+str(len(moments))
@@ -70,7 +70,8 @@ def setup_db_cursor(db_name):
    conn = sqlite3.connect(db_name)
    return conn.cursor(), conn
 
-IGNORE_SETS = [1, 2, 5, 8, 13, 14, 15, 16, 17, 24]
+IGNORE_SETS = [1, 2, 5, 8, 13, 14, 15, 16, 17, 24, 56, 57,
+      58,59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 71, 81, 117]
 def get_moments(cur, conn, exercise_id):
    #delete ignored sets from db
    for set_id in IGNORE_SETS:
@@ -261,13 +262,13 @@ def classify(data_array, target_array):
 #   pprint.pprint(scores)
    print 'ExtraTreesClassifier scores.mean(): '+str(scores.mean())
    
-   scores = cross_val_score(clf2, X, y, scoring='precision')
+   scores = cross_val_score(clf2, X, y, scoring='precision', cv = 10)
    print 'ExtraTreesClassifier precision: '+str(scores.mean())
    pprint.pprint(scores)
 
 #   scores = cross_val_score(clf2, X, y, scoring='average_precision')
 #   print 'ExtraTreesClassifier average precision: '+str(scores.mean())
-   scores = cross_val_score(clf2, X, y, scoring='recall')
+   scores = cross_val_score(clf2, X, y, scoring='recall', cv = 10)
    print 'ExtraTreesClassifier recall: '+str(scores.mean())
    pprint.pprint(scores)
 #   s = pickle.dumps(clf2)
@@ -323,50 +324,50 @@ def classify(data_array, target_array):
    
    clf_list = [clf2] #clf0, clf1
 
-   if show_graphs:
-      for clf in clf_list:
-         # Split the data into a training set and a test set
-         X_train, X_test, y_train, y_test = train_test_split(X, y, random_state=0)
-         y_pred = clf.fit(X_train, y_train).predict(X_test)
+   for clf in clf_list:
+      # Split the data into a training set and a test set
+      X_train, X_test, y_train, y_test = train_test_split(X, y, random_state=0)
+      y_pred = clf.fit(X_train, y_train).predict(X_test)
 
 #         print(classification_report(y_true, y_pred, target_names=target_names))
-         
-         # Compute confusion matrix
-         cm = confusion_matrix(y_test, y_pred)
-         print(cm)
+      
+      # Compute confusion matrix
+      cm = confusion_matrix(y_test, y_pred)
+      print(cm)
 
-         # Show confusion matrix in a separate window
-         pl.matshow(cm)
-         pl.title('Confusion matrix')
-         pl.colorbar()
-         pl.ylabel('True label')
-         pl.xlabel('Predicted label')
-         pl.show()
+   if show_graphs:
+      # Show confusion matrix in a separate window
+      pl.matshow(cm)
+      pl.title('Confusion matrix')
+      pl.colorbar()
+      pl.ylabel('True label')
+      pl.xlabel('Predicted label')
+      pl.show()
 
-         #svc = SVC(kernel="linear")
-         #rfe = RFE(estimator=svc, n_features_to_select=1, step=1)
-         #rfe.fit(X, y)
-         #ranking = rfe.ranking_
-         #print 'ranking'
-         #pprint.pprint(ranking)
+      #svc = SVC(kernel="linear")
+      #rfe = RFE(estimator=svc, n_features_to_select=1, step=1)
+      #rfe.fit(X, y)
+      #ranking = rfe.ranking_
+      #print 'ranking'
+      #pprint.pprint(ranking)
 
-         # Plot pixel ranking
+      # Plot pixel ranking
 #         import pylab as pl
-         #pl.matshow(ranking)
-         #pl.colorbar()
-         #pl.title("Ranking of pixels with RFE")
-         #pl.show()
-      #   rfecv = RFECV(estimator=svc, step=1, cv=StratifiedKFold(y, 2),
-      #                       scoring='accuracy')
-      #   rfecv.fit(X, y)
+      #pl.matshow(ranking)
+      #pl.colorbar()
+      #pl.title("Ranking of pixels with RFE")
+      #pl.show()
+   #   rfecv = RFECV(estimator=svc, step=1, cv=StratifiedKFold(y, 2),
+   #                       scoring='accuracy')
+   #   rfecv.fit(X, y)
 
-      #   print("Optimal number of features : %d" % rfecv.n_features_)
+   #   print("Optimal number of features : %d" % rfecv.n_features_)
 
-      #   pl.figure()
-      #   pl.xlabel("Number of features selected")
-      #   pl.ylabel("Cross validation score (nb of misclassifications)")
-      #   pl.plot(range(1, len(rfecv.grid_scores_) + 1), rfecv.grid_scores_)
-      #   pl.show()
+   #   pl.figure()
+   #   pl.xlabel("Number of features selected")
+   #   pl.ylabel("Cross validation score (nb of misclassifications)")
+   #   pl.plot(range(1, len(rfecv.grid_scores_) + 1), rfecv.grid_scores_)
+   #   pl.show()
       
 
 
