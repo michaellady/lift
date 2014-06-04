@@ -3,4 +3,4 @@
 echo BENCH
 python lift.py bench ./db/smartbell_database.db
 echo SQUAT
-python lift.py squat ./db smartbell_database.db 
+python lift.py squat ./db/smartbell_database.db 

@@ -27,6 +27,7 @@ from sklearn.metrics import classification_report
 import argparse
 
 exercises = {'press': 0, 'bench' : 1, 'squat' : 2}
+current_exercise = 0
 
 def main(argv):
    parser = argparse.ArgumentParser(description='Set up how LIFT runs')
@@ -38,6 +39,8 @@ def main(argv):
    args = parser.parse_args()
    cur, conn = setup_db_cursor(args.database_file)
    moments = get_moments(cur, conn, exercises[args.exercise])
+   current_exercise = exercises[args.exercise]
+   print 'current_exercise: ' + str(current_exercise)
    print 'moments'
 #   pprint.pprint(moments)
    print 'len moments: '+str(len(moments))
@@ -45,11 +48,11 @@ def main(argv):
    if args.one:
       print 'leave one out vaidation'
       athletes = get_athletes(cur, conn)
-      result_accuracy = leave_one_out(athletes, moments)
+      result_accuracy = leave_one_out(athletes, moments, current_exercise)
       print 'result_accuracy '+str(result_accuracy)
 
    else:
-      data_target_list = get_data_target_list(moments)
+      data_target_list = get_data_target_list(moments, current_exercise)
       data_target_list = prune_data_target_list(data_target_list)
 
       data_array = np.array(data_target_list[0])  
@@ -64,7 +67,60 @@ def setup_db_cursor(db_name):
    conn = sqlite3.connect(db_name)
    return conn.cursor(), conn
 
-IGNORE_SETS = [] 
+IGNORE_SETS = [1, 2, 33, 61, 62] 
+IGNORE_ATHLETES = [1] 
+#0 is ignored/removed from consideration
+#1 - inf is priority. higher the more important
+LABEL_PRIORITY_BENCH = {
+      'Golden' : 1,
+      'Correct' : 100,
+      'Upper back not tight' : 30 ,
+      'Elbows out' : 110,
+      'Glutes not engaged' : 10,
+      'Excessive lower back arch' : 95 ,
+      'Bounce off of chest' : 97 ,
+      'Did not touch chest' : 96,
+      'Did not lock out' : 95,
+      'Wrists rolled back' : 80 ,
+      'Left side came up first' : 55 ,
+      'Right side came up first' : 56,
+      'Jerky rep' :  50,
+      'Did not complete rep' : 0
+      }
+
+LABEL_PRIORITY_SQUAT = {
+      'Golden' : 1,
+      'Correct' : 100,
+      'Chin not tucked / head not neutral' : 30,
+      'Upper back round' : 40,
+      'Lower back round / butt wink' : 110,
+      'Over extension / too vertical' : 70 ,
+      'Hips out / Chasing with back' : 90 ,
+      'Hips roll under spine' : 50 ,
+      'Did not get to parallel' : 95  ,
+      'Did not stand all the way up' : 93 ,
+      'Knees not spread out' : 75,
+      'Heels coming up off of the ground' : 92 ,
+      'Wrists rolled back' : 45,
+      'Jerky rep' : 35,
+      'Did not complete rep' : 0 
+      }
+
+LABEL_PRIORITY_PRESS = {
+      'Golden' : 1,
+      'Correct' : 100,
+      'Chest/Shoulders/Elbows down' : 80 ,
+      'Didn\'t use hips' : 70 ,
+      'Pushed the bar away / started too far out' : 75,
+      'Didn\'t get under bar' : 90,
+      'Too much layback' : 95 ,
+      'Wrists rolled back' : 73 ,
+      'Jerky, uncontrolled rep' : 60 ,
+      'Elbows out' : 85 ,
+      'Left side came up first' : 55 ,
+      'Right side came up first' : 56 ,
+      'Did not complete rep' : 0 
+      }
 
 #old ignore sets
 #[1, 2, 5, 8, 13, 14, 15, 16, 17, 24, 56, 57,
@@ -74,10 +130,13 @@ def get_moments(cur, conn, exercise_id):
    #delete ignored sets from db
    for set_id in IGNORE_SETS:
       cur.execute('delete from set_table where _id = ?;', (set_id,)) 
-   print 'conn.total_changes after del: '+str(conn.total_changes)
+   print 'conn.total_changes after set del: '+str(conn.total_changes)
+   for athlete_id in IGNORE_ATHLETES:
+      cur.execute('delete from athlete_table where _id = ?;', (athlete_id,)) 
+   print 'conn.total_changes after athlete del: '+str(conn.total_changes)
 
    #retrieve rest of sets for particular exercise from db
-   cur.execute('select s.exercise_id, r._id, r.category, m.timestamp, m.quat_W, m.quat_X, m.quat_Y, m.quat_Z, m.lin_acc_X, m.lin_acc_Y, m.lin_acc_Z, m.corrected_gyro_X, m.corrected_gyro_Y, m.corrected_gyro_Z, m.corrected_acc_X, m.corrected_acc_Y, m.corrected_acc_Z, m.corrected_compass_X, m.corrected_compass_Y, m.corrected_compas_Z, w.athlete_id from workout_table w inner join set_table s on w._id = s.workout_id inner join rep_table r on s._id = r.set_id inner join moment_table m on r._id = m.rep_id where s.exercise_id = ?;', (exercise_id,))
+   cur.execute('select s.exercise_id, r._id, r.category, m.timestamp, m.quat_W, m.quat_X, m.quat_Y, m.quat_Z, m.lin_acc_X, m.lin_acc_Y, m.lin_acc_Z, m.corrected_gyro_X, m.corrected_gyro_Y, m.corrected_gyro_Z, m.corrected_acc_X, m.corrected_acc_Y, m.corrected_acc_Z, m.corrected_compass_X, m.corrected_compass_Y, m.corrected_compas_Z, m.raw_gyro_X, m.raw_gyro_Y, m.raw_gyro_Z, m.raw_acc_X, m.raw_acc_Y, m.raw_acc_Z, m.raw_compass_X, m.raw_compass_Y, m.raw_compas_Z,  w.athlete_id from workout_table w inner join set_table s on w._id = s.workout_id inner join rep_table r on s._id = r.set_id inner join moment_table m on r._id = m.rep_id where s.exercise_id = ?;', (exercise_id,))
    moments = cur.fetchall()
    return moments 
 
@@ -86,7 +145,7 @@ def get_athletes(cur, conn):
    athletes = cur.fetchall()
    return athletes
 
-def leave_one_out(athletes, moments):
+def leave_one_out(athletes, moments, current_exercise):
    results = []
    for athlete in athletes:
       print 'athlete: '+str(athlete[0])
@@ -105,13 +164,13 @@ def leave_one_out(athletes, moments):
 
       if len(athlete_moments) > 0:
 
-         train_data_target_list = get_data_target_list(current_moments)
+         train_data_target_list = get_data_target_list(current_moments, current_exercise)
          train_data_target_list = prune_data_target_list(train_data_target_list)
 
          X_train = np.array(train_data_target_list[0])  
          y_train = np.array(train_data_target_list[1])
 
-         test_data_target_list = get_data_target_list(athlete_moments)
+         test_data_target_list = get_data_target_list(athlete_moments, current_exercise)
          test_data_target_list = prune_data_target_list(test_data_target_list)
          X_test = np.array(test_data_target_list[0])  
          y_test = np.array(test_data_target_list[1])
@@ -180,8 +239,9 @@ def min_max_diff(x):
 
 measure_index_dict = {'time' : 3, 'ow' : 4, 'ox' : 5, 'oy' : 6, 'oz' : 7, 'lx' : 8, 'ly' : 9,
       'lz' : 10, 'cgx' : 11, 'cgy' : 12, 'cgz' : 13, 'cax' : 14, 'cay' : 15, 'caz' : 16,
-      'ccx' : 17, 'ccy' : 18, 'ccz' : 19}
-dimension_list = range(3,20) 
+      'ccx' : 17, 'ccy' : 18, 'ccz' : 19, 'rgx' : 20, 'rgy' : 21, 'rgz' : 22, 'rax' : 23, 
+      'ray' : 24, 'raz' : 25, 'rcx' : 26, 'rcy' : 27, 'rcz' : 28}
+dimension_list = range(3,29) 
 #mean, variance, standard deviation, max, min, amplitude, kurtosis and skewness
 #feature_function_dict = {'mean' : np.mean, 'var' : np.var, 'std' : np.std, 
 #      'max' : np.amax, 'min' : np.amin, 'rms' : rms, 
@@ -192,7 +252,7 @@ dimension_list = range(3,20)
 feature_function_list = [np.mean, np.var, np.std, np.amax, np.amin, rms, 
       sp.stats.kurtosis, sp.stats.skew, min_max_diff] 
 
-def get_data_target_list(moments):
+def get_data_target_list(moments, current_exercise):
    data_target_list = [[], []]
 
    rep_id_label_tuple = get_rep_id_label_tuple(moments) 
@@ -220,8 +280,38 @@ def get_data_target_list(moments):
 
 
       data_target_list[0].append(rep_feature_set)
+      
+#      print 'target_list'
+#      pprint.pprint(target_list)
       if len(target_list) > 0:
-         data_target_list[1].append(target_list[0]) # only works for single labels for now
+#         if 'Golden' not in target_list[0]:
+#            data_target_list[1].append(target_list[0]) # only works for single labels for now
+#         else:
+#            data_target_list[1].append('Correct') # only works for single labels for now
+         highest_idx = 0
+         highest_value = 0
+#         print 'current_exercise2: ' + str(current_exercise)
+         if current_exercise == 0: 
+            for idx, label in enumerate(target_list):
+               current_value = LABEL_PRIORITY_PRESS[label]
+               if current_value > highest_value:
+                  highest_value = current_value
+                  highest_idx = idx
+
+         elif current_exercise == 1:
+             for idx, label in enumerate(target_list):
+               current_value = LABEL_PRIORITY_BENCH[label]
+               if current_value > highest_value:
+                  highest_value = current_value
+                  highest_idx = idx
+         else:
+             for idx, label in enumerate(target_list):
+               current_value = LABEL_PRIORITY_SQUAT[label]
+               if current_value > highest_value:
+                  highest_value = current_value
+                  highest_idx = idx
+         data_target_list[1].append(target_list[highest_idx]) # only works for single labels for now
+         
       else:
          data_target_list[1].append('Correct')
 
@@ -253,7 +343,7 @@ def prune_data_target_list(data_target_list):
    for target in list(target_list):
 #      print 'target'
 #      pprint.pprint(target)
-      if 'Did not' in target:
+      if 'complete' in target:
          i = target_list.index(target)
          target_list.pop(i)
          data_list.pop(i)
