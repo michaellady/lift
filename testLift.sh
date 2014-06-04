@@ -1,6 +1,6 @@
-echo PRESS
-python lift.py 0 ./db/fourth.sqlite
+#echo PRESS
+#python lift.py press ./db/db7.sqlite -o
 echo BENCH
-python lift.py 1 ./db/fourth.sqlite
+python lift.py bench ./db/smartbell_database.db
 echo SQUAT
-python lift.py 2 ./db/fourth.sqlite
+python lift.py squat ./db smartbell_database.db 
