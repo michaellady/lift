@@ -96,7 +96,7 @@ LABEL_PRIORITY_SQUAT = {
       'Over extension / too vertical' : 70 ,
       'Hips out / Chasing with back' : 90 ,
       'Hips roll under spine' : 50 ,
-      'Did not get to parallel' : 95  ,
+      'Did not get to parallel' : 105  ,
       'Did not stand all the way up' : 93 ,
       'Knees not spread out' : 75,
       'Heels coming up off of the ground' : 92 ,
