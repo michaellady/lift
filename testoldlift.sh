@@ -1,6 +1,9 @@
-echo PRESS
-python oldlift.py press ./db/v1.sqlite 
-echo BENCH
-python oldlift.py bench ./db/v1.sqlite 
+
 echo SQUAT
-python oldlift.py squat ./db/v1.sqlite 
+python lift.py squat ./db/v1.sqlite -o 
+
+#echo BENCH
+#python lift.py bench ./db/v1.sqlite -o
+
+#echo PRESS
+#python lift.py press ./db/v1.sqlite -o

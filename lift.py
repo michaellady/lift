@@ -31,6 +31,10 @@ current_exercise = 0
 
 def main(argv):
 
+   confusion_matrix = [[1, 1, 0], [0, 1, 1], [1, 0, 1]]
+   get_precision(confusion_matrix)
+   get_recall(confusion_matrix)
+
    parser = argparse.ArgumentParser(description='Set up how LIFT runs')
    parser.add_argument('exercise', help='enter exercise to analyze (press, bench, squat)')
    parser.add_argument('database_file', help='enter database filename to use')
@@ -70,11 +74,19 @@ IGNORE_SETS = [1, 2, 33, 61, 62]
 IGNORE_ATHLETES = [1]
 #0 is ignored/removed from consideration
 #1 - inf is priority. higher the more important
+
+
+#old ignore sets
+#IGNORE_SETS = [1, 2, 5, 8, 13, 14, 15, 16, 17, 24, 56, 57,
+#58,59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 71, 81, 117,
+#      194, 195, 201]
+
 LABEL_PRIORITY_BENCH = {
       'Golden' : 1,
       'Correct' : 100,
       'Upper back not tight' : 30 ,
       'Elbows out' : 110,
+      #'Upper back not tight / elbows out' : 111, #v1
       'Glutes not engaged' : 10,
       'Excessive lower back arch' : 95 ,
       'Bounce off of chest' : 97 ,
@@ -91,10 +103,12 @@ LABEL_PRIORITY_SQUAT = {
       'Golden' : 1,
       'Correct' : 100,
       'Chin not tucked / head not neutral' : 30,
+      #'Chin not tucked' : 31, #v1
       'Upper back round' : 40,
       'Lower back round / butt wink' : 110,
       'Over extension / too vertical' : 70 ,
       'Hips out / Chasing with back' : 90 ,
+      #'Chasing with back' : 91 , #v1
       'Hips roll under spine' : 50 ,
       'Did not get to parallel' : 105  ,
       'Did not stand all the way up' : 93 ,
@@ -108,9 +122,12 @@ LABEL_PRIORITY_SQUAT = {
 LABEL_PRIORITY_PRESS = {
       'Golden' : 1,
       'Correct' : 100,
+      #'Chest' : 81 , #v1
+      #'Chest down' : 82 , #v1
       'Chest/Shoulders/Elbows down' : 80 ,
       'Didn\'t use hips' : 70 ,
       'Pushed the bar away / started too far out' : 75,
+      #'Pushed bar away / started too far out' : 76, #v1
       'Didn\'t get under bar' : 90,
       'Too much layback' : 95 ,
       'Wrists rolled back' : 73 ,
@@ -121,10 +138,6 @@ LABEL_PRIORITY_PRESS = {
       'Did not complete rep' : 0
       }
 
-#old ignore sets
-#[1, 2, 5, 8, 13, 14, 15, 16, 17, 24, 56, 57,
-#58,59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 71, 81, 117,
-#      194, 195, 201]
 def get_moments(cur, conn, exercise_id):
 #   for label in LABEL_PRIORITY_PRESS.keyset():
 #      cur.execute('delete from rep_table where category = ?;', (set_id,))
@@ -140,6 +153,11 @@ def get_moments(cur, conn, exercise_id):
 
    #retrieve rest of sets for particular exercise from db
    cur.execute('select s.exercise_id, r._id, r.category, m.timestamp, m.quat_W, m.quat_X, m.quat_Y, m.quat_Z, m.lin_acc_X, m.lin_acc_Y, m.lin_acc_Z, m.corrected_gyro_X, m.corrected_gyro_Y, m.corrected_gyro_Z, m.corrected_acc_X, m.corrected_acc_Y, m.corrected_acc_Z, m.corrected_compass_X, m.corrected_compass_Y, m.corrected_compas_Z, m.raw_gyro_X, m.raw_gyro_Y, m.raw_gyro_Z, m.raw_acc_X, m.raw_acc_Y, m.raw_acc_Z, m.raw_compass_X, m.raw_compass_Y, m.raw_compas_Z,  w.athlete_id from workout_table w inner join set_table s on w._id = s.workout_id inner join rep_table r on s._id = r.set_id inner join moment_table m on r._id = m.rep_id where s.exercise_id = ?;', (exercise_id,))
+
+
+#old v1
+#   cur.execute('select s.exercise_id, r._id, r.category, m.timestamp, m.euler_angle_X, m.euler_angle_Y, m.euler_angle_Z, m.lin_acc_X, m.lin_acc_Y, m.lin_acc_Z, w.athlete_id from workout_table w inner join set_table s on w._id = s.workout_id inner join rep_table r on s._id = r.set_id inner join moment_table m on r._id = m.rep_id where s.exercise_id = ?;', (exercise_id,))
+
    moments = cur.fetchall()
    return moments
 
@@ -150,6 +168,21 @@ def get_athletes(cur, conn):
 
 def leave_one_out(athletes, moments, current_exercise):
    results = []
+   num_labels = 0
+#press
+   if current_exercise == 0:
+      num_labels = len(LABEL_PRIORITY_PRESS.keys())
+      confusion_matrix = [[0 for x in xrange(num_labels)] for x in xrange(num_labels)]
+#squat
+   elif current_exercise == 1:
+      num_labels = len(LABEL_PRIORITY_SQUAT.keys())
+      #print 'num_labels: '+str(num_labels)
+      confusion_matrix = [[0 for x in xrange(num_labels)] for x in xrange(num_labels)]
+#bench
+   else:
+      num_labels = len(LABEL_PRIORITY_BENCH.keys())
+      confusion_matrix = [[0 for x in xrange(num_labels)] for x in xrange(num_labels)]
+
    for athlete in athletes:
        print 'athlete: '+str(athlete[0])
        current_moments = moments
@@ -186,12 +219,69 @@ def leave_one_out(athletes, moments, current_exercise):
           #predict on left out athlete's rep moments
           if len(X_train) > 0 and len(X_train) == len(y_train) and len(X_test) > 0:
               #store prediciton results from each rep
-             result = predict_and_compare(X_train, y_train, X_test, y_test, clf)
+             result = predict_and_compare(X_train, y_train, X_test, y_test, clf, confusion_matrix, current_exercise)
              results.append(result)
+
+   print 'confusion_matrix'
+
+   if current_exercise == 0:
+      tk = LABEL_PRIORITY_PRESS.keys()
+      pprint.pprint(tk)
+
+   if current_exercise == 1:
+      tk = LABEL_PRIORITY_BENCH.keys()
+      pprint.pprint(tk)
+
+   if current_exercise == 2:
+      tk = LABEL_PRIORITY_SQUAT.keys()
+      pprint.pprint(tk)
+
+   pprint.pprint(confusion_matrix)
+
+   get_precision(confusion_matrix)
+   get_recall(confusion_matrix)
 
    return get_accuracy(results)
 
-def predict_and_compare(X_train, y_train, X_test, y_test, clf):
+def get_precision(confusion_matrix):
+   precision = []
+
+   for i, arr in enumerate(confusion_matrix):
+      n = confusion_matrix[i][i]
+      d = 0
+      for j, val in enumerate(confusion_matrix[i]):
+         d += confusion_matrix[i][j]
+      print 'd: '+str(d)
+      if d == 0:
+         continue
+      precision.append(n * 1.0 / d)
+
+   print 'precision array'
+   pprint.pprint(precision)
+   avg = np.mean(precision)
+   print 'precision avg: '+str(avg)
+
+def get_recall(confusion_matrix):
+   recall = []
+
+   for i, arr in enumerate(confusion_matrix):
+      n = confusion_matrix[i][i]
+      d = 0
+      for j, val in enumerate(confusion_matrix[i]):
+         d += confusion_matrix[j][i]
+      print 'd: '+str(d)
+      if d == 0:
+         continue
+      recall.append(n * 1.0 / d)
+
+   print 'recall array'
+   pprint.pprint(recall)
+   avg = np.mean(recall)
+   print 'recall avg: '+str(avg)
+
+
+
+def predict_and_compare(X_train, y_train, X_test, y_test, clf, confusion_matrix, current_exercise):
 
    y_pred = clf.fit(X_train, y_train).predict(X_test)
 
@@ -200,7 +290,26 @@ def predict_and_compare(X_train, y_train, X_test, y_test, clf):
    if len(y_pred) > 0 and len(y_pred) == len(y_test):
       for i, x in enumerate(y_pred):
          print 'y_pred['+str(i)+'] = '+y_pred[i] + ', y_test['+str(i)+'] = '+y_test[i]
+
+         print 'current_exercise: '+str(current_exercise)
+
+         if current_exercise == 0:
+            tk = LABEL_PRIORITY_PRESS.keys()
+            confusion_matrix[tk.index(y_test[i])][tk.index(y_pred[i])] += 1
+
+         elif current_exercise == 1:
+            tk = LABEL_PRIORITY_BENCH.keys()
+            confusion_matrix[tk.index(y_test[i])][tk.index(y_pred[i])] += 1
+
+         else:
+            tk = LABEL_PRIORITY_SQUAT.keys()
+            #print 'i: '+str(i)
+            #print 'tk.index(y_test[i]): '+ str(tk.index(y_test[i]))
+            #print 'len(confusion_matrix): ' +str(len(confusion_matrix[0]))
+            confusion_matrix[tk.index(y_test[i])][tk.index(y_pred[i])] += 1
+
          if y_pred[i] == y_test[i]:
+            #true positives
             result.append(1)
          else:
             result.append(0)
@@ -241,6 +350,12 @@ measure_index_dict = {'time' : 3, 'ow' : 4, 'ox' : 5, 'oy' : 6, 'oz' : 7, 'lx' :
       'ccx' : 17, 'ccy' : 18, 'ccz' : 19, 'rgx' : 20, 'rgy' : 21, 'rgz' : 22, 'rax' : 23,
       'ray' : 24, 'raz' : 25, 'rcx' : 26, 'rcy' : 27, 'rcz' : 28}
 dimension_list = range(3,29)
+
+
+#measure_index_dict = {'time' : 3, 'ox' : 4, 'oy' : 5, 'oz' : 6, 'lx' : 7, 'ly' : 8,
+#      'lz' : 9 }
+#dimension_list = range(3,10)
+
 #mean, variance, standard deviation, max, min, amplitude, kurtosis and skewness
 #feature_function_dict = {'mean' : np.mean, 'var' : np.var, 'std' : np.std,
 #      'max' : np.amax, 'min' : np.amin, 'rms' : rms,
