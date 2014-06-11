@@ -259,9 +259,15 @@ def simple_matrix(confusion_matrix, current_exercise):
    if current_exercise == 2:
       tk = LABEL_PRIORITY_SQUAT.keys()
 
-   for i, x in tk:
+   correct_index = 0
+
+   for i, x in enumerate(tk):
       if 'Correct' in x:
          simple[0][0] = confusion_matrix[i][i]
+         correct_index = i
+
+   for a, x in enumerate(tk):
+
 
 def get_precision(confusion_matrix):
    precision = []
