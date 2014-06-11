@@ -243,13 +243,13 @@ def leave_one_out(athletes, moments, current_exercise):
    get_recall(confusion_matrix)
 
    result_accuracy = get_accuracy(results)
-   print 'result_accuracy '+str(result_accuracy)
 
    simple = simple_matrix(confusion_matrix, current_exercise)
    print 'simple confusion matrix'
    pprint.pprint(simple)
    get_precision(simple)   
    get_recall(simple)   
+   get_accuracy(simple)   
 
 def simple_matrix(confusion_matrix, current_exercise):
    tk = []
@@ -394,7 +394,15 @@ def get_accuracy(results):
 
    overall_avg /= 1.0 * len(avgs)
 
+#   print 'result_accuracy '+str(result_accuracy)
+   print 'result_accuracy '+str(overall_avg)
    return overall_avg
+
+def get_accuracy_simple(simple):
+   tptn = simple[0][0] + simple[1][1]
+   total = simple[0][0] + simple[0][1] + simple[1][0] + simple[1][1]
+   acc = tptn / total 
+   print 'accuracy: '+str(acc)
 
 def rms(x, axis=None):
    return np.sqrt(np.mean(x**2, axis=axis))
