@@ -248,7 +248,8 @@ def leave_one_out(athletes, moments, current_exercise):
    simple = simple_matrix(confusion_matrix, current_exercise)
    print 'simple confusion matrix'
    pprint.pprint(simple)
-   
+   get_precision(simple)   
+   get_recall(simple)   
 
 def simple_matrix(confusion_matrix, current_exercise):
    tk = []
@@ -348,9 +349,9 @@ def predict_and_compare(X_train, y_train, X_test, y_test, clf, confusion_matrix,
    #compare y_pred and y_test
    if len(y_pred) > 0 and len(y_pred) == len(y_test):
       for i, x in enumerate(y_pred):
-         print 'y_pred['+str(i)+'] = '+y_pred[i] + ', y_test['+str(i)+'] = '+y_test[i]
+#         print 'y_pred['+str(i)+'] = '+y_pred[i] + ', y_test['+str(i)+'] = '+y_test[i]
 
-         print 'current_exercise: '+str(current_exercise)
+ #        print 'current_exercise: '+str(current_exercise)
 
          if current_exercise == 0:
             tk = LABEL_PRIORITY_PRESS.keys()
