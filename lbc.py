@@ -19,9 +19,23 @@ cm = [[0, 0, 0, 0, 0, 0, 0, 12, 0, 0, 0, 0, 0, 0],
                  [0, 0, 0, 0, 0, 0, 0, 24, 0, 0, 0, 0, 0, 0],
                   [0, 0, 0, 0, 0, 0, 0, 10, 0, 0, 0, 0, 0, 0],
                    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]]
+pl.title('Squat v1 Confusion matrix')
+# Show confusion matrix in a separate window
+pl.matshow(cm)
+pl.colorbar()
+pl.ylabel('Predicted label')
+pl.xlabel('True label')
+pl.show()
 
 #squat v1 simple
 cm = [[121, 32], [86, 45]] 
+pl.title('Squat v1 Simple Confusion matrix')
+# Show confusion matrix in a separate window
+pl.matshow(cm)
+pl.colorbar()
+pl.ylabel('Predicted label')
+pl.xlabel('True label')
+pl.show()
 
 #bench v1 full
 cm = [[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
@@ -39,8 +53,23 @@ cm = [[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
                   [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
                    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
                     [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]]
+pl.title('Bench v1 Confusion matrix')
+# Show confusion matrix in a separate window
+pl.matshow(cm)
+pl.colorbar()
+pl.ylabel('Predicted label')
+pl.xlabel('True label')
+pl.show()
+
 #bench v1 simple
 cm = [[49, 144], [135, 332]]
+pl.title('Bench v1 Simple Confusion matrix')
+# Show confusion matrix in a separate window
+pl.matshow(cm)
+pl.colorbar()
+pl.ylabel('Predicted label')
+pl.xlabel('True label')
+pl.show()
 
 #press v1 full
 cm = [[16, 10, 0, 0, 2, 0, 0, 13, 0, 7, 8, 0, 0, 0, 0],
@@ -58,9 +87,23 @@ cm = [[16, 10, 0, 0, 2, 0, 0, 13, 0, 7, 8, 0, 0, 0, 0],
                   [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
                    [0, 0, 0, 0, 0, 0, 0, 19, 0, 0, 0, 0, 0, 0, 0],
                     [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]]
+pl.title('Press v1 Confusion matrix')
+# Show confusion matrix in a separate window
+pl.matshow(cm)
+pl.colorbar()
+pl.ylabel('Predicted label')
+pl.xlabel('True label')
+pl.show()
 
 #press v1 simple
 cm = [[197, 87], [155, 116]]
+pl.title('Press v1 Simple Confusion matrix')
+# Show confusion matrix in a separate window
+pl.matshow(cm)
+pl.colorbar()
+pl.ylabel('Predicted label')
+pl.xlabel('True label')
+pl.show()
 
 #squat v2 full
 cm = [[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
@@ -78,9 +121,23 @@ cm = [[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
                   [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 85, 8, 0, 0],
                    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
                     [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]]
+pl.title('Squat v2 Confusion matrix')
+# Show confusion matrix in a separate window
+pl.matshow(cm)
+pl.colorbar()
+pl.ylabel('Predicted label')
+pl.xlabel('True label')
+pl.show()
 
 #squat v2 simple
 cm = [[57, 32], [82, 212]]
+pl.title('Squat v2 Simple Confusion matrix')
+# Show confusion matrix in a separate window
+pl.matshow(cm)
+pl.colorbar()
+pl.ylabel('Predicted label')
+pl.xlabel('True label')
+pl.show()
 
 #bench v2 full
 cm = [[212, 0, 0, 0, 22, 19, 0, 26, 0, 1, 0, 0, 16, 0, 0, 0],
@@ -99,20 +156,26 @@ cm = [[212, 0, 0, 0, 22, 19, 0, 26, 0, 1, 0, 0, 16, 0, 0, 0],
                    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
                     [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
                      [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]]
+pl.title('Bench v2 Confusion matrix')
+# Show confusion matrix in a separate window
+pl.matshow(cm)
+pl.colorbar()
+pl.ylabel('Predicted label')
+pl.xlabel('True label')
+pl.show()
 
 #bench v2 simple
 cm = [[1, 82], [22, 385]]
+pl.title('Bench v2 Simple Confusion matrix')
+# Show confusion matrix in a separate window
+pl.matshow(cm)
+pl.colorbar()
+pl.ylabel('Predicted label')
+pl.xlabel('True label')
+pl.show()
 
 #bench alt priorities full
 
 #bench alt priorities simple
 
-#print(cm)
 
-# Show confusion matrix in a separate window
-pl.matshow(cm)
-pl.title('Confusion matrix')
-pl.colorbar()
-pl.ylabel('Predicted label')
-pl.xlabel('True label')
-pl.show()
