@@ -1,0 +1,465 @@
+SQUAT
+precision array
+[0.5, 0.5, 0.5]
+precision avg: 0.5
+recall array
+[0.5, 0.5, 0.5]
+recall avg: 0.5
+conn.total_changes after set del: 30
+conn.total_changes after athlete del: 31
+current_exercise: 2
+moments
+len moments: 13072
+leave one out vaidation
+athlete: 2
+athlete: 3
+athlete: 4
+athlete: 5
+athlete: 6
+athlete: 7
+athlete: 8
+athlete: 9
+athlete: 10
+athlete: 11
+athlete: 12
+athlete: 13
+athlete: 14
+athlete: 15
+athlete: 16
+athlete: 17
+athlete: 18
+athlete: 19
+athlete: 20
+athlete: 21
+athlete: 22
+athlete: 23
+athlete: 24
+athlete: 25
+athlete: 26
+athlete: 27
+athlete: 28
+athlete: 29
+athlete: 30
+athlete: 31
+athlete: 32
+athlete: 33
+athlete: 34
+athlete: 35
+athlete: 36
+athlete: 37
+athlete: 38
+athlete: 39
+athlete: 40
+athlete: 41
+athlete: 42
+athlete: 43
+athlete: 44
+athlete: 45
+athlete: 46
+athlete: 47
+athlete: 48
+athlete: 49
+athlete: 50
+athlete: 51
+athlete: 52
+athlete: 53
+athlete: 54
+athlete: 55
+athlete: 56
+athlete: 57
+athlete: 58
+athlete: 59
+athlete: 60
+athlete: 61
+athlete: 62
+athlete: 63
+athlete: 64
+athlete: 65
+athlete: 66
+athlete: 67
+athlete: 68
+athlete: 69
+athlete: 70
+confusion_matrix
+['Upper back round',
+ 'Over extension / too vertical',
+ 'Jerky rep',
+ 'Knees not spread out',
+ 'Wrists rolled back',
+ 'Chin not tucked',
+ 'Chasing with back',
+ 'Correct',
+ 'Heels coming up off of the ground',
+ 'Golden',
+ 'Did not get to parallel',
+ 'Lower back round / butt wink',
+ 'Hips roll under spine',
+ 'Did not complete rep']
+[[0, 0, 0, 0, 0, 0, 0, 12, 0, 0, 0, 0, 0, 0],
+ [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+ [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+ [0, 0, 0, 0, 0, 0, 0, 6, 0, 0, 0, 0, 0, 0],
+ [0, 0, 0, 0, 0, 0, 0, 22, 0, 0, 0, 0, 0, 0],
+ [0, 0, 0, 0, 0, 0, 0, 7, 0, 0, 0, 0, 0, 0],
+ [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 0, 0, 0],
+ [6, 0, 0, 0, 0, 0, 0, 121, 0, 0, 15, 0, 11, 0],
+ [0, 0, 0, 0, 0, 0, 0, 5, 0, 0, 9, 0, 0, 0],
+ [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+ [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 34, 0, 0, 0],
+ [0, 0, 0, 0, 0, 0, 0, 24, 0, 0, 0, 0, 0, 0],
+ [0, 0, 0, 0, 0, 0, 0, 10, 0, 0, 0, 0, 0, 0],
+ [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]]
+precision array
+[0.0, 0.0, 0.0, 0.0, 0.0, 0.79084967320261434, 0.0, 1.0, 0.0, 0.0]
+precision avg: 0.17908496732
+recall array
+[0.0, 0.58454106280193241, 0.56666666666666665, 0.0]
+recall avg: 0.287801932367
+[0.0,
+ 0.40000000000000002,
+ 0.0,
+ 0.88461538461538458,
+ 0.75,
+ 0.80000000000000004,
+ 1.0,
+ 0.31578947368421051,
+ 0.80000000000000004,
+ 0.23999999999999999,
+ 0.5,
+ 0.0,
+ 1.0,
+ 1.0]
+result_accuracy 0.549314632736
+simple confusion matrix
+[[121, 32], [86, 45]]
+precision array
+[0.79084967320261434, 0.34351145038167941]
+precision avg: 0.567180561792
+recall array
+[0.58454106280193241, 0.58441558441558439]
+recall avg: 0.584478323609
+accuracy: 0.584507042254
+BENCH
+precision array
+[0.5, 0.5, 0.5]
+precision avg: 0.5
+recall array
+[0.5, 0.5, 0.5]
+recall avg: 0.5
+conn.total_changes after set del: 30
+conn.total_changes after athlete del: 31
+current_exercise: 1
+moments
+len moments: 21844
+leave one out vaidation
+athlete: 2
+athlete: 3
+athlete: 4
+athlete: 5
+athlete: 6
+athlete: 7
+athlete: 8
+athlete: 9
+athlete: 10
+athlete: 11
+athlete: 12
+athlete: 13
+athlete: 14
+athlete: 15
+athlete: 16
+athlete: 17
+athlete: 18
+athlete: 19
+athlete: 20
+athlete: 21
+athlete: 22
+athlete: 23
+athlete: 24
+athlete: 25
+athlete: 26
+athlete: 27
+athlete: 28
+athlete: 29
+athlete: 30
+athlete: 31
+athlete: 32
+athlete: 33
+athlete: 34
+athlete: 35
+athlete: 36
+athlete: 37
+athlete: 38
+athlete: 39
+athlete: 40
+athlete: 41
+athlete: 42
+athlete: 43
+athlete: 44
+athlete: 45
+athlete: 46
+athlete: 47
+athlete: 48
+athlete: 49
+athlete: 50
+athlete: 51
+athlete: 52
+athlete: 53
+athlete: 54
+athlete: 55
+athlete: 56
+athlete: 57
+athlete: 58
+athlete: 59
+athlete: 60
+athlete: 61
+athlete: 62
+athlete: 63
+athlete: 64
+athlete: 65
+athlete: 66
+athlete: 67
+athlete: 68
+athlete: 69
+athlete: 70
+confusion_matrix
+['Jerky rep',
+ 'Did not complete rep',
+ 'Did not lock out',
+ 'Bounce off of chest',
+ 'Upper back not tight / elbows out',
+ 'Correct',
+ 'Golden',
+ 'Glutes not engaged',
+ 'Excessive lower back arch',
+ 'Wrists rolled back',
+ 'Left side came up first',
+ 'Did not touch chest',
+ 'Right side came up first']
+[[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+ [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+ [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+ [0, 0, 0, 0, 20, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+ [0, 0, 0, 0, 212, 115, 0, 9, 0, 29, 0, 0, 0, 0, 0],
+ [0, 0, 0, 0, 122, 49, 0, 22, 0, 0, 0, 0, 0, 0, 0],
+ [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+ [0, 0, 0, 0, 38, 4, 0, 2, 0, 0, 0, 0, 0, 0, 0],
+ [0, 0, 0, 0, 7, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+ [0, 0, 0, 0, 15, 15, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+ [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+ [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+ [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+ [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+ [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]]
+precision array
+[0.0, 0.58082191780821912, 0.25388601036269431, 0.045454545454545456, 0.0, 0.0]
+precision avg: 0.146693745604
+recall array
+[0.51207729468599039, 0.26630434782608697, 0.060606060606060608, 0.0]
+recall avg: 0.20974692578
+[0.44444444444444442,
+ 0.5,
+ 0.083333333333333329,
+ 0.69999999999999996,
+ 0.20000000000000001,
+ 0.41666666666666669,
+ 0.10000000000000001,
+ 0.10000000000000001,
+ 0.40740740740740738,
+ 0.0,
+ 1.0,
+ 0.77777777777777779,
+ 0.1111111111111111,
+ 0.0,
+ 0.0,
+ 1.0,
+ 1.0,
+ 1.0,
+ 0.88,
+ 0.5,
+ 0.95999999999999996,
+ 0.53846153846153844,
+ 0.064516129032258063,
+ 0.0,
+ 0.0,
+ 0.52380952380952384,
+ 0.0,
+ 0.69999999999999996,
+ 0.21428571428571427,
+ 0.0,
+ 0.0]
+result_accuracy 0.394252053107
+simple confusion matrix
+[[49, 144], [135, 332]]
+precision array
+[0.25388601036269431, 0.71092077087794436]
+precision avg: 0.48240339062
+recall array
+[0.26630434782608697, 0.69747899159663862]
+recall avg: 0.481891669711
+accuracy: 0.577272727273
+PRESS
+precision array
+[0.5, 0.5, 0.5]
+precision avg: 0.5
+recall array
+[0.5, 0.5, 0.5]
+recall avg: 0.5
+conn.total_changes after set del: 30
+conn.total_changes after athlete del: 31
+current_exercise: 0
+moments
+len moments: 23108
+leave one out vaidation
+athlete: 2
+athlete: 3
+athlete: 4
+athlete: 5
+athlete: 6
+athlete: 7
+athlete: 8
+athlete: 9
+athlete: 10
+athlete: 11
+athlete: 12
+athlete: 13
+athlete: 14
+athlete: 15
+athlete: 16
+athlete: 17
+athlete: 18
+athlete: 19
+athlete: 20
+athlete: 21
+athlete: 22
+athlete: 23
+athlete: 24
+athlete: 25
+athlete: 26
+athlete: 27
+athlete: 28
+athlete: 29
+athlete: 30
+athlete: 31
+athlete: 32
+athlete: 33
+athlete: 34
+athlete: 35
+athlete: 36
+athlete: 37
+athlete: 38
+athlete: 39
+athlete: 40
+athlete: 41
+athlete: 42
+athlete: 43
+athlete: 44
+athlete: 45
+athlete: 46
+athlete: 47
+athlete: 48
+athlete: 49
+athlete: 50
+athlete: 51
+athlete: 52
+athlete: 53
+athlete: 54
+athlete: 55
+athlete: 56
+athlete: 57
+athlete: 58
+athlete: 59
+athlete: 60
+athlete: 61
+athlete: 62
+athlete: 63
+athlete: 64
+athlete: 65
+athlete: 66
+athlete: 67
+athlete: 68
+athlete: 69
+athlete: 70
+confusion_matrix
+['Elbows out',
+ 'Pushed bar away / started too far out',
+ 'Chest/Shoulders/Elbows down',
+ 'Did not complete rep',
+ 'Jerky, uncontrolled rep',
+ 'Right side came up first',
+ "Didn't get under bar",
+ 'Correct',
+ 'Golden',
+ 'Wrists rolled back',
+ 'Too much layback',
+ 'Chest down',
+ 'Left side came up first',
+ "Didn't use hips"]
+[[16, 10, 0, 0, 2, 0, 0, 13, 0, 7, 8, 0, 0, 0, 0],
+ [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+ [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+ [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+ [3, 1, 0, 0, 17, 0, 0, 47, 0, 5, 0, 0, 0, 3, 0],
+ [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+ [10, 0, 0, 0, 0, 0, 0, 11, 0, 0, 0, 0, 0, 0, 0],
+ [14, 5, 0, 0, 38, 0, 17, 197, 0, 4, 5, 0, 0, 4, 0],
+ [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+ [0, 0, 0, 0, 3, 0, 0, 33, 0, 2, 0, 0, 0, 0, 0],
+ [7, 10, 0, 0, 2, 0, 0, 32, 0, 0, 10, 0, 0, 0, 0],
+ [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+ [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+ [0, 0, 0, 0, 0, 0, 0, 19, 0, 0, 0, 0, 0, 0, 0],
+ [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]]
+precision array
+[0.2857142857142857,
+ 0.22368421052631579,
+ 0.0,
+ 0.69366197183098588,
+ 0.052631578947368418,
+ 0.16393442622950818,
+ 0.0]
+precision avg: 0.202803781893
+recall array
+[0.32000000000000001,
+ 0.0,
+ 0.27419354838709675,
+ 0.0,
+ 0.55965909090909094,
+ 0.1111111111111111,
+ 0.43478260869565216,
+ 0.0]
+recall avg: 0.212468294888
+[0.12,
+ 0.5,
+ 0.3125,
+ 0.34375,
+ 0.40000000000000002,
+ 0.0,
+ 0.076923076923076927,
+ 1.0,
+ 0.29999999999999999,
+ 0.43478260869565216,
+ 0.8666666666666667,
+ 0.7142857142857143,
+ 0.0,
+ 1.0,
+ 1.0,
+ 0.69999999999999996,
+ 0.45000000000000001,
+ 1.0,
+ 0.47619047619047616,
+ 0.75,
+ 0.0,
+ 0.5,
+ 0.0,
+ 0.2608695652173913,
+ 0.0]
+result_accuracy 0.448238724319
+simple confusion matrix
+[[197, 87], [155, 116]]
+precision array
+[0.69366197183098588, 0.4280442804428044]
+precision avg: 0.560853126137
+recall array
+[0.55965909090909094, 0.5714285714285714]
+recall avg: 0.565543831169
+accuracy: 0.563963963964
