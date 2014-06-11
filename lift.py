@@ -173,16 +173,16 @@ def leave_one_out(athletes, moments, current_exercise):
 #press
    if current_exercise == 0:
       num_labels = len(LABEL_PRIORITY_PRESS.keys())
-      confusion_matrix = [[0 for x in xrange(num_labels)] for x in xrange(num_labels)]
+      confusion_matrix = [[0 for x in xrange(num_labels+1)] for x in xrange(num_labels+1)]
 #squat
    elif current_exercise == 1:
       num_labels = len(LABEL_PRIORITY_SQUAT.keys())
       #print 'num_labels: '+str(num_labels)
-      confusion_matrix = [[0 for x in xrange(num_labels)] for x in xrange(num_labels)]
+      confusion_matrix = [[0 for x in xrange(num_labels+1)] for x in xrange(num_labels+1)]
 #bench
    else:
       num_labels = len(LABEL_PRIORITY_BENCH.keys())
-      confusion_matrix = [[0 for x in xrange(num_labels)] for x in xrange(num_labels)]
+      confusion_matrix = [[0 for x in xrange(num_labels+1)] for x in xrange(num_labels+1)]
 
    for athlete in athletes:
        print 'athlete: '+str(athlete[0])
@@ -245,7 +245,10 @@ def leave_one_out(athletes, moments, current_exercise):
    result_accuracy = get_accuracy(results)
    print 'result_accuracy '+str(result_accuracy)
 
-   simple_matrix(confusion_matrix, current_exercise)
+   simple = simple_matrix(confusion_matrix, current_exercise)
+   print 'simple confusion matrix'
+   pprint.pprint(simple)
+   
 
 def simple_matrix(confusion_matrix, current_exercise):
    tk = []
@@ -261,12 +264,42 @@ def simple_matrix(confusion_matrix, current_exercise):
 
    correct_index = 0
 
+#   print 'len(simple): '+str(len(simple))
+#   print 'len(simple[0]): '+str(len(simple[0]))
+#   print 'len(confusion_matrix): '+str(len(confusion_matrix))
+#   print 'len(confusion_matrix[0]): '+str(len(confusion_matrix[0]))
+
+#   for i, x in enumerate(tk):
+#      print 'i: '+str(i)
+#      print 'x: '+str(x)
+
+   #set correct diagonal number
    for i, x in enumerate(tk):
       if 'Correct' in x:
          simple[0][0] = confusion_matrix[i][i]
          correct_index = i
 
+   #addition along cols in correct row
    for a, x in enumerate(tk):
+#      print 'a0: '+str(a)
+      if a != correct_index:
+         simple[0][1] += confusion_matrix[correct_index][a]
+  
+   #addition along rows in correct col
+   for a, x in enumerate(tk):
+#      print 'a1: '+str(a)
+      if a != correct_index:
+         simple[1][0] += confusion_matrix[a][correct_index]
+
+   #addition along rows and cols for bottom right
+   for a, x in enumerate(tk):
+      for b, y in enumerate(tk):
+#         print 'a2: '+str(a) + ' b2: '+str(b)
+         if a != correct_index and b != correct_index:
+            simple[1][1] += confusion_matrix[a][b]
+#           simple[1][1] += confusion_matrix[b][a]
+   
+   return simple
 
 
 def get_precision(confusion_matrix):
@@ -277,7 +310,7 @@ def get_precision(confusion_matrix):
       d = 0
       for j, val in enumerate(confusion_matrix[i]):
          d += confusion_matrix[i][j]
-      print 'd: '+str(d)
+#      print 'd: '+str(d)
       if d == 0:
          continue
       precision.append(n * 1.0 / d)
@@ -295,7 +328,7 @@ def get_recall(confusion_matrix):
       d = 0
       for j, val in enumerate(confusion_matrix[i]):
          d += confusion_matrix[j][i]
-      print 'd: '+str(d)
+#      print 'd: '+str(d)
       if d == 0:
          continue
       recall.append(n * 1.0 / d)
