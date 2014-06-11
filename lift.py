@@ -70,7 +70,7 @@ def setup_db_cursor(db_name):
    return conn.cursor(), conn
 
 #v2
-#IGNORE_SETS = [1, 2, 33, 61, 62]
+IGNORE_SETS = [1, 2, 33, 61, 62]
 IGNORE_ATHLETES = [1]
 #0 is ignored/removed from consideration
 #1 - inf is priority. higher the more important
@@ -78,16 +78,16 @@ IGNORE_ATHLETES = [1]
 
 #old ignore sets
 #v1
-IGNORE_SETS = [1, 2, 5, 8, 13, 14, 15, 16, 17, 24, 56, 57,
-58,59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 71, 81, 117,
-      194, 195, 201]
+#IGNORE_SETS = [1, 2, 5, 8, 13, 14, 15, 16, 17, 24, 56, 57,
+#58,59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 71, 81, 117,
+#      194, 195, 201]
 
 LABEL_PRIORITY_BENCH = {
       'Golden' : 1,
       'Correct' : 100,
-#      'Upper back not tight' : 30 , #v2
-#      'Elbows out' : 110, #v2
-      'Upper back not tight / elbows out' : 111, #v1
+      'Upper back not tight' : 30 , #v2
+      'Elbows out' : 110, #v2
+#      'Upper back not tight / elbows out' : 111, #v1
       'Glutes not engaged' : 10,
       'Excessive lower back arch' : 95 ,
       'Bounce off of chest' : 97 ,
@@ -103,16 +103,16 @@ LABEL_PRIORITY_BENCH = {
 LABEL_PRIORITY_SQUAT = {
       'Golden' : 1,
       'Correct' : 100,
-#      'Chin not tucked / head not neutral' : 30, #v2
-      'Chin not tucked' : 31, #v1
+      'Chin not tucked / head not neutral' : 30, #v2
+#      'Chin not tucked' : 31, #v1
       'Upper back round' : 40,
       'Lower back round / butt wink' : 110,
       'Over extension / too vertical' : 70 ,
-#      'Hips out / Chasing with back' : 90 , #v2
-      'Chasing with back' : 91 , #v1
+      'Hips out / Chasing with back' : 90 , #v2
+#      'Chasing with back' : 91 , #v1
       'Hips roll under spine' : 50 ,
       'Did not get to parallel' : 105  , 
-#      'Did not stand all the way up' : 93 , #v2
+      'Did not stand all the way up' : 93 , #v2
       'Knees not spread out' : 75,
       'Heels coming up off of the ground' : 92 ,
       'Wrists rolled back' : 45,
@@ -123,12 +123,11 @@ LABEL_PRIORITY_SQUAT = {
 LABEL_PRIORITY_PRESS = {
       'Golden' : 1,
       'Correct' : 100,
-#      'Chest' : 81 , #v1
-      'Chest down' : 82 , #v1
+#      'Chest down' : 82 , #v1
       'Chest/Shoulders/Elbows down' : 80 ,
       'Didn\'t use hips' : 70 ,
-#      'Pushed the bar away / started too far out' : 75, #v2
-      'Pushed bar away / started too far out' : 76, #v1
+      'Pushed the bar away / started too far out' : 75, #v2
+#      'Pushed bar away / started too far out' : 76, #v1
       'Didn\'t get under bar' : 90,
       'Too much layback' : 95 ,
       'Wrists rolled back' : 73 ,
@@ -153,11 +152,11 @@ def get_moments(cur, conn, exercise_id):
    print 'conn.total_changes after athlete del: '+str(conn.total_changes)
 
    #retrieve rest of sets for particular exercise from db
-#   cur.execute('select s.exercise_id, r._id, r.category, m.timestamp, m.quat_W, m.quat_X, m.quat_Y, m.quat_Z, m.lin_acc_X, m.lin_acc_Y, m.lin_acc_Z, m.corrected_gyro_X, m.corrected_gyro_Y, m.corrected_gyro_Z, m.corrected_acc_X, m.corrected_acc_Y, m.corrected_acc_Z, m.corrected_compass_X, m.corrected_compass_Y, m.corrected_compas_Z, m.raw_gyro_X, m.raw_gyro_Y, m.raw_gyro_Z, m.raw_acc_X, m.raw_acc_Y, m.raw_acc_Z, m.raw_compass_X, m.raw_compass_Y, m.raw_compas_Z,  w.athlete_id from workout_table w inner join set_table s on w._id = s.workout_id inner join rep_table r on s._id = r.set_id inner join moment_table m on r._id = m.rep_id where s.exercise_id = ?;', (exercise_id,))
+   cur.execute('select s.exercise_id, r._id, r.category, m.timestamp, m.quat_W, m.quat_X, m.quat_Y, m.quat_Z, m.lin_acc_X, m.lin_acc_Y, m.lin_acc_Z, m.corrected_gyro_X, m.corrected_gyro_Y, m.corrected_gyro_Z, m.corrected_acc_X, m.corrected_acc_Y, m.corrected_acc_Z, m.corrected_compass_X, m.corrected_compass_Y, m.corrected_compas_Z, m.raw_gyro_X, m.raw_gyro_Y, m.raw_gyro_Z, m.raw_acc_X, m.raw_acc_Y, m.raw_acc_Z, m.raw_compass_X, m.raw_compass_Y, m.raw_compas_Z,  w.athlete_id from workout_table w inner join set_table s on w._id = s.workout_id inner join rep_table r on s._id = r.set_id inner join moment_table m on r._id = m.rep_id where s.exercise_id = ?;', (exercise_id,))
 
 
 #old v1
-   cur.execute('select s.exercise_id, r._id, r.category, m.timestamp, m.euler_angle_X, m.euler_angle_Y, m.euler_angle_Z, m.lin_acc_X, m.lin_acc_Y, m.lin_acc_Z, w.athlete_id from workout_table w inner join set_table s on w._id = s.workout_id inner join rep_table r on s._id = r.set_id inner join moment_table m on r._id = m.rep_id where s.exercise_id = ?;', (exercise_id,))
+#   cur.execute('select s.exercise_id, r._id, r.category, m.timestamp, m.euler_angle_X, m.euler_angle_Y, m.euler_angle_Z, m.lin_acc_X, m.lin_acc_Y, m.lin_acc_Z, w.athlete_id from workout_table w inner join set_table s on w._id = s.workout_id inner join rep_table r on s._id = r.set_id inner join moment_table m on r._id = m.rep_id where s.exercise_id = ?;', (exercise_id,))
 
    moments = cur.fetchall()
    return moments
@@ -413,16 +412,17 @@ def min_max_diff(x):
    min = np.amin(y)
    return max - min
 
-#measure_index_dict = {'time' : 3, 'ow' : 4, 'ox' : 5, 'oy' : 6, 'oz' : 7, 'lx' : 8, 'ly' : 9,
-#      'lz' : 10, 'cgx' : 11, 'cgy' : 12, 'cgz' : 13, 'cax' : 14, 'cay' : 15, 'caz' : 16,
-#      'ccx' : 17, 'ccy' : 18, 'ccz' : 19, 'rgx' : 20, 'rgy' : 21, 'rgz' : 22, 'rax' : 23,
-#      'ray' : 24, 'raz' : 25, 'rcx' : 26, 'rcy' : 27, 'rcz' : 28}
-#dimension_list = range(3,29)
+#v2
+measure_index_dict = {'time' : 3, 'ow' : 4, 'ox' : 5, 'oy' : 6, 'oz' : 7, 'lx' : 8, 'ly' : 9,
+      'lz' : 10, 'cgx' : 11, 'cgy' : 12, 'cgz' : 13, 'cax' : 14, 'cay' : 15, 'caz' : 16,
+      'ccx' : 17, 'ccy' : 18, 'ccz' : 19, 'rgx' : 20, 'rgy' : 21, 'rgz' : 22, 'rax' : 23,
+      'ray' : 24, 'raz' : 25, 'rcx' : 26, 'rcy' : 27, 'rcz' : 28}
+dimension_list = range(3,29)
 
 #v1
-measure_index_dict = {'time' : 3, 'ox' : 4, 'oy' : 5, 'oz' : 6, 'lx' : 7, 'ly' : 8,
-      'lz' : 9 }
-dimension_list = range(3,10)
+#measure_index_dict = {'time' : 3, 'ox' : 4, 'oy' : 5, 'oz' : 6, 'lx' : 7, 'ly' : 8,
+#      'lz' : 9 }
+#dimension_list = range(3,10)
 
 #mean, variance, standard deviation, max, min, amplitude, kurtosis and skewness
 #feature_function_dict = {'mean' : np.mean, 'var' : np.var, 'std' : np.std,
