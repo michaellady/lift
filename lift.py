@@ -52,8 +52,7 @@ def main(argv):
    if args.one:
       print 'leave one out vaidation'
       athletes = get_athletes(cur, conn)
-      result_accuracy = leave_one_out(athletes, moments, current_exercise)
-      print 'result_accuracy '+str(result_accuracy)
+      leave_one_out(athletes, moments, current_exercise)
    else:
        data_target_list = get_data_target_list(moments, current_exercise)
        data_target_list = prune_data_target_list(data_target_list)
@@ -244,7 +243,25 @@ def leave_one_out(athletes, moments, current_exercise):
    get_recall(confusion_matrix)
 
    result_accuracy = get_accuracy(results)
-   return result_accuracy
+   print 'result_accuracy '+str(result_accuracy)
+
+   simple_matrix(confusion_matrix, current_exercise)
+
+def simple_matrix(confusion_matrix, current_exercise):
+   tk = []
+   simple = [[0,0],[0,0]]
+   if current_exercise == 0:
+      tk = LABEL_PRIORITY_PRESS.keys()
+
+   if current_exercise == 1:
+      tk = LABEL_PRIORITY_BENCH.keys()
+
+   if current_exercise == 2:
+      tk = LABEL_PRIORITY_SQUAT.keys()
+
+   for i, x in tk:
+      if 'Correct' in x:
+         simple[0][0] = confusion_matrix[i][i]
 
 def get_precision(confusion_matrix):
    precision = []
