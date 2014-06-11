@@ -112,8 +112,8 @@ LABEL_PRIORITY_SQUAT = {
 #      'Hips out / Chasing with back' : 90 , #v2
       'Chasing with back' : 91 , #v1
       'Hips roll under spine' : 50 ,
-      'Did not get to parallel' : 105  ,
-      'Did not stand all the way up' : 93 ,
+      'Did not get to parallel' : 105  , 
+#      'Did not stand all the way up' : 93 , #v2
       'Knees not spread out' : 75,
       'Heels coming up off of the ground' : 92 ,
       'Wrists rolled back' : 45,
@@ -243,7 +243,8 @@ def leave_one_out(athletes, moments, current_exercise):
    get_precision(confusion_matrix)
    get_recall(confusion_matrix)
 
-   return get_accuracy(results)
+   result_accuracy = get_accuracy(results)
+   return result_accuracy
 
 def get_precision(confusion_matrix):
    precision = []
