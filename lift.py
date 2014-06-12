@@ -301,7 +301,7 @@ def simple_matrix(confusion_matrix, current_exercise):
    
    return simple
 
-
+#really recall
 def get_precision(confusion_matrix):
    precision = []
 
@@ -315,11 +315,12 @@ def get_precision(confusion_matrix):
          continue
       precision.append(n * 1.0 / d)
 
-   print 'precision array'
+   print 'recall array'
    pprint.pprint(precision)
    avg = np.mean(precision)
-   print 'precision avg: '+str(avg)
+   print 'recall avg: '+str(avg)
 
+#really precision
 def get_recall(confusion_matrix):
    recall = []
 
@@ -333,10 +334,10 @@ def get_recall(confusion_matrix):
          continue
       recall.append(n * 1.0 / d)
 
-   print 'recall array'
+   print 'precision array'
    pprint.pprint(recall)
    avg = np.mean(recall)
-   print 'recall avg: '+str(avg)
+   print 'precision avg: '+str(avg)
 
 
 
