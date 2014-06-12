@@ -2,6 +2,7 @@ from sklearn import svm, datasets
 from sklearn.cross_validation import train_test_split
 from sklearn.metrics import confusion_matrix
 import numpy as np
+import matplotlib.pyplot as plt
 import sys
 import pprint
 
@@ -24,16 +25,26 @@ def main(argv):
                      [0, 0, 0, 0, 0, 0, 0, 10, 0, 0, 0, 0, 0, 0],
                       [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]])
    cm = cm.transpose()
-   #print 'cm transpose()'
-   #pprint.pprint(cm)
+#   #print 'cm transpose()'
+#   #pprint.pprint(cm)
    cm = normalize(cm)
-   # Show confusion matrix in a separate window
-   pl.matshow(cm)
-   pl.colorbar()
-   pl.title('Squat v1 Full Normalized Confusion Matrix')
-   pl.ylabel('True label')
-   pl.xlabel('Predicted label')
-   pl.show()
+#   # Show confusion matrix in a separate window
+   fig = plt.figure()
+   ax = fig.add_subplot(111)
+   cax = ax.matshow(cm, interpolation='nearest', vmin = 0, vmax = 1)
+   fig.colorbar(cax)
+   plt.title('Squat v1 Full Normalized Confusion Matrix')
+   plt.ylabel('True label')
+   plt.xlabel('Predicted label')
+   plt.show()
+
+
+#   pl.matshow(cm)
+#   pl.colorbar()
+#   pl.title('Squat v1 Full Normalized Confusion Matrix')
+#   pl.ylabel('True label')
+#   pl.xlabel('Predicted label')
+#   pl.show()
 
    #squat v1 simple
    cm = np.array([[121, 32], [86, 45]]) 
@@ -42,12 +53,15 @@ def main(argv):
    #pprint.pprint(cm)
    cm = normalize(cm)
    # Show confusion matrix in a separate window
-   pl.matshow(cm)
-   pl.colorbar()
-   pl.title('Squat v1 Simple Confusion Matrix')
-   pl.ylabel('True label')
-   pl.xlabel('Predicted label')
-   pl.show()
+
+   fig = plt.figure()
+   ax = fig.add_subplot(111)
+   cax = ax.matshow(cm, interpolation='nearest', vmin = 0, vmax = 1)
+   fig.colorbar(cax)
+   plt.title('Squat v1 Simple Normalized Confusion Matrix')
+   plt.ylabel('True label')
+   plt.xlabel('Predicted label')
+   plt.show()
 
    #bench v1 full
    cm = np.array([[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
@@ -84,12 +98,14 @@ def main(argv):
    #pprint.pprint(cm)
    cm = normalize(cm)
    # Show confusion matrix in a separate window
-   pl.matshow(cm)
-   pl.colorbar()
-   pl.title('Bench v1 Simple Confusion Matrix')
-   pl.ylabel('True label')
-   pl.xlabel('Predicted label')
-   pl.show()
+   fig = plt.figure()
+   ax = fig.add_subplot(111)
+   cax = ax.matshow(cm, interpolation='nearest', vmin = 0, vmax = 1)
+   fig.colorbar(cax)
+   plt.title('Bench v1 Simple Normalized Confusion Matrix')
+   plt.ylabel('True label')
+   plt.xlabel('Predicted label')
+   plt.show()
 
    #press v1 full
    cm = np.array([[16, 10, 0, 0, 2, 0, 0, 13, 0, 7, 8, 0, 0, 0, 0],
@@ -112,12 +128,14 @@ def main(argv):
    #pprint.pprint(cm)
    cm = normalize(cm)
    # Show confusion matrix in a separate window
-   pl.matshow(cm)
-   pl.colorbar()
-   pl.title('Press v1 Full Normalized Confusion Matrix')
-   pl.ylabel('True label')
-   pl.xlabel('Predicted label')
-   pl.show()
+   fig = plt.figure()
+   ax = fig.add_subplot(111)
+   cax = ax.matshow(cm, interpolation='nearest', vmin = 0, vmax = 1)
+   fig.colorbar(cax)
+   plt.title('Press v1 Full Normalized Confusion Matrix')
+   plt.ylabel('True label')
+   plt.xlabel('Predicted label')
+   plt.show()
 
    #press v1 simple
    cm = np.array([[197, 87], [155, 116]])
@@ -126,12 +144,15 @@ def main(argv):
    #pprint.pprint(cm)
    cm = normalize(cm)
    # Show confusion matrix in a separate window
-   pl.matshow(cm)
-   pl.colorbar()
-   pl.title('Press v1 Simple Confusion Matrix')
-   pl.ylabel('True label')
-   pl.xlabel('Predicted label')
-   pl.show()
+
+   fig = plt.figure()
+   ax = fig.add_subplot(111)
+   cax = ax.matshow(cm, interpolation='nearest', vmin = 0, vmax = 1)
+   fig.colorbar(cax)
+   plt.title('Press v1 Simple Normalized Confusion Matrix')
+   plt.ylabel('True label')
+   plt.xlabel('Predicted label')
+   plt.show()
 
    #squat v2 full
    cm = np.array([[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
@@ -154,12 +175,15 @@ def main(argv):
    #pprint.pprint(cm)
    cm = normalize(cm)
    # Show confusion matrix in a separate window
-   pl.matshow(cm)
-   pl.colorbar()
-   pl.title('Squat v2 Full Normalized Confusion Matrix')
-   pl.ylabel('True label')
-   pl.xlabel('Predicted label')
-   pl.show()
+   fig = plt.figure()
+   ax = fig.add_subplot(111)
+   cax = ax.matshow(cm, interpolation='nearest', vmin = 0, vmax = 1)
+   fig.colorbar(cax)
+
+   plt.title('Squat v2 Full Normalized Confusion Matrix')
+   plt.ylabel('True label')
+   plt.xlabel('Predicted label')
+   plt.show()
 
    #squat v2 simple
    cm = np.array([[57, 32], [82, 212]])
@@ -168,12 +192,15 @@ def main(argv):
    #pprint.pprint(cm)
    cm = normalize(cm)
    # Show confusion matrix in a separate window
-   pl.matshow(cm)
-   pl.colorbar()
-   pl.title('Squat v2 Simple Confusion Matrix')
-   pl.ylabel('True label')
-   pl.xlabel('Predicted label')
-   pl.show()
+   fig = plt.figure()
+   ax = fig.add_subplot(111)
+   cax = ax.matshow(cm, interpolation='nearest', vmin = 0, vmax = 1)
+   fig.colorbar(cax)
+
+   plt.title('Squat v2 Simple Normalized Confusion Matrix')
+   plt.ylabel('True label')
+   plt.xlabel('Predicted label')
+   plt.show()
 
    #bench v2 full
    cm = np.array([[212, 0, 0, 0, 22, 19, 0, 26, 0, 1, 0, 0, 16, 0, 0, 0],
@@ -197,12 +224,15 @@ def main(argv):
    #pprint.pprint(cm)
    cm = normalize(cm)
    # Show confusion matrix in a separate window
-   pl.matshow(cm)
-   pl.colorbar()
-   pl.title('Bench v2 Full Normalized Confusion Matrix')
-   pl.ylabel('True label')
-   pl.xlabel('Predicted label')
-   pl.show()
+   fig = plt.figure()
+   ax = fig.add_subplot(111)
+   cax = ax.matshow(cm, interpolation='nearest', vmin = 0, vmax = 1)
+   fig.colorbar(cax)
+
+   plt.title('Bench v2 Full Normalized Confusion Matrix')
+   plt.ylabel('True label')
+   plt.xlabel('Predicted label')
+   plt.show()
 
    #bench v2 simple
    cm = np.array([[1, 82], [22, 385]])
@@ -211,12 +241,10 @@ def main(argv):
    #pprint.pprint(cm)
    cm = normalize(cm)
    # Show confusion matrix in a separate window
-   pl.matshow(cm)
-   pl.colorbar()
-   pl.title('Bench v2 Simple Confusion Matrix')
-   pl.ylabel('True label')
-   pl.xlabel('Predicted label')
-   pl.show()
+   plt.title('Bench v2 Simple Normalized Confusion Matrix')
+   plt.ylabel('True label')
+   plt.xlabel('Predicted label')
+   plt.show()
 
    #bench alt priorities full
 
