@@ -30,11 +30,20 @@ def main(argv):
 #   cm = cm.transpose()
 #   #print 'cm transpose()'
 #   #pprint.pprint(cm)
-   cm = normalize(cm)
+   cm_n = normalize(cm)
 #   # Show confusion matrix in a separate window
    fig = plt.figure()
    ax = fig.add_subplot(111)
-   cax = ax.matshow(cm, interpolation='nearest', vmin = 0, vmax = 1)
+
+   width = len(cm)
+   height = len(cm[0])
+   for x in xrange(width):
+      for y in xrange(height):
+         if cm[x][y] > 0:
+           ax.annotate(str(cm[x][y]), xy=(y, x), 
+                  horizontalalignment='center',
+                  verticalalignment='center')
+   cax = ax.matshow(cm_n, interpolation='nearest', vmin = 0, vmax = 1)
    fig.colorbar(cax)
    plt.title('Squat v1 Full Normalized Confusion Matrix')
    plt.ylabel('True label')
@@ -54,12 +63,21 @@ def main(argv):
 #   cm = cm.transpose()
    #print 'cm transpose()'
    #pprint.pprint(cm)
-   cm = normalize(cm)
+   cm_n = normalize(cm)
    # Show confusion matrix in a separate window
 
    fig = plt.figure()
    ax = fig.add_subplot(111)
-   cax = ax.matshow(cm, interpolation='nearest', vmin = 0, vmax = 1)
+   width = len(cm)
+   height = len(cm[0])
+   for x in xrange(width):
+      for y in xrange(height):
+         if cm[x][y] > 0:
+           ax.annotate(str(cm[x][y]), xy=(y, x), 
+                  horizontalalignment='center',
+                  verticalalignment='center')
+
+   cax = ax.matshow(cm_n, interpolation='nearest', vmin = 0, vmax = 1)
    fig.colorbar(cax)
    plt.title('Squat v1 Simple Normalized Confusion Matrix')
    plt.ylabel('True label')
@@ -85,25 +103,45 @@ def main(argv):
 #   cm = cm.transpose()
    #print 'cm transpose()'
    #pprint.pprint(cm)
-   cm = normalize(cm)
+   cm_n = normalize(cm)
    # Show confusion matrix in a separate window
-   pl.matshow(cm)
-   pl.colorbar()
-   pl.title('Bench v1 Full Normalized Confusion Matrix')
-   pl.ylabel('True label')
-   pl.xlabel('Predicted label')
-   pl.show()
+   fig = plt.figure()
+   ax = fig.add_subplot(111)
+   width = len(cm)
+   height = len(cm[0])
+   for x in xrange(width):
+      for y in xrange(height):
+         if cm[x][y] > 0:
+           ax.annotate(str(cm[x][y]), xy=(y, x), 
+                  horizontalalignment='center',
+                  verticalalignment='center')
+
+   cax = ax.matshow(cm_n, interpolation='nearest', vmin = 0, vmax = 1)
+   fig.colorbar(cax)
+   plt.title('Bench v1 Full Normalized Confusion Matrix')
+   plt.ylabel('True label')
+   plt.xlabel('Predicted label')
+   plt.show()
 
    #bench v1 simple
    cm = np.array([[49, 144], [135, 332]])
 #   cm = cm.transpose()
    #print 'cm transpose()'
    #pprint.pprint(cm)
-   cm = normalize(cm)
+   cm_n = normalize(cm)
    # Show confusion matrix in a separate window
    fig = plt.figure()
    ax = fig.add_subplot(111)
-   cax = ax.matshow(cm, interpolation='nearest', vmin = 0, vmax = 1)
+   width = len(cm)
+   height = len(cm[0])
+   for x in xrange(width):
+      for y in xrange(height):
+         if cm[x][y] > 0:
+           ax.annotate(str(cm[x][y]), xy=(y, x), 
+                  horizontalalignment='center',
+                  verticalalignment='center')
+
+   cax = ax.matshow(cm_n, interpolation='nearest', vmin = 0, vmax = 1)
    fig.colorbar(cax)
    plt.title('Bench v1 Simple Normalized Confusion Matrix')
    plt.ylabel('True label')
@@ -129,11 +167,20 @@ def main(argv):
 #   cm = cm.transpose()
    #print 'cm transpose()'
    #pprint.pprint(cm)
-   cm = normalize(cm)
+   cm_n = normalize(cm)
    # Show confusion matrix in a separate window
    fig = plt.figure()
    ax = fig.add_subplot(111)
-   cax = ax.matshow(cm, interpolation='nearest', vmin = 0, vmax = 1)
+   width = len(cm)
+   height = len(cm[0])
+   for x in xrange(width):
+      for y in xrange(height):
+         if cm[x][y] > 0:
+           ax.annotate(str(cm[x][y]), xy=(y, x), 
+                  horizontalalignment='center',
+                  verticalalignment='center')
+
+   cax = ax.matshow(cm_n, interpolation='nearest', vmin = 0, vmax = 1)
    fig.colorbar(cax)
    plt.title('Press v1 Full Normalized Confusion Matrix')
    plt.ylabel('True label')
@@ -145,12 +192,21 @@ def main(argv):
 #   cm = cm.transpose()
    #print 'cm transpose()'
    #pprint.pprint(cm)
-   cm = normalize(cm)
+   cm_n = normalize(cm)
    # Show confusion matrix in a separate window
 
    fig = plt.figure()
    ax = fig.add_subplot(111)
-   cax = ax.matshow(cm, interpolation='nearest', vmin = 0, vmax = 1)
+   width = len(cm)
+   height = len(cm[0])
+   for x in xrange(width):
+      for y in xrange(height):
+         if cm[x][y] > 0:
+           ax.annotate(str(cm[x][y]), xy=(y, x), 
+                  horizontalalignment='center',
+                  verticalalignment='center')
+
+   cax = ax.matshow(cm_n, interpolation='nearest', vmin = 0, vmax = 1)
    fig.colorbar(cax)
    plt.title('Press v1 Simple Normalized Confusion Matrix')
    plt.ylabel('True label')
@@ -176,13 +232,21 @@ def main(argv):
 #   cm = cm.transpose()
    #print 'cm transpose()'
    #pprint.pprint(cm)
-   cm = normalize(cm)
+   cm_n = normalize(cm)
    # Show confusion matrix in a separate window
    fig = plt.figure()
    ax = fig.add_subplot(111)
-   cax = ax.matshow(cm, interpolation='nearest', vmin = 0, vmax = 1)
-   fig.colorbar(cax)
+   width = len(cm)
+   height = len(cm[0])
+   for x in xrange(width):
+      for y in xrange(height):
+         if cm[x][y] > 0:
+           ax.annotate(str(cm[x][y]), xy=(y, x), 
+                  horizontalalignment='center',
+                  verticalalignment='center')
 
+   cax = ax.matshow(cm_n, interpolation='nearest', vmin = 0, vmax = 1)
+   fig.colorbar(cax)
    plt.title('Squat v2 Full Normalized Confusion Matrix')
    plt.ylabel('True label')
    plt.xlabel('Predicted label')
@@ -193,13 +257,21 @@ def main(argv):
 #   cm = cm.transpose()
    #print 'cm transpose()'
    #pprint.pprint(cm)
-   cm = normalize(cm)
+   cm_n = normalize(cm)
    # Show confusion matrix in a separate window
    fig = plt.figure()
    ax = fig.add_subplot(111)
-   cax = ax.matshow(cm, interpolation='nearest', vmin = 0, vmax = 1)
-   fig.colorbar(cax)
+   width = len(cm)
+   height = len(cm[0])
+   for x in xrange(width):
+      for y in xrange(height):
+         if cm[x][y] > 0:
+           ax.annotate(str(cm[x][y]), xy=(y, x), 
+                  horizontalalignment='center',
+                  verticalalignment='center')
 
+   cax = ax.matshow(cm_n, interpolation='nearest', vmin = 0, vmax = 1)
+   fig.colorbar(cax)
    plt.title('Squat v2 Simple Normalized Confusion Matrix')
    plt.ylabel('True label')
    plt.xlabel('Predicted label')
@@ -225,13 +297,21 @@ def main(argv):
 #   cm = cm.transpose()
    #print 'cm transpose()'
    #pprint.pprint(cm)
-   cm = normalize(cm)
+   cm_n = normalize(cm)
    # Show confusion matrix in a separate window
    fig = plt.figure()
    ax = fig.add_subplot(111)
-   cax = ax.matshow(cm, interpolation='nearest', vmin = 0, vmax = 1)
-   fig.colorbar(cax)
+   width = len(cm)
+   height = len(cm[0])
+   for x in xrange(width):
+      for y in xrange(height):
+         if cm[x][y] > 0:
+           ax.annotate(str(cm[x][y]), xy=(y, x), 
+                  horizontalalignment='center',
+                  verticalalignment='center')
 
+   cax = ax.matshow(cm_n, interpolation='nearest', vmin = 0, vmax = 1)
+   fig.colorbar(cax)
    plt.title('Bench v2 Full Normalized Confusion Matrix')
    plt.ylabel('True label')
    plt.xlabel('Predicted label')
@@ -242,13 +322,21 @@ def main(argv):
 #   cm = cm.transpose()
    #print 'cm transpose()'
    #pprint.pprint(cm)
-   cm = normalize(cm)
+   cm_n = normalize(cm)
    # Show confusion matrix in a separate window
    fig = plt.figure()
    ax = fig.add_subplot(111)
-   cax = ax.matshow(cm, interpolation='nearest', vmin = 0, vmax = 1)
-   fig.colorbar(cax)
+   width = len(cm)
+   height = len(cm[0])
+   for x in xrange(width):
+      for y in xrange(height):
+         if cm[x][y] > 0:
+           ax.annotate(str(cm[x][y]), xy=(y, x), 
+                  horizontalalignment='center',
+                  verticalalignment='center')
 
+   cax = ax.matshow(cm_n, interpolation='nearest', vmin = 0, vmax = 1)
+   fig.colorbar(cax)
    plt.title('Bench v2 Simple Normalized Confusion Matrix')
    plt.ylabel('True label')
    plt.xlabel('Predicted label')
