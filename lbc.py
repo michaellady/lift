@@ -9,6 +9,9 @@ import pprint
 import pylab as pl
 
 def main(argv):
+
+
+
    #squat v1 full
    cm = np.array([[0, 0, 0, 0, 0, 0, 0, 12, 0, 0, 0, 0, 0, 0],
           [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
@@ -241,6 +244,11 @@ def main(argv):
    #pprint.pprint(cm)
    cm = normalize(cm)
    # Show confusion matrix in a separate window
+   fig = plt.figure()
+   ax = fig.add_subplot(111)
+   cax = ax.matshow(cm, interpolation='nearest', vmin = 0, vmax = 1)
+   fig.colorbar(cax)
+
    plt.title('Bench v2 Simple Normalized Confusion Matrix')
    plt.ylabel('True label')
    plt.xlabel('Predicted label')
