@@ -30,13 +30,13 @@ def main(argv):
    # Show confusion matrix in a separate window
    pl.matshow(cm)
    pl.colorbar()
-   pl.title('Squat v1 Full Confusion Matrix')
-   pl.ylabel('Predicted label')
-   pl.xlabel('True label')
+   pl.title('Squat v1 Full Normalized Confusion Matrix')
+   pl.ylabel('True label')
+   pl.xlabel('Predicted label')
    pl.show()
 
    #squat v1 simple
-   cm = [[121, 32], [86, 45]] 
+   cm = np.array([[121, 32], [86, 45]]) 
    cm = cm.transpose()
    #print 'cm transpose()'
    #pprint.pprint(cm)
@@ -45,12 +45,12 @@ def main(argv):
    pl.matshow(cm)
    pl.colorbar()
    pl.title('Squat v1 Simple Confusion Matrix')
-   pl.ylabel('Predicted label')
-   pl.xlabel('True label')
+   pl.ylabel('True label')
+   pl.xlabel('Predicted label')
    pl.show()
 
    #bench v1 full
-   cm = [[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+   cm = np.array([[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
           [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
            [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
             [0, 0, 0, 0, 20, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0],
@@ -64,7 +64,7 @@ def main(argv):
                     [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
                      [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
                       [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-                       [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]]
+                       [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]])
    cm = cm.transpose()
    #print 'cm transpose()'
    #pprint.pprint(cm)
@@ -72,13 +72,13 @@ def main(argv):
    # Show confusion matrix in a separate window
    pl.matshow(cm)
    pl.colorbar()
-   pl.title('Bench v1 Full Confusion Matrix')
-   pl.ylabel('Predicted label')
-   pl.xlabel('True label')
+   pl.title('Bench v1 Full Normalized Confusion Matrix')
+   pl.ylabel('True label')
+   pl.xlabel('Predicted label')
    pl.show()
 
    #bench v1 simple
-   cm = [[49, 144], [135, 332]]
+   cm = np.array([[49, 144], [135, 332]])
    cm = cm.transpose()
    #print 'cm transpose()'
    #pprint.pprint(cm)
@@ -87,12 +87,12 @@ def main(argv):
    pl.matshow(cm)
    pl.colorbar()
    pl.title('Bench v1 Simple Confusion Matrix')
-   pl.ylabel('Predicted label')
-   pl.xlabel('True label')
+   pl.ylabel('True label')
+   pl.xlabel('Predicted label')
    pl.show()
 
    #press v1 full
-   cm = [[16, 10, 0, 0, 2, 0, 0, 13, 0, 7, 8, 0, 0, 0, 0],
+   cm = np.array([[16, 10, 0, 0, 2, 0, 0, 13, 0, 7, 8, 0, 0, 0, 0],
           [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
            [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
             [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
@@ -106,7 +106,7 @@ def main(argv):
                     [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
                      [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
                       [0, 0, 0, 0, 0, 0, 0, 19, 0, 0, 0, 0, 0, 0, 0],
-                       [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]]
+                       [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]])
    cm = cm.transpose()
    #print 'cm transpose()'
    #pprint.pprint(cm)
@@ -114,13 +114,13 @@ def main(argv):
    # Show confusion matrix in a separate window
    pl.matshow(cm)
    pl.colorbar()
-   pl.title('Press v1 Full Confusion Matrix')
-   pl.ylabel('Predicted label')
-   pl.xlabel('True label')
+   pl.title('Press v1 Full Normalized Confusion Matrix')
+   pl.ylabel('True label')
+   pl.xlabel('Predicted label')
    pl.show()
 
    #press v1 simple
-   cm = [[197, 87], [155, 116]]
+   cm = np.array([[197, 87], [155, 116]])
    cm = cm.transpose()
    #print 'cm transpose()'
    #pprint.pprint(cm)
@@ -129,12 +129,12 @@ def main(argv):
    pl.matshow(cm)
    pl.colorbar()
    pl.title('Press v1 Simple Confusion Matrix')
-   pl.ylabel('Predicted label')
-   pl.xlabel('True label')
+   pl.ylabel('True label')
+   pl.xlabel('Predicted label')
    pl.show()
 
    #squat v2 full
-   cm = [[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+   cm = np.array([[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
           [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
            [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
             [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
@@ -148,7 +148,7 @@ def main(argv):
                     [0, 0, 0, 0, 13, 0, 0, 0, 62, 0, 0, 95, 0, 0, 0],
                      [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 85, 8, 0, 0],
                       [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-                       [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]]
+                       [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]])
    cm = cm.transpose()
    #print 'cm transpose()'
    #pprint.pprint(cm)
@@ -156,13 +156,13 @@ def main(argv):
    # Show confusion matrix in a separate window
    pl.matshow(cm)
    pl.colorbar()
-   pl.title('Squat v2 Full Confusion Matrix')
-   pl.ylabel('Predicted label')
-   pl.xlabel('True label')
+   pl.title('Squat v2 Full Normalized Confusion Matrix')
+   pl.ylabel('True label')
+   pl.xlabel('Predicted label')
    pl.show()
 
    #squat v2 simple
-   cm = [[57, 32], [82, 212]]
+   cm = np.array([[57, 32], [82, 212]])
    cm = cm.transpose()
    #print 'cm transpose()'
    #pprint.pprint(cm)
@@ -171,12 +171,12 @@ def main(argv):
    pl.matshow(cm)
    pl.colorbar()
    pl.title('Squat v2 Simple Confusion Matrix')
-   pl.ylabel('Predicted label')
-   pl.xlabel('True label')
+   pl.ylabel('True label')
+   pl.xlabel('Predicted label')
    pl.show()
 
    #bench v2 full
-   cm = [[212, 0, 0, 0, 22, 19, 0, 26, 0, 1, 0, 0, 16, 0, 0, 0],
+   cm = np.array([[212, 0, 0, 0, 22, 19, 0, 26, 0, 1, 0, 0, 16, 0, 0, 0],
           [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
            [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
             [16, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
@@ -191,7 +191,7 @@ def main(argv):
                      [7, 0, 0, 0, 0, 0, 0, 18, 0, 0, 0, 0, 0, 0, 0, 0],
                       [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
                        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-                        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]]
+                        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]])
    cm = cm.transpose()
    #print 'cm transpose()'
    #pprint.pprint(cm)
@@ -199,13 +199,13 @@ def main(argv):
    # Show confusion matrix in a separate window
    pl.matshow(cm)
    pl.colorbar()
-   pl.title('Bench v2 Full Confusion Matrix')
-   pl.ylabel('Predicted label')
-   pl.xlabel('True label')
+   pl.title('Bench v2 Full Normalized Confusion Matrix')
+   pl.ylabel('True label')
+   pl.xlabel('Predicted label')
    pl.show()
 
    #bench v2 simple
-   cm = [[1, 82], [22, 385]]
+   cm = np.array([[1, 82], [22, 385]])
    cm = cm.transpose()
    #print 'cm transpose()'
    #pprint.pprint(cm)
@@ -214,8 +214,8 @@ def main(argv):
    pl.matshow(cm)
    pl.colorbar()
    pl.title('Bench v2 Simple Confusion Matrix')
-   pl.ylabel('Predicted label')
-   pl.xlabel('True label')
+   pl.ylabel('True label')
+   pl.xlabel('Predicted label')
    pl.show()
 
    #bench alt priorities full
