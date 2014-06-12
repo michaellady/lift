@@ -1,0 +1,1964 @@
+SQUAT
+precision array
+[0.5, 0.5, 0.5]
+precision avg: 0.5
+recall array
+[0.5, 0.5, 0.5]
+recall avg: 0.5
+conn.total_changes after set del: 30
+conn.total_changes after athlete del: 31
+current_exercise: 2
+moments
+len moments: 13072
+leave one out vaidation
+athlete: 2
+athlete: 3
+athlete: 4
+athlete: 5
+athlete: 6
+athlete: 7
+athlete: 8
+athlete: 9
+athlete: 10
+athlete: 11
+y_pred[0] = Correct, y_test[0] = Wrists rolled back
+y_pred[1] = Correct, y_test[1] = Wrists rolled back
+y_pred[2] = Correct, y_test[2] = Wrists rolled back
+y_pred[3] = Correct, y_test[3] = Wrists rolled back
+y_pred[4] = Correct, y_test[4] = Wrists rolled back
+y_pred[5] = Correct, y_test[5] = Chin not tucked
+y_pred[6] = Correct, y_test[6] = Chin not tucked
+y_pred[7] = Correct, y_test[7] = Chin not tucked
+y_pred[8] = Correct, y_test[8] = Chin not tucked
+y_pred[9] = Correct, y_test[9] = Chin not tucked
+y_pred[10] = Correct, y_test[10] = Wrists rolled back
+y_pred[11] = Correct, y_test[11] = Wrists rolled back
+y_pred[12] = Correct, y_test[12] = Wrists rolled back
+y_pred[13] = Correct, y_test[13] = Wrists rolled back
+y_pred[14] = Correct, y_test[14] = Wrists rolled back
+y_pred[15] = Correct, y_test[15] = Wrists rolled back
+y_pred[16] = Correct, y_test[16] = Wrists rolled back
+y_pred[17] = Correct, y_test[17] = Wrists rolled back
+y_pred[18] = Correct, y_test[18] = Wrists rolled back
+y_pred[19] = Correct, y_test[19] = Wrists rolled back
+y_pred[20] = Correct, y_test[20] = Wrists rolled back
+y_pred[21] = Correct, y_test[21] = Wrists rolled back
+y_pred[22] = Correct, y_test[22] = Wrists rolled back
+y_pred[23] = Correct, y_test[23] = Wrists rolled back
+y_pred[24] = Correct, y_test[24] = Wrists rolled back
+athlete: 12
+y_pred[0] = Correct, y_test[0] = Lower back round / butt wink
+y_pred[1] = Correct, y_test[1] = Lower back round / butt wink
+y_pred[2] = Correct, y_test[2] = Lower back round / butt wink
+y_pred[3] = Correct, y_test[3] = Lower back round / butt wink
+y_pred[4] = Correct, y_test[4] = Lower back round / butt wink
+y_pred[5] = Correct, y_test[5] = Lower back round / butt wink
+y_pred[6] = Correct, y_test[6] = Lower back round / butt wink
+y_pred[7] = Correct, y_test[7] = Lower back round / butt wink
+y_pred[8] = Correct, y_test[8] = Lower back round / butt wink
+y_pred[9] = Correct, y_test[9] = Lower back round / butt wink
+y_pred[10] = Correct, y_test[10] = Lower back round / butt wink
+y_pred[11] = Correct, y_test[11] = Lower back round / butt wink
+y_pred[12] = Correct, y_test[12] = Lower back round / butt wink
+y_pred[13] = Correct, y_test[13] = Lower back round / butt wink
+y_pred[14] = Correct, y_test[14] = Lower back round / butt wink
+y_pred[15] = Correct, y_test[15] = Correct
+y_pred[16] = Correct, y_test[16] = Correct
+y_pred[17] = Correct, y_test[17] = Correct
+y_pred[18] = Correct, y_test[18] = Correct
+y_pred[19] = Correct, y_test[19] = Correct
+y_pred[20] = Correct, y_test[20] = Correct
+y_pred[21] = Correct, y_test[21] = Correct
+y_pred[22] = Correct, y_test[22] = Correct
+y_pred[23] = Correct, y_test[23] = Correct
+y_pred[24] = Correct, y_test[24] = Correct
+athlete: 13
+y_pred[0] = Correct, y_test[0] = Knees not spread out
+y_pred[1] = Correct, y_test[1] = Knees not spread out
+y_pred[2] = Correct, y_test[2] = Knees not spread out
+y_pred[3] = Correct, y_test[3] = Lower back round / butt wink
+y_pred[4] = Correct, y_test[4] = Lower back round / butt wink
+y_pred[5] = Correct, y_test[5] = Knees not spread out
+y_pred[6] = Correct, y_test[6] = Knees not spread out
+y_pred[7] = Correct, y_test[7] = Knees not spread out
+y_pred[8] = Correct, y_test[8] = Heels coming up off of the ground
+y_pred[9] = Correct, y_test[9] = Heels coming up off of the ground
+y_pred[10] = Correct, y_test[10] = Lower back round / butt wink
+y_pred[11] = Correct, y_test[11] = Chin not tucked
+y_pred[12] = Correct, y_test[12] = Chin not tucked
+y_pred[13] = Correct, y_test[13] = Lower back round / butt wink
+y_pred[14] = Correct, y_test[14] = Lower back round / butt wink
+athlete: 14
+y_pred[0] = Correct, y_test[0] = Correct
+y_pred[1] = Correct, y_test[1] = Correct
+y_pred[2] = Correct, y_test[2] = Correct
+y_pred[3] = Correct, y_test[3] = Correct
+y_pred[4] = Correct, y_test[4] = Correct
+y_pred[5] = Correct, y_test[5] = Correct
+y_pred[6] = Correct, y_test[6] = Correct
+y_pred[7] = Correct, y_test[7] = Correct
+y_pred[8] = Correct, y_test[8] = Correct
+y_pred[9] = Correct, y_test[9] = Correct
+y_pred[10] = Correct, y_test[10] = Correct
+y_pred[11] = Correct, y_test[11] = Correct
+y_pred[12] = Correct, y_test[12] = Correct
+y_pred[13] = Correct, y_test[13] = Correct
+y_pred[14] = Correct, y_test[14] = Correct
+y_pred[15] = Correct, y_test[15] = Correct
+y_pred[16] = Correct, y_test[16] = Correct
+y_pred[17] = Correct, y_test[17] = Correct
+y_pred[18] = Correct, y_test[18] = Correct
+y_pred[19] = Correct, y_test[19] = Correct
+y_pred[20] = Correct, y_test[20] = Correct
+y_pred[21] = Correct, y_test[21] = Heels coming up off of the ground
+y_pred[22] = Correct, y_test[22] = Heels coming up off of the ground
+y_pred[23] = Correct, y_test[23] = Correct
+y_pred[24] = Correct, y_test[24] = Correct
+y_pred[25] = Correct, y_test[25] = Heels coming up off of the ground
+athlete: 15
+y_pred[0] = Correct, y_test[0] = Correct
+y_pred[1] = Correct, y_test[1] = Correct
+y_pred[2] = Correct, y_test[2] = Correct
+y_pred[3] = Correct, y_test[3] = Correct
+y_pred[4] = Correct, y_test[4] = Correct
+y_pred[5] = Correct, y_test[5] = Correct
+y_pred[6] = Correct, y_test[6] = Correct
+y_pred[7] = Correct, y_test[7] = Correct
+y_pred[8] = Correct, y_test[8] = Wrists rolled back
+y_pred[9] = Correct, y_test[9] = Wrists rolled back
+y_pred[10] = Correct, y_test[10] = Correct
+y_pred[11] = Correct, y_test[11] = Correct
+y_pred[12] = Correct, y_test[12] = Upper back round
+y_pred[13] = Correct, y_test[13] = Upper back round
+y_pred[14] = Correct, y_test[14] = Upper back round
+y_pred[15] = Correct, y_test[15] = Correct
+y_pred[16] = Correct, y_test[16] = Correct
+y_pred[17] = Correct, y_test[17] = Correct
+y_pred[18] = Correct, y_test[18] = Correct
+y_pred[19] = Correct, y_test[19] = Correct
+athlete: 16
+y_pred[0] = Correct, y_test[0] = Correct
+y_pred[1] = Correct, y_test[1] = Correct
+y_pred[2] = Correct, y_test[2] = Correct
+y_pred[3] = Correct, y_test[3] = Correct
+y_pred[4] = Correct, y_test[4] = Correct
+y_pred[5] = Correct, y_test[5] = Correct
+y_pred[6] = Correct, y_test[6] = Correct
+y_pred[7] = Correct, y_test[7] = Correct
+y_pred[8] = Correct, y_test[8] = Correct
+y_pred[9] = Correct, y_test[9] = Correct
+y_pred[10] = Correct, y_test[10] = Correct
+y_pred[11] = Correct, y_test[11] = Correct
+y_pred[12] = Correct, y_test[12] = Correct
+y_pred[13] = Correct, y_test[13] = Lower back round / butt wink
+y_pred[14] = Correct, y_test[14] = Lower back round / butt wink
+y_pred[15] = Correct, y_test[15] = Correct
+y_pred[16] = Correct, y_test[16] = Correct
+y_pred[17] = Correct, y_test[17] = Correct
+y_pred[18] = Correct, y_test[18] = Lower back round / butt wink
+y_pred[19] = Correct, y_test[19] = Lower back round / butt wink
+athlete: 17
+y_pred[0] = Correct, y_test[0] = Correct
+y_pred[1] = Correct, y_test[1] = Correct
+y_pred[2] = Correct, y_test[2] = Correct
+y_pred[3] = Correct, y_test[3] = Correct
+y_pred[4] = Correct, y_test[4] = Correct
+y_pred[5] = Correct, y_test[5] = Correct
+y_pred[6] = Correct, y_test[6] = Correct
+y_pred[7] = Correct, y_test[7] = Correct
+y_pred[8] = Correct, y_test[8] = Correct
+y_pred[9] = Correct, y_test[9] = Correct
+y_pred[10] = Correct, y_test[10] = Correct
+y_pred[11] = Correct, y_test[11] = Correct
+y_pred[12] = Correct, y_test[12] = Correct
+y_pred[13] = Correct, y_test[13] = Correct
+y_pred[14] = Correct, y_test[14] = Correct
+y_pred[15] = Correct, y_test[15] = Correct
+y_pred[16] = Correct, y_test[16] = Correct
+y_pred[17] = Correct, y_test[17] = Correct
+y_pred[18] = Correct, y_test[18] = Correct
+athlete: 18
+y_pred[0] = Hips roll under spine, y_test[0] = Correct
+y_pred[1] = Hips roll under spine, y_test[1] = Correct
+y_pred[2] = Correct, y_test[2] = Correct
+y_pred[3] = Upper back round, y_test[3] = Correct
+y_pred[4] = Correct, y_test[4] = Correct
+y_pred[5] = Hips roll under spine, y_test[5] = Correct
+y_pred[6] = Hips roll under spine, y_test[6] = Correct
+y_pred[7] = Hips roll under spine, y_test[7] = Correct
+y_pred[8] = Hips roll under spine, y_test[8] = Correct
+y_pred[9] = Hips roll under spine, y_test[9] = Correct
+y_pred[10] = Hips roll under spine, y_test[10] = Correct
+y_pred[11] = Hips roll under spine, y_test[11] = Correct
+y_pred[12] = Correct, y_test[12] = Correct
+y_pred[13] = Hips roll under spine, y_test[13] = Correct
+y_pred[14] = Hips roll under spine, y_test[14] = Correct
+y_pred[15] = Hips roll under spine, y_test[15] = Correct
+y_pred[16] = Hips roll under spine, y_test[16] = Correct
+y_pred[17] = Correct, y_test[17] = Correct
+y_pred[18] = Hips roll under spine, y_test[18] = Correct
+athlete: 19
+athlete: 20
+athlete: 21
+athlete: 22
+athlete: 23
+athlete: 24
+athlete: 25
+athlete: 26
+athlete: 27
+athlete: 28
+athlete: 29
+athlete: 30
+athlete: 31
+athlete: 32
+athlete: 33
+athlete: 34
+athlete: 35
+y_pred[0] = Correct, y_test[0] = Correct
+y_pred[1] = Correct, y_test[1] = Correct
+y_pred[2] = Correct, y_test[2] = Correct
+y_pred[3] = Correct, y_test[3] = Correct
+y_pred[4] = Correct, y_test[4] = Correct
+y_pred[5] = Correct, y_test[5] = Correct
+y_pred[6] = Correct, y_test[6] = Correct
+y_pred[7] = Correct, y_test[7] = Correct
+y_pred[8] = Correct, y_test[8] = Correct
+y_pred[9] = Correct, y_test[9] = Correct
+y_pred[10] = Upper back round, y_test[10] = Correct
+y_pred[11] = Correct, y_test[11] = Correct
+y_pred[12] = Correct, y_test[12] = Correct
+y_pred[13] = Correct, y_test[13] = Correct
+y_pred[14] = Correct, y_test[14] = Correct
+y_pred[15] = Correct, y_test[15] = Correct
+y_pred[16] = Correct, y_test[16] = Correct
+y_pred[17] = Upper back round, y_test[17] = Correct
+y_pred[18] = Correct, y_test[18] = Correct
+y_pred[19] = Correct, y_test[19] = Correct
+athlete: 36
+y_pred[0] = Correct, y_test[0] = Upper back round
+y_pred[1] = Correct, y_test[1] = Upper back round
+y_pred[2] = Correct, y_test[2] = Upper back round
+y_pred[3] = Correct, y_test[3] = Upper back round
+y_pred[4] = Correct, y_test[4] = Upper back round
+y_pred[5] = Correct, y_test[5] = Upper back round
+y_pred[6] = Correct, y_test[6] = Correct
+y_pred[7] = Correct, y_test[7] = Upper back round
+y_pred[8] = Correct, y_test[8] = Upper back round
+y_pred[9] = Correct, y_test[9] = Upper back round
+y_pred[10] = Correct, y_test[10] = Hips roll under spine
+y_pred[11] = Correct, y_test[11] = Hips roll under spine
+y_pred[12] = Correct, y_test[12] = Hips roll under spine
+y_pred[13] = Correct, y_test[13] = Hips roll under spine
+y_pred[14] = Correct, y_test[14] = Hips roll under spine
+y_pred[15] = Correct, y_test[15] = Hips roll under spine
+y_pred[16] = Correct, y_test[16] = Hips roll under spine
+y_pred[17] = Correct, y_test[17] = Hips roll under spine
+y_pred[18] = Correct, y_test[18] = Hips roll under spine
+y_pred[19] = Correct, y_test[19] = Hips roll under spine
+y_pred[20] = Correct, y_test[20] = Correct
+y_pred[21] = Correct, y_test[21] = Correct
+y_pred[22] = Correct, y_test[22] = Correct
+y_pred[23] = Correct, y_test[23] = Correct
+y_pred[24] = Correct, y_test[24] = Correct
+athlete: 37
+y_pred[0] = Heels coming up off of the ground, y_test[0] = Correct
+y_pred[1] = Correct, y_test[1] = Correct
+y_pred[2] = Correct, y_test[2] = Correct
+y_pred[3] = Correct, y_test[3] = Correct
+y_pred[4] = Correct, y_test[4] = Correct
+y_pred[5] = Correct, y_test[5] = Correct
+y_pred[6] = Correct, y_test[6] = Correct
+y_pred[7] = Correct, y_test[7] = Correct
+y_pred[8] = Correct, y_test[8] = Correct
+y_pred[9] = Correct, y_test[9] = Correct
+y_pred[10] = Did not get to parallel, y_test[10] = Correct
+y_pred[11] = Heels coming up off of the ground, y_test[11] = Correct
+y_pred[12] = Heels coming up off of the ground, y_test[12] = Correct
+y_pred[13] = Did not get to parallel, y_test[13] = Correct
+y_pred[14] = Heels coming up off of the ground, y_test[14] = Correct
+y_pred[15] = Did not get to parallel, y_test[15] = Correct
+y_pred[16] = Did not get to parallel, y_test[16] = Correct
+y_pred[17] = Did not get to parallel, y_test[17] = Correct
+y_pred[18] = Did not get to parallel, y_test[18] = Correct
+y_pred[19] = Did not get to parallel, y_test[19] = Correct
+athlete: 38
+y_pred[0] = Did not get to parallel, y_test[0] = Correct
+y_pred[1] = Did not get to parallel, y_test[1] = Correct
+y_pred[2] = Did not get to parallel, y_test[2] = Correct
+y_pred[3] = Did not get to parallel, y_test[3] = Correct
+y_pred[4] = Did not get to parallel, y_test[4] = Correct
+y_pred[5] = Did not get to parallel, y_test[5] = Heels coming up off of the ground
+y_pred[6] = Did not get to parallel, y_test[6] = Heels coming up off of the ground
+y_pred[7] = Did not get to parallel, y_test[7] = Heels coming up off of the ground
+y_pred[8] = Did not get to parallel, y_test[8] = Heels coming up off of the ground
+y_pred[9] = Did not get to parallel, y_test[9] = Heels coming up off of the ground
+y_pred[10] = Did not get to parallel, y_test[10] = Heels coming up off of the ground
+y_pred[11] = Did not get to parallel, y_test[11] = Heels coming up off of the ground
+y_pred[12] = Did not get to parallel, y_test[12] = Heels coming up off of the ground
+y_pred[13] = Did not get to parallel, y_test[13] = Heels coming up off of the ground
+y_pred[14] = Did not get to parallel, y_test[14] = Chasing with back
+y_pred[15] = Did not get to parallel, y_test[15] = Chasing with back
+athlete: 39
+athlete: 40
+athlete: 41
+athlete: 42
+athlete: 43
+athlete: 44
+athlete: 45
+athlete: 46
+athlete: 47
+athlete: 48
+athlete: 49
+athlete: 50
+athlete: 51
+athlete: 52
+athlete: 53
+athlete: 54
+athlete: 55
+athlete: 56
+athlete: 57
+athlete: 58
+athlete: 59
+athlete: 60
+athlete: 61
+athlete: 62
+athlete: 63
+athlete: 64
+athlete: 65
+athlete: 66
+y_pred[0] = Did not get to parallel, y_test[0] = Did not get to parallel
+y_pred[1] = Did not get to parallel, y_test[1] = Did not get to parallel
+y_pred[2] = Did not get to parallel, y_test[2] = Did not get to parallel
+y_pred[3] = Did not get to parallel, y_test[3] = Did not get to parallel
+y_pred[4] = Did not get to parallel, y_test[4] = Did not get to parallel
+y_pred[5] = Did not get to parallel, y_test[5] = Did not get to parallel
+y_pred[6] = Did not get to parallel, y_test[6] = Did not get to parallel
+y_pred[7] = Did not get to parallel, y_test[7] = Did not get to parallel
+y_pred[8] = Did not get to parallel, y_test[8] = Did not get to parallel
+y_pred[9] = Did not get to parallel, y_test[9] = Did not get to parallel
+y_pred[10] = Did not get to parallel, y_test[10] = Did not get to parallel
+y_pred[11] = Did not get to parallel, y_test[11] = Did not get to parallel
+y_pred[12] = Did not get to parallel, y_test[12] = Did not get to parallel
+y_pred[13] = Did not get to parallel, y_test[13] = Did not get to parallel
+y_pred[14] = Did not get to parallel, y_test[14] = Did not get to parallel
+y_pred[15] = Did not get to parallel, y_test[15] = Did not get to parallel
+y_pred[16] = Did not get to parallel, y_test[16] = Did not get to parallel
+y_pred[17] = Did not get to parallel, y_test[17] = Did not get to parallel
+athlete: 67
+y_pred[0] = Did not get to parallel, y_test[0] = Did not get to parallel
+y_pred[1] = Did not get to parallel, y_test[1] = Did not get to parallel
+y_pred[2] = Did not get to parallel, y_test[2] = Did not get to parallel
+y_pred[3] = Did not get to parallel, y_test[3] = Did not get to parallel
+y_pred[4] = Did not get to parallel, y_test[4] = Did not get to parallel
+y_pred[5] = Did not get to parallel, y_test[5] = Did not get to parallel
+y_pred[6] = Did not get to parallel, y_test[6] = Did not get to parallel
+y_pred[7] = Did not get to parallel, y_test[7] = Did not get to parallel
+y_pred[8] = Did not get to parallel, y_test[8] = Did not get to parallel
+y_pred[9] = Did not get to parallel, y_test[9] = Did not get to parallel
+y_pred[10] = Did not get to parallel, y_test[10] = Did not get to parallel
+y_pred[11] = Did not get to parallel, y_test[11] = Did not get to parallel
+y_pred[12] = Did not get to parallel, y_test[12] = Did not get to parallel
+y_pred[13] = Did not get to parallel, y_test[13] = Did not get to parallel
+y_pred[14] = Did not get to parallel, y_test[14] = Did not get to parallel
+y_pred[15] = Did not get to parallel, y_test[15] = Did not get to parallel
+athlete: 68
+athlete: 69
+athlete: 70
+confusion_matrix
+['Upper back round',
+ 'Over extension / too vertical',
+ 'Jerky rep',
+ 'Knees not spread out',
+ 'Wrists rolled back',
+ 'Chin not tucked',
+ 'Chasing with back',
+ 'Correct',
+ 'Heels coming up off of the ground',
+ 'Golden',
+ 'Did not get to parallel',
+ 'Lower back round / butt wink',
+ 'Hips roll under spine',
+ 'Did not complete rep']
+[[0, 0, 0, 0, 0, 0, 0, 12, 0, 0, 0, 0, 0, 0],
+ [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+ [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+ [0, 0, 0, 0, 0, 0, 0, 6, 0, 0, 0, 0, 0, 0],
+ [0, 0, 0, 0, 0, 0, 0, 22, 0, 0, 0, 0, 0, 0],
+ [0, 0, 0, 0, 0, 0, 0, 7, 0, 0, 0, 0, 0, 0],
+ [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 0, 0, 0],
+ [3, 0, 0, 0, 0, 0, 0, 120, 4, 0, 12, 0, 14, 0],
+ [0, 0, 0, 0, 0, 0, 0, 5, 0, 0, 9, 0, 0, 0],
+ [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+ [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 34, 0, 0, 0],
+ [0, 0, 0, 0, 0, 0, 0, 24, 0, 0, 0, 0, 0, 0],
+ [0, 0, 0, 0, 0, 0, 0, 10, 0, 0, 0, 0, 0, 0],
+ [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]]
+precision array
+[0.0, 0.0, 0.0, 0.0, 0.0, 0.7843137254901961, 0.0, 1.0, 0.0, 0.0]
+precision avg: 0.178431372549
+recall array
+[0.0, 0.5825242718446602, 0.0, 0.5964912280701754, 0.0]
+recall avg: 0.235803099983
+[0.0,
+ 0.4,
+ 0.0,
+ 0.8846153846153846,
+ 0.75,
+ 0.8,
+ 1.0,
+ 0.21052631578947367,
+ 0.9,
+ 0.24,
+ 0.45,
+ 0.0,
+ 1.0,
+ 1.0]
+result_accuracy 0.545367264315
+simple confusion matrix
+[[120, 33], [86, 45]]
+precision array
+[0.7843137254901961, 0.3435114503816794]
+precision avg: 0.563912587936
+recall array
+[0.5825242718446602, 0.5769230769230769]
+recall avg: 0.579723674384
+accuracy: 0.580985915493
+BENCH
+precision array
+[0.5, 0.5, 0.5]
+precision avg: 0.5
+recall array
+[0.5, 0.5, 0.5]
+recall avg: 0.5
+conn.total_changes after set del: 30
+conn.total_changes after athlete del: 31
+current_exercise: 1
+moments
+len moments: 21844
+leave one out vaidation
+athlete: 2
+athlete: 3
+athlete: 4
+athlete: 5
+athlete: 6
+athlete: 7
+athlete: 8
+athlete: 9
+athlete: 10
+athlete: 11
+athlete: 12
+athlete: 13
+athlete: 14
+athlete: 15
+y_pred[0] = Correct, y_test[0] = Wrists rolled back
+y_pred[1] = Correct, y_test[1] = Wrists rolled back
+y_pred[2] = Correct, y_test[2] = Wrists rolled back
+y_pred[3] = Upper back not tight / elbows out, y_test[3] = Wrists rolled back
+y_pred[4] = Upper back not tight / elbows out, y_test[4] = Wrists rolled back
+y_pred[5] = Correct, y_test[5] = Glutes not engaged
+y_pred[6] = Correct, y_test[6] = Glutes not engaged
+y_pred[7] = Correct, y_test[7] = Glutes not engaged
+y_pred[8] = Correct, y_test[8] = Glutes not engaged
+y_pred[9] = Upper back not tight / elbows out, y_test[9] = Glutes not engaged
+y_pred[10] = Correct, y_test[10] = Correct
+y_pred[11] = Correct, y_test[11] = Correct
+y_pred[12] = Correct, y_test[12] = Correct
+y_pred[13] = Correct, y_test[13] = Correct
+y_pred[14] = Correct, y_test[14] = Correct
+y_pred[15] = Correct, y_test[15] = Correct
+y_pred[16] = Correct, y_test[16] = Correct
+y_pred[17] = Upper back not tight / elbows out, y_test[17] = Correct
+athlete: 16
+athlete: 17
+athlete: 18
+y_pred[0] = Correct, y_test[0] = Correct
+y_pred[1] = Correct, y_test[1] = Correct
+y_pred[2] = Correct, y_test[2] = Correct
+y_pred[3] = Correct, y_test[3] = Correct
+y_pred[4] = Correct, y_test[4] = Correct
+y_pred[5] = Correct, y_test[5] = Correct
+y_pred[6] = Correct, y_test[6] = Correct
+y_pred[7] = Correct, y_test[7] = Correct
+y_pred[8] = Correct, y_test[8] = Correct
+y_pred[9] = Correct, y_test[9] = Correct
+y_pred[10] = Correct, y_test[10] = Upper back not tight / elbows out
+y_pred[11] = Correct, y_test[11] = Upper back not tight / elbows out
+y_pred[12] = Correct, y_test[12] = Upper back not tight / elbows out
+y_pred[13] = Correct, y_test[13] = Upper back not tight / elbows out
+y_pred[14] = Correct, y_test[14] = Upper back not tight / elbows out
+y_pred[15] = Correct, y_test[15] = Upper back not tight / elbows out
+y_pred[16] = Correct, y_test[16] = Upper back not tight / elbows out
+y_pred[17] = Correct, y_test[17] = Upper back not tight / elbows out
+y_pred[18] = Correct, y_test[18] = Upper back not tight / elbows out
+y_pred[19] = Correct, y_test[19] = Upper back not tight / elbows out
+athlete: 19
+y_pred[0] = Correct, y_test[0] = Upper back not tight / elbows out
+y_pred[1] = Correct, y_test[1] = Upper back not tight / elbows out
+y_pred[2] = Correct, y_test[2] = Upper back not tight / elbows out
+y_pred[3] = Correct, y_test[3] = Upper back not tight / elbows out
+y_pred[4] = Correct, y_test[4] = Upper back not tight / elbows out
+y_pred[5] = Correct, y_test[5] = Upper back not tight / elbows out
+y_pred[6] = Correct, y_test[6] = Upper back not tight / elbows out
+y_pred[7] = Correct, y_test[7] = Upper back not tight / elbows out
+y_pred[8] = Correct, y_test[8] = Upper back not tight / elbows out
+y_pred[9] = Correct, y_test[9] = Upper back not tight / elbows out
+y_pred[10] = Correct, y_test[10] = Upper back not tight / elbows out
+y_pred[11] = Correct, y_test[11] = Upper back not tight / elbows out
+athlete: 20
+y_pred[0] = Correct, y_test[0] = Correct
+y_pred[1] = Correct, y_test[1] = Correct
+y_pred[2] = Correct, y_test[2] = Correct
+y_pred[3] = Correct, y_test[3] = Correct
+y_pred[4] = Correct, y_test[4] = Correct
+y_pred[5] = Correct, y_test[5] = Correct
+y_pred[6] = Correct, y_test[6] = Correct
+y_pred[7] = Correct, y_test[7] = Correct
+y_pred[8] = Correct, y_test[8] = Correct
+y_pred[9] = Correct, y_test[9] = Correct
+y_pred[10] = Glutes not engaged, y_test[10] = Correct
+y_pred[11] = Upper back not tight / elbows out, y_test[11] = Correct
+y_pred[12] = Correct, y_test[12] = Correct
+y_pred[13] = Correct, y_test[13] = Correct
+y_pred[14] = Correct, y_test[14] = Correct
+y_pred[15] = Correct, y_test[15] = Correct
+y_pred[16] = Upper back not tight / elbows out, y_test[16] = Correct
+y_pred[17] = Correct, y_test[17] = Correct
+y_pred[18] = Correct, y_test[18] = Correct
+y_pred[19] = Upper back not tight / elbows out, y_test[19] = Correct
+athlete: 21
+y_pred[0] = Glutes not engaged, y_test[0] = Correct
+y_pred[1] = Glutes not engaged, y_test[1] = Correct
+y_pred[2] = Glutes not engaged, y_test[2] = Correct
+y_pred[3] = Glutes not engaged, y_test[3] = Correct
+y_pred[4] = Upper back not tight / elbows out, y_test[4] = Correct
+y_pred[5] = Glutes not engaged, y_test[5] = Correct
+y_pred[6] = Glutes not engaged, y_test[6] = Correct
+y_pred[7] = Glutes not engaged, y_test[7] = Correct
+y_pred[8] = Correct, y_test[8] = Correct
+y_pred[9] = Glutes not engaged, y_test[9] = Correct
+y_pred[10] = Glutes not engaged, y_test[10] = Correct
+y_pred[11] = Glutes not engaged, y_test[11] = Correct
+y_pred[12] = Correct, y_test[12] = Correct
+y_pred[13] = Correct, y_test[13] = Correct
+y_pred[14] = Correct, y_test[14] = Correct
+y_pred[15] = Glutes not engaged, y_test[15] = Correct
+y_pred[16] = Glutes not engaged, y_test[16] = Correct
+y_pred[17] = Glutes not engaged, y_test[17] = Correct
+y_pred[18] = Correct, y_test[18] = Correct
+y_pred[19] = Correct, y_test[19] = Correct
+athlete: 22
+y_pred[0] = Correct, y_test[0] = Upper back not tight / elbows out
+y_pred[1] = Correct, y_test[1] = Upper back not tight / elbows out
+y_pred[2] = Correct, y_test[2] = Upper back not tight / elbows out
+y_pred[3] = Correct, y_test[3] = Upper back not tight / elbows out
+y_pred[4] = Correct, y_test[4] = Upper back not tight / elbows out
+y_pred[5] = Correct, y_test[5] = Upper back not tight / elbows out
+y_pred[6] = Correct, y_test[6] = Upper back not tight / elbows out
+y_pred[7] = Correct, y_test[7] = Upper back not tight / elbows out
+y_pred[8] = Correct, y_test[8] = Upper back not tight / elbows out
+y_pred[9] = Correct, y_test[9] = Upper back not tight / elbows out
+y_pred[10] = Correct, y_test[10] = Upper back not tight / elbows out
+y_pred[11] = Correct, y_test[11] = Upper back not tight / elbows out
+y_pred[12] = Correct, y_test[12] = Upper back not tight / elbows out
+y_pred[13] = Correct, y_test[13] = Upper back not tight / elbows out
+y_pred[14] = Correct, y_test[14] = Correct
+y_pred[15] = Correct, y_test[15] = Correct
+y_pred[16] = Correct, y_test[16] = Correct
+y_pred[17] = Correct, y_test[17] = Correct
+y_pred[18] = Correct, y_test[18] = Correct
+y_pred[19] = Correct, y_test[19] = Correct
+y_pred[20] = Correct, y_test[20] = Correct
+y_pred[21] = Correct, y_test[21] = Correct
+y_pred[22] = Correct, y_test[22] = Correct
+y_pred[23] = Correct, y_test[23] = Correct
+athlete: 23
+y_pred[0] = Upper back not tight / elbows out, y_test[0] = Correct
+y_pred[1] = Glutes not engaged, y_test[1] = Correct
+y_pred[2] = Glutes not engaged, y_test[2] = Correct
+y_pred[3] = Glutes not engaged, y_test[3] = Correct
+y_pred[4] = Upper back not tight / elbows out, y_test[4] = Correct
+y_pred[5] = Upper back not tight / elbows out, y_test[5] = Correct
+y_pred[6] = Glutes not engaged, y_test[6] = Correct
+y_pred[7] = Glutes not engaged, y_test[7] = Correct
+y_pred[8] = Upper back not tight / elbows out, y_test[8] = Correct
+y_pred[9] = Glutes not engaged, y_test[9] = Correct
+y_pred[10] = Upper back not tight / elbows out, y_test[10] = Correct
+y_pred[11] = Upper back not tight / elbows out, y_test[11] = Correct
+y_pred[12] = Glutes not engaged, y_test[12] = Correct
+y_pred[13] = Glutes not engaged, y_test[13] = Upper back not tight / elbows out
+y_pred[14] = Glutes not engaged, y_test[14] = Upper back not tight / elbows out
+y_pred[15] = Upper back not tight / elbows out, y_test[15] = Correct
+y_pred[16] = Upper back not tight / elbows out, y_test[16] = Correct
+y_pred[17] = Upper back not tight / elbows out, y_test[17] = Correct
+y_pred[18] = Glutes not engaged, y_test[18] = Correct
+y_pred[19] = Upper back not tight / elbows out, y_test[19] = Correct
+athlete: 24
+y_pred[0] = Upper back not tight / elbows out, y_test[0] = Glutes not engaged
+y_pred[1] = Upper back not tight / elbows out, y_test[1] = Glutes not engaged
+y_pred[2] = Upper back not tight / elbows out, y_test[2] = Glutes not engaged
+y_pred[3] = Upper back not tight / elbows out, y_test[3] = Glutes not engaged
+y_pred[4] = Glutes not engaged, y_test[4] = Glutes not engaged
+y_pred[5] = Upper back not tight / elbows out, y_test[5] = Glutes not engaged
+y_pred[6] = Glutes not engaged, y_test[6] = Glutes not engaged
+y_pred[7] = Glutes not engaged, y_test[7] = Glutes not engaged
+y_pred[8] = Upper back not tight / elbows out, y_test[8] = Glutes not engaged
+y_pred[9] = Upper back not tight / elbows out, y_test[9] = Glutes not engaged
+y_pred[10] = Upper back not tight / elbows out, y_test[10] = Glutes not engaged
+y_pred[11] = Upper back not tight / elbows out, y_test[11] = Glutes not engaged
+y_pred[12] = Upper back not tight / elbows out, y_test[12] = Glutes not engaged
+y_pred[13] = Upper back not tight / elbows out, y_test[13] = Glutes not engaged
+y_pred[14] = Glutes not engaged, y_test[14] = Glutes not engaged
+y_pred[15] = Upper back not tight / elbows out, y_test[15] = Glutes not engaged
+y_pred[16] = Glutes not engaged, y_test[16] = Glutes not engaged
+y_pred[17] = Upper back not tight / elbows out, y_test[17] = Glutes not engaged
+y_pred[18] = Upper back not tight / elbows out, y_test[18] = Glutes not engaged
+y_pred[19] = Upper back not tight / elbows out, y_test[19] = Glutes not engaged
+athlete: 25
+athlete: 26
+y_pred[0] = Upper back not tight / elbows out, y_test[0] = Upper back not tight / elbows out
+y_pred[1] = Glutes not engaged, y_test[1] = Upper back not tight / elbows out
+y_pred[2] = Glutes not engaged, y_test[2] = Upper back not tight / elbows out
+y_pred[3] = Glutes not engaged, y_test[3] = Upper back not tight / elbows out
+y_pred[4] = Glutes not engaged, y_test[4] = Upper back not tight / elbows out
+y_pred[5] = Upper back not tight / elbows out, y_test[5] = Upper back not tight / elbows out
+y_pred[6] = Upper back not tight / elbows out, y_test[6] = Upper back not tight / elbows out
+y_pred[7] = Glutes not engaged, y_test[7] = Upper back not tight / elbows out
+y_pred[8] = Correct, y_test[8] = Upper back not tight / elbows out
+y_pred[9] = Correct, y_test[9] = Upper back not tight / elbows out
+y_pred[10] = Correct, y_test[10] = Upper back not tight / elbows out
+y_pred[11] = Correct, y_test[11] = Upper back not tight / elbows out
+y_pred[12] = Upper back not tight / elbows out, y_test[12] = Upper back not tight / elbows out
+y_pred[13] = Correct, y_test[13] = Upper back not tight / elbows out
+y_pred[14] = Correct, y_test[14] = Upper back not tight / elbows out
+y_pred[15] = Correct, y_test[15] = Upper back not tight / elbows out
+y_pred[16] = Correct, y_test[16] = Upper back not tight / elbows out
+y_pred[17] = Glutes not engaged, y_test[17] = Upper back not tight / elbows out
+y_pred[18] = Upper back not tight / elbows out, y_test[18] = Upper back not tight / elbows out
+y_pred[19] = Glutes not engaged, y_test[19] = Upper back not tight / elbows out
+y_pred[20] = Upper back not tight / elbows out, y_test[20] = Upper back not tight / elbows out
+y_pred[21] = Upper back not tight / elbows out, y_test[21] = Upper back not tight / elbows out
+y_pred[22] = Upper back not tight / elbows out, y_test[22] = Upper back not tight / elbows out
+y_pred[23] = Upper back not tight / elbows out, y_test[23] = Upper back not tight / elbows out
+y_pred[24] = Upper back not tight / elbows out, y_test[24] = Upper back not tight / elbows out
+y_pred[25] = Upper back not tight / elbows out, y_test[25] = Upper back not tight / elbows out
+y_pred[26] = Upper back not tight / elbows out, y_test[26] = Upper back not tight / elbows out
+athlete: 27
+y_pred[0] = Upper back not tight / elbows out, y_test[0] = Glutes not engaged
+y_pred[1] = Upper back not tight / elbows out, y_test[1] = Glutes not engaged
+y_pred[2] = Upper back not tight / elbows out, y_test[2] = Glutes not engaged
+y_pred[3] = Upper back not tight / elbows out, y_test[3] = Glutes not engaged
+y_pred[4] = Upper back not tight / elbows out, y_test[4] = Glutes not engaged
+y_pred[5] = Upper back not tight / elbows out, y_test[5] = Glutes not engaged
+y_pred[6] = Upper back not tight / elbows out, y_test[6] = Glutes not engaged
+y_pred[7] = Upper back not tight / elbows out, y_test[7] = Glutes not engaged
+y_pred[8] = Upper back not tight / elbows out, y_test[8] = Glutes not engaged
+y_pred[9] = Upper back not tight / elbows out, y_test[9] = Glutes not engaged
+y_pred[10] = Upper back not tight / elbows out, y_test[10] = Glutes not engaged
+y_pred[11] = Upper back not tight / elbows out, y_test[11] = Glutes not engaged
+y_pred[12] = Upper back not tight / elbows out, y_test[12] = Glutes not engaged
+y_pred[13] = Upper back not tight / elbows out, y_test[13] = Glutes not engaged
+y_pred[14] = Upper back not tight / elbows out, y_test[14] = Glutes not engaged
+y_pred[15] = Upper back not tight / elbows out, y_test[15] = Glutes not engaged
+y_pred[16] = Upper back not tight / elbows out, y_test[16] = Glutes not engaged
+y_pred[17] = Upper back not tight / elbows out, y_test[17] = Glutes not engaged
+y_pred[18] = Upper back not tight / elbows out, y_test[18] = Glutes not engaged
+athlete: 28
+y_pred[0] = Upper back not tight / elbows out, y_test[0] = Upper back not tight / elbows out
+y_pred[1] = Upper back not tight / elbows out, y_test[1] = Upper back not tight / elbows out
+y_pred[2] = Upper back not tight / elbows out, y_test[2] = Upper back not tight / elbows out
+y_pred[3] = Upper back not tight / elbows out, y_test[3] = Upper back not tight / elbows out
+y_pred[4] = Upper back not tight / elbows out, y_test[4] = Upper back not tight / elbows out
+y_pred[5] = Upper back not tight / elbows out, y_test[5] = Upper back not tight / elbows out
+y_pred[6] = Upper back not tight / elbows out, y_test[6] = Upper back not tight / elbows out
+y_pred[7] = Upper back not tight / elbows out, y_test[7] = Upper back not tight / elbows out
+y_pred[8] = Upper back not tight / elbows out, y_test[8] = Upper back not tight / elbows out
+y_pred[9] = Upper back not tight / elbows out, y_test[9] = Upper back not tight / elbows out
+y_pred[10] = Upper back not tight / elbows out, y_test[10] = Upper back not tight / elbows out
+y_pred[11] = Upper back not tight / elbows out, y_test[11] = Upper back not tight / elbows out
+y_pred[12] = Upper back not tight / elbows out, y_test[12] = Upper back not tight / elbows out
+y_pred[13] = Upper back not tight / elbows out, y_test[13] = Upper back not tight / elbows out
+y_pred[14] = Upper back not tight / elbows out, y_test[14] = Upper back not tight / elbows out
+y_pred[15] = Upper back not tight / elbows out, y_test[15] = Upper back not tight / elbows out
+y_pred[16] = Upper back not tight / elbows out, y_test[16] = Upper back not tight / elbows out
+y_pred[17] = Upper back not tight / elbows out, y_test[17] = Upper back not tight / elbows out
+y_pred[18] = Upper back not tight / elbows out, y_test[18] = Upper back not tight / elbows out
+y_pred[19] = Upper back not tight / elbows out, y_test[19] = Upper back not tight / elbows out
+athlete: 29
+y_pred[0] = Upper back not tight / elbows out, y_test[0] = Upper back not tight / elbows out
+y_pred[1] = Upper back not tight / elbows out, y_test[1] = Upper back not tight / elbows out
+y_pred[2] = Upper back not tight / elbows out, y_test[2] = Upper back not tight / elbows out
+y_pred[3] = Upper back not tight / elbows out, y_test[3] = Upper back not tight / elbows out
+y_pred[4] = Upper back not tight / elbows out, y_test[4] = Upper back not tight / elbows out
+y_pred[5] = Upper back not tight / elbows out, y_test[5] = Upper back not tight / elbows out
+y_pred[6] = Upper back not tight / elbows out, y_test[6] = Upper back not tight / elbows out
+y_pred[7] = Upper back not tight / elbows out, y_test[7] = Upper back not tight / elbows out
+y_pred[8] = Correct, y_test[8] = Upper back not tight / elbows out
+y_pred[9] = Upper back not tight / elbows out, y_test[9] = Upper back not tight / elbows out
+y_pred[10] = Upper back not tight / elbows out, y_test[10] = Upper back not tight / elbows out
+y_pred[11] = Upper back not tight / elbows out, y_test[11] = Upper back not tight / elbows out
+y_pred[12] = Upper back not tight / elbows out, y_test[12] = Upper back not tight / elbows out
+y_pred[13] = Upper back not tight / elbows out, y_test[13] = Correct
+y_pred[14] = Upper back not tight / elbows out, y_test[14] = Correct
+y_pred[15] = Upper back not tight / elbows out, y_test[15] = Upper back not tight / elbows out
+y_pred[16] = Upper back not tight / elbows out, y_test[16] = Upper back not tight / elbows out
+y_pred[17] = Upper back not tight / elbows out, y_test[17] = Upper back not tight / elbows out
+athlete: 30
+y_pred[0] = Correct, y_test[0] = Upper back not tight / elbows out
+y_pred[1] = Correct, y_test[1] = Upper back not tight / elbows out
+y_pred[2] = Correct, y_test[2] = Upper back not tight / elbows out
+y_pred[3] = Upper back not tight / elbows out, y_test[3] = Upper back not tight / elbows out
+y_pred[4] = Upper back not tight / elbows out, y_test[4] = Upper back not tight / elbows out
+y_pred[5] = Correct, y_test[5] = Upper back not tight / elbows out
+y_pred[6] = Upper back not tight / elbows out, y_test[6] = Upper back not tight / elbows out
+y_pred[7] = Upper back not tight / elbows out, y_test[7] = Upper back not tight / elbows out
+y_pred[8] = Correct, y_test[8] = Upper back not tight / elbows out
+y_pred[9] = Correct, y_test[9] = Upper back not tight / elbows out
+y_pred[10] = Correct, y_test[10] = Upper back not tight / elbows out
+y_pred[11] = Upper back not tight / elbows out, y_test[11] = Upper back not tight / elbows out
+y_pred[12] = Correct, y_test[12] = Upper back not tight / elbows out
+y_pred[13] = Correct, y_test[13] = Upper back not tight / elbows out
+y_pred[14] = Correct, y_test[14] = Upper back not tight / elbows out
+y_pred[15] = Correct, y_test[15] = Upper back not tight / elbows out
+y_pred[16] = Upper back not tight / elbows out, y_test[16] = Upper back not tight / elbows out
+y_pred[17] = Correct, y_test[17] = Upper back not tight / elbows out
+athlete: 31
+y_pred[0] = Upper back not tight / elbows out, y_test[0] = Correct
+y_pred[1] = Upper back not tight / elbows out, y_test[1] = Correct
+y_pred[2] = Upper back not tight / elbows out, y_test[2] = Correct
+y_pred[3] = Upper back not tight / elbows out, y_test[3] = Correct
+y_pred[4] = Upper back not tight / elbows out, y_test[4] = Correct
+y_pred[5] = Upper back not tight / elbows out, y_test[5] = Correct
+y_pred[6] = Upper back not tight / elbows out, y_test[6] = Correct
+y_pred[7] = Upper back not tight / elbows out, y_test[7] = Correct
+y_pred[8] = Upper back not tight / elbows out, y_test[8] = Correct
+y_pred[9] = Upper back not tight / elbows out, y_test[9] = Correct
+y_pred[10] = Upper back not tight / elbows out, y_test[10] = Correct
+y_pred[11] = Upper back not tight / elbows out, y_test[11] = Correct
+y_pred[12] = Upper back not tight / elbows out, y_test[12] = Correct
+y_pred[13] = Upper back not tight / elbows out, y_test[13] = Correct
+y_pred[14] = Upper back not tight / elbows out, y_test[14] = Correct
+y_pred[15] = Upper back not tight / elbows out, y_test[15] = Correct
+y_pred[16] = Upper back not tight / elbows out, y_test[16] = Correct
+y_pred[17] = Upper back not tight / elbows out, y_test[17] = Correct
+y_pred[18] = Upper back not tight / elbows out, y_test[18] = Correct
+y_pred[19] = Upper back not tight / elbows out, y_test[19] = Correct
+athlete: 32
+y_pred[0] = Upper back not tight / elbows out, y_test[0] = Correct
+y_pred[1] = Upper back not tight / elbows out, y_test[1] = Correct
+y_pred[2] = Upper back not tight / elbows out, y_test[2] = Correct
+y_pred[3] = Upper back not tight / elbows out, y_test[3] = Correct
+y_pred[4] = Upper back not tight / elbows out, y_test[4] = Correct
+y_pred[5] = Upper back not tight / elbows out, y_test[5] = Correct
+y_pred[6] = Upper back not tight / elbows out, y_test[6] = Correct
+y_pred[7] = Upper back not tight / elbows out, y_test[7] = Correct
+y_pred[8] = Upper back not tight / elbows out, y_test[8] = Correct
+y_pred[9] = Upper back not tight / elbows out, y_test[9] = Correct
+y_pred[10] = Upper back not tight / elbows out, y_test[10] = Correct
+y_pred[11] = Upper back not tight / elbows out, y_test[11] = Correct
+y_pred[12] = Upper back not tight / elbows out, y_test[12] = Correct
+y_pred[13] = Upper back not tight / elbows out, y_test[13] = Correct
+y_pred[14] = Upper back not tight / elbows out, y_test[14] = Correct
+y_pred[15] = Upper back not tight / elbows out, y_test[15] = Correct
+y_pred[16] = Upper back not tight / elbows out, y_test[16] = Correct
+y_pred[17] = Upper back not tight / elbows out, y_test[17] = Correct
+y_pred[18] = Upper back not tight / elbows out, y_test[18] = Correct
+y_pred[19] = Upper back not tight / elbows out, y_test[19] = Correct
+y_pred[20] = Upper back not tight / elbows out, y_test[20] = Correct
+y_pred[21] = Upper back not tight / elbows out, y_test[21] = Correct
+y_pred[22] = Upper back not tight / elbows out, y_test[22] = Correct
+y_pred[23] = Upper back not tight / elbows out, y_test[23] = Correct
+athlete: 33
+y_pred[0] = Upper back not tight / elbows out, y_test[0] = Upper back not tight / elbows out
+y_pred[1] = Upper back not tight / elbows out, y_test[1] = Upper back not tight / elbows out
+y_pred[2] = Upper back not tight / elbows out, y_test[2] = Upper back not tight / elbows out
+y_pred[3] = Upper back not tight / elbows out, y_test[3] = Upper back not tight / elbows out
+y_pred[4] = Upper back not tight / elbows out, y_test[4] = Upper back not tight / elbows out
+y_pred[5] = Upper back not tight / elbows out, y_test[5] = Upper back not tight / elbows out
+y_pred[6] = Upper back not tight / elbows out, y_test[6] = Upper back not tight / elbows out
+y_pred[7] = Upper back not tight / elbows out, y_test[7] = Upper back not tight / elbows out
+y_pred[8] = Upper back not tight / elbows out, y_test[8] = Upper back not tight / elbows out
+y_pred[9] = Upper back not tight / elbows out, y_test[9] = Upper back not tight / elbows out
+y_pred[10] = Upper back not tight / elbows out, y_test[10] = Upper back not tight / elbows out
+y_pred[11] = Upper back not tight / elbows out, y_test[11] = Upper back not tight / elbows out
+y_pred[12] = Upper back not tight / elbows out, y_test[12] = Upper back not tight / elbows out
+y_pred[13] = Upper back not tight / elbows out, y_test[13] = Upper back not tight / elbows out
+y_pred[14] = Upper back not tight / elbows out, y_test[14] = Upper back not tight / elbows out
+y_pred[15] = Upper back not tight / elbows out, y_test[15] = Upper back not tight / elbows out
+y_pred[16] = Upper back not tight / elbows out, y_test[16] = Upper back not tight / elbows out
+y_pred[17] = Upper back not tight / elbows out, y_test[17] = Upper back not tight / elbows out
+y_pred[18] = Upper back not tight / elbows out, y_test[18] = Upper back not tight / elbows out
+y_pred[19] = Upper back not tight / elbows out, y_test[19] = Upper back not tight / elbows out
+athlete: 34
+y_pred[0] = Upper back not tight / elbows out, y_test[0] = Upper back not tight / elbows out
+y_pred[1] = Upper back not tight / elbows out, y_test[1] = Upper back not tight / elbows out
+y_pred[2] = Upper back not tight / elbows out, y_test[2] = Upper back not tight / elbows out
+y_pred[3] = Upper back not tight / elbows out, y_test[3] = Upper back not tight / elbows out
+y_pred[4] = Upper back not tight / elbows out, y_test[4] = Upper back not tight / elbows out
+y_pred[5] = Upper back not tight / elbows out, y_test[5] = Upper back not tight / elbows out
+y_pred[6] = Upper back not tight / elbows out, y_test[6] = Upper back not tight / elbows out
+y_pred[7] = Upper back not tight / elbows out, y_test[7] = Upper back not tight / elbows out
+y_pred[8] = Upper back not tight / elbows out, y_test[8] = Upper back not tight / elbows out
+y_pred[9] = Upper back not tight / elbows out, y_test[9] = Upper back not tight / elbows out
+y_pred[10] = Upper back not tight / elbows out, y_test[10] = Upper back not tight / elbows out
+y_pred[11] = Upper back not tight / elbows out, y_test[11] = Upper back not tight / elbows out
+y_pred[12] = Upper back not tight / elbows out, y_test[12] = Upper back not tight / elbows out
+y_pred[13] = Upper back not tight / elbows out, y_test[13] = Upper back not tight / elbows out
+y_pred[14] = Upper back not tight / elbows out, y_test[14] = Upper back not tight / elbows out
+y_pred[15] = Upper back not tight / elbows out, y_test[15] = Upper back not tight / elbows out
+y_pred[16] = Upper back not tight / elbows out, y_test[16] = Upper back not tight / elbows out
+y_pred[17] = Upper back not tight / elbows out, y_test[17] = Upper back not tight / elbows out
+y_pred[18] = Upper back not tight / elbows out, y_test[18] = Upper back not tight / elbows out
+y_pred[19] = Upper back not tight / elbows out, y_test[19] = Upper back not tight / elbows out
+athlete: 35
+athlete: 36
+athlete: 37
+athlete: 38
+athlete: 39
+athlete: 40
+athlete: 41
+athlete: 42
+athlete: 43
+athlete: 44
+athlete: 45
+athlete: 46
+athlete: 47
+athlete: 48
+athlete: 49
+athlete: 50
+y_pred[0] = Upper back not tight / elbows out, y_test[0] = Upper back not tight / elbows out
+y_pred[1] = Upper back not tight / elbows out, y_test[1] = Upper back not tight / elbows out
+y_pred[2] = Upper back not tight / elbows out, y_test[2] = Upper back not tight / elbows out
+y_pred[3] = Upper back not tight / elbows out, y_test[3] = Upper back not tight / elbows out
+y_pred[4] = Upper back not tight / elbows out, y_test[4] = Upper back not tight / elbows out
+y_pred[5] = Upper back not tight / elbows out, y_test[5] = Upper back not tight / elbows out
+y_pred[6] = Upper back not tight / elbows out, y_test[6] = Upper back not tight / elbows out
+y_pred[7] = Upper back not tight / elbows out, y_test[7] = Upper back not tight / elbows out
+y_pred[8] = Upper back not tight / elbows out, y_test[8] = Upper back not tight / elbows out
+y_pred[9] = Upper back not tight / elbows out, y_test[9] = Upper back not tight / elbows out
+y_pred[10] = Correct, y_test[10] = Upper back not tight / elbows out
+y_pred[11] = Upper back not tight / elbows out, y_test[11] = Upper back not tight / elbows out
+y_pred[12] = Upper back not tight / elbows out, y_test[12] = Upper back not tight / elbows out
+y_pred[13] = Correct, y_test[13] = Upper back not tight / elbows out
+y_pred[14] = Upper back not tight / elbows out, y_test[14] = Upper back not tight / elbows out
+y_pred[15] = Upper back not tight / elbows out, y_test[15] = Upper back not tight / elbows out
+y_pred[16] = Upper back not tight / elbows out, y_test[16] = Upper back not tight / elbows out
+y_pred[17] = Upper back not tight / elbows out, y_test[17] = Upper back not tight / elbows out
+y_pred[18] = Upper back not tight / elbows out, y_test[18] = Upper back not tight / elbows out
+y_pred[19] = Upper back not tight / elbows out, y_test[19] = Upper back not tight / elbows out
+y_pred[20] = Upper back not tight / elbows out, y_test[20] = Upper back not tight / elbows out
+y_pred[21] = Upper back not tight / elbows out, y_test[21] = Upper back not tight / elbows out
+y_pred[22] = Upper back not tight / elbows out, y_test[22] = Upper back not tight / elbows out
+y_pred[23] = Correct, y_test[23] = Upper back not tight / elbows out
+y_pred[24] = Correct, y_test[24] = Upper back not tight / elbows out
+y_pred[25] = Upper back not tight / elbows out, y_test[25] = Upper back not tight / elbows out
+y_pred[26] = Upper back not tight / elbows out, y_test[26] = Upper back not tight / elbows out
+y_pred[27] = Upper back not tight / elbows out, y_test[27] = Upper back not tight / elbows out
+athlete: 51
+y_pred[0] = Upper back not tight / elbows out, y_test[0] = Upper back not tight / elbows out
+y_pred[1] = Upper back not tight / elbows out, y_test[1] = Upper back not tight / elbows out
+y_pred[2] = Upper back not tight / elbows out, y_test[2] = Upper back not tight / elbows out
+y_pred[3] = Upper back not tight / elbows out, y_test[3] = Upper back not tight / elbows out
+y_pred[4] = Upper back not tight / elbows out, y_test[4] = Upper back not tight / elbows out
+y_pred[5] = Upper back not tight / elbows out, y_test[5] = Upper back not tight / elbows out
+y_pred[6] = Upper back not tight / elbows out, y_test[6] = Upper back not tight / elbows out
+y_pred[7] = Upper back not tight / elbows out, y_test[7] = Upper back not tight / elbows out
+y_pred[8] = Upper back not tight / elbows out, y_test[8] = Upper back not tight / elbows out
+y_pred[9] = Upper back not tight / elbows out, y_test[9] = Upper back not tight / elbows out
+y_pred[10] = Upper back not tight / elbows out, y_test[10] = Upper back not tight / elbows out
+y_pred[11] = Upper back not tight / elbows out, y_test[11] = Upper back not tight / elbows out
+y_pred[12] = Upper back not tight / elbows out, y_test[12] = Upper back not tight / elbows out
+y_pred[13] = Upper back not tight / elbows out, y_test[13] = Upper back not tight / elbows out
+y_pred[14] = Upper back not tight / elbows out, y_test[14] = Upper back not tight / elbows out
+y_pred[15] = Upper back not tight / elbows out, y_test[15] = Upper back not tight / elbows out
+y_pred[16] = Upper back not tight / elbows out, y_test[16] = Upper back not tight / elbows out
+y_pred[17] = Upper back not tight / elbows out, y_test[17] = Upper back not tight / elbows out
+y_pred[18] = Upper back not tight / elbows out, y_test[18] = Upper back not tight / elbows out
+y_pred[19] = Upper back not tight / elbows out, y_test[19] = Upper back not tight / elbows out
+y_pred[20] = Upper back not tight / elbows out, y_test[20] = Upper back not tight / elbows out
+y_pred[21] = Upper back not tight / elbows out, y_test[21] = Excessive lower back arch
+y_pred[22] = Upper back not tight / elbows out, y_test[22] = Upper back not tight / elbows out
+y_pred[23] = Upper back not tight / elbows out, y_test[23] = Excessive lower back arch
+y_pred[24] = Upper back not tight / elbows out, y_test[24] = Excessive lower back arch
+athlete: 52
+y_pred[0] = Upper back not tight / elbows out, y_test[0] = Upper back not tight / elbows out
+y_pred[1] = Upper back not tight / elbows out, y_test[1] = Upper back not tight / elbows out
+y_pred[2] = Upper back not tight / elbows out, y_test[2] = Upper back not tight / elbows out
+y_pred[3] = Upper back not tight / elbows out, y_test[3] = Upper back not tight / elbows out
+y_pred[4] = Correct, y_test[4] = Upper back not tight / elbows out
+y_pred[5] = Correct, y_test[5] = Upper back not tight / elbows out
+y_pred[6] = Correct, y_test[6] = Upper back not tight / elbows out
+y_pred[7] = Correct, y_test[7] = Upper back not tight / elbows out
+y_pred[8] = Correct, y_test[8] = Upper back not tight / elbows out
+y_pred[9] = Upper back not tight / elbows out, y_test[9] = Upper back not tight / elbows out
+y_pred[10] = Upper back not tight / elbows out, y_test[10] = Upper back not tight / elbows out
+y_pred[11] = Upper back not tight / elbows out, y_test[11] = Upper back not tight / elbows out
+y_pred[12] = Upper back not tight / elbows out, y_test[12] = Upper back not tight / elbows out
+y_pred[13] = Upper back not tight / elbows out, y_test[13] = Upper back not tight / elbows out
+y_pred[14] = Upper back not tight / elbows out, y_test[14] = Upper back not tight / elbows out
+y_pred[15] = Wrists rolled back, y_test[15] = Upper back not tight / elbows out
+y_pred[16] = Correct, y_test[16] = Upper back not tight / elbows out
+y_pred[17] = Correct, y_test[17] = Upper back not tight / elbows out
+y_pred[18] = Upper back not tight / elbows out, y_test[18] = Upper back not tight / elbows out
+y_pred[19] = Upper back not tight / elbows out, y_test[19] = Upper back not tight / elbows out
+y_pred[20] = Upper back not tight / elbows out, y_test[20] = Upper back not tight / elbows out
+y_pred[21] = Correct, y_test[21] = Upper back not tight / elbows out
+y_pred[22] = Correct, y_test[22] = Upper back not tight / elbows out
+y_pred[23] = Correct, y_test[23] = Upper back not tight / elbows out
+y_pred[24] = Correct, y_test[24] = Upper back not tight / elbows out
+y_pred[25] = Correct, y_test[25] = Upper back not tight / elbows out
+y_pred[26] = Correct, y_test[26] = Upper back not tight / elbows out
+y_pred[27] = Correct, y_test[27] = Upper back not tight / elbows out
+athlete: 53
+y_pred[0] = Correct, y_test[0] = Upper back not tight / elbows out
+y_pred[1] = Upper back not tight / elbows out, y_test[1] = Upper back not tight / elbows out
+y_pred[2] = Upper back not tight / elbows out, y_test[2] = Upper back not tight / elbows out
+y_pred[3] = Upper back not tight / elbows out, y_test[3] = Upper back not tight / elbows out
+y_pred[4] = Upper back not tight / elbows out, y_test[4] = Upper back not tight / elbows out
+y_pred[5] = Upper back not tight / elbows out, y_test[5] = Upper back not tight / elbows out
+y_pred[6] = Upper back not tight / elbows out, y_test[6] = Upper back not tight / elbows out
+y_pred[7] = Upper back not tight / elbows out, y_test[7] = Upper back not tight / elbows out
+y_pred[8] = Upper back not tight / elbows out, y_test[8] = Upper back not tight / elbows out
+y_pred[9] = Upper back not tight / elbows out, y_test[9] = Upper back not tight / elbows out
+y_pred[10] = Upper back not tight / elbows out, y_test[10] = Upper back not tight / elbows out
+y_pred[11] = Upper back not tight / elbows out, y_test[11] = Upper back not tight / elbows out
+y_pred[12] = Upper back not tight / elbows out, y_test[12] = Upper back not tight / elbows out
+y_pred[13] = Upper back not tight / elbows out, y_test[13] = Upper back not tight / elbows out
+y_pred[14] = Upper back not tight / elbows out, y_test[14] = Upper back not tight / elbows out
+y_pred[15] = Upper back not tight / elbows out, y_test[15] = Upper back not tight / elbows out
+y_pred[16] = Upper back not tight / elbows out, y_test[16] = Upper back not tight / elbows out
+y_pred[17] = Upper back not tight / elbows out, y_test[17] = Upper back not tight / elbows out
+y_pred[18] = Upper back not tight / elbows out, y_test[18] = Upper back not tight / elbows out
+y_pred[19] = Upper back not tight / elbows out, y_test[19] = Upper back not tight / elbows out
+y_pred[20] = Upper back not tight / elbows out, y_test[20] = Upper back not tight / elbows out
+y_pred[21] = Upper back not tight / elbows out, y_test[21] = Upper back not tight / elbows out
+y_pred[22] = Upper back not tight / elbows out, y_test[22] = Upper back not tight / elbows out
+y_pred[23] = Upper back not tight / elbows out, y_test[23] = Upper back not tight / elbows out
+y_pred[24] = Upper back not tight / elbows out, y_test[24] = Upper back not tight / elbows out
+athlete: 54
+y_pred[0] = Upper back not tight / elbows out, y_test[0] = Correct
+y_pred[1] = Upper back not tight / elbows out, y_test[1] = Correct
+y_pred[2] = Upper back not tight / elbows out, y_test[2] = Correct
+y_pred[3] = Upper back not tight / elbows out, y_test[3] = Upper back not tight / elbows out
+y_pred[4] = Upper back not tight / elbows out, y_test[4] = Upper back not tight / elbows out
+y_pred[5] = Upper back not tight / elbows out, y_test[5] = Upper back not tight / elbows out
+y_pred[6] = Upper back not tight / elbows out, y_test[6] = Correct
+y_pred[7] = Upper back not tight / elbows out, y_test[7] = Correct
+y_pred[8] = Upper back not tight / elbows out, y_test[8] = Correct
+y_pred[9] = Upper back not tight / elbows out, y_test[9] = Upper back not tight / elbows out
+y_pred[10] = Upper back not tight / elbows out, y_test[10] = Upper back not tight / elbows out
+y_pred[11] = Upper back not tight / elbows out, y_test[11] = Upper back not tight / elbows out
+y_pred[12] = Upper back not tight / elbows out, y_test[12] = Upper back not tight / elbows out
+athlete: 55
+y_pred[0] = Upper back not tight / elbows out, y_test[0] = Upper back not tight / elbows out
+y_pred[1] = Upper back not tight / elbows out, y_test[1] = Upper back not tight / elbows out
+y_pred[2] = Wrists rolled back, y_test[2] = Upper back not tight / elbows out
+y_pred[3] = Wrists rolled back, y_test[3] = Upper back not tight / elbows out
+y_pred[4] = Upper back not tight / elbows out, y_test[4] = Upper back not tight / elbows out
+y_pred[5] = Wrists rolled back, y_test[5] = Upper back not tight / elbows out
+y_pred[6] = Wrists rolled back, y_test[6] = Upper back not tight / elbows out
+y_pred[7] = Wrists rolled back, y_test[7] = Upper back not tight / elbows out
+y_pred[8] = Upper back not tight / elbows out, y_test[8] = Upper back not tight / elbows out
+y_pred[9] = Wrists rolled back, y_test[9] = Upper back not tight / elbows out
+y_pred[10] = Wrists rolled back, y_test[10] = Upper back not tight / elbows out
+y_pred[11] = Wrists rolled back, y_test[11] = Upper back not tight / elbows out
+y_pred[12] = Upper back not tight / elbows out, y_test[12] = Upper back not tight / elbows out
+y_pred[13] = Wrists rolled back, y_test[13] = Upper back not tight / elbows out
+y_pred[14] = Wrists rolled back, y_test[14] = Upper back not tight / elbows out
+y_pred[15] = Wrists rolled back, y_test[15] = Upper back not tight / elbows out
+y_pred[16] = Wrists rolled back, y_test[16] = Upper back not tight / elbows out
+y_pred[17] = Upper back not tight / elbows out, y_test[17] = Upper back not tight / elbows out
+y_pred[18] = Wrists rolled back, y_test[18] = Upper back not tight / elbows out
+y_pred[19] = Wrists rolled back, y_test[19] = Upper back not tight / elbows out
+y_pred[20] = Wrists rolled back, y_test[20] = Upper back not tight / elbows out
+y_pred[21] = Wrists rolled back, y_test[21] = Upper back not tight / elbows out
+y_pred[22] = Wrists rolled back, y_test[22] = Upper back not tight / elbows out
+y_pred[23] = Wrists rolled back, y_test[23] = Upper back not tight / elbows out
+y_pred[24] = Upper back not tight / elbows out, y_test[24] = Upper back not tight / elbows out
+y_pred[25] = Wrists rolled back, y_test[25] = Upper back not tight / elbows out
+y_pred[26] = Wrists rolled back, y_test[26] = Upper back not tight / elbows out
+y_pred[27] = Wrists rolled back, y_test[27] = Upper back not tight / elbows out
+y_pred[28] = Wrists rolled back, y_test[28] = Upper back not tight / elbows out
+y_pred[29] = Upper back not tight / elbows out, y_test[29] = Upper back not tight / elbows out
+y_pred[30] = Wrists rolled back, y_test[30] = Upper back not tight / elbows out
+athlete: 56
+y_pred[0] = Correct, y_test[0] = Wrists rolled back
+y_pred[1] = Correct, y_test[1] = Wrists rolled back
+y_pred[2] = Correct, y_test[2] = Wrists rolled back
+y_pred[3] = Correct, y_test[3] = Wrists rolled back
+y_pred[4] = Correct, y_test[4] = Wrists rolled back
+y_pred[5] = Correct, y_test[5] = Wrists rolled back
+y_pred[6] = Correct, y_test[6] = Wrists rolled back
+y_pred[7] = Correct, y_test[7] = Wrists rolled back
+y_pred[8] = Correct, y_test[8] = Wrists rolled back
+y_pred[9] = Correct, y_test[9] = Wrists rolled back
+y_pred[10] = Correct, y_test[10] = Wrists rolled back
+y_pred[11] = Correct, y_test[11] = Wrists rolled back
+y_pred[12] = Correct, y_test[12] = Wrists rolled back
+y_pred[13] = Upper back not tight / elbows out, y_test[13] = Wrists rolled back
+y_pred[14] = Upper back not tight / elbows out, y_test[14] = Wrists rolled back
+y_pred[15] = Upper back not tight / elbows out, y_test[15] = Wrists rolled back
+y_pred[16] = Upper back not tight / elbows out, y_test[16] = Wrists rolled back
+y_pred[17] = Upper back not tight / elbows out, y_test[17] = Wrists rolled back
+y_pred[18] = Upper back not tight / elbows out, y_test[18] = Wrists rolled back
+y_pred[19] = Upper back not tight / elbows out, y_test[19] = Wrists rolled back
+y_pred[20] = Upper back not tight / elbows out, y_test[20] = Wrists rolled back
+y_pred[21] = Upper back not tight / elbows out, y_test[21] = Wrists rolled back
+y_pred[22] = Upper back not tight / elbows out, y_test[22] = Wrists rolled back
+y_pred[23] = Upper back not tight / elbows out, y_test[23] = Wrists rolled back
+y_pred[24] = Upper back not tight / elbows out, y_test[24] = Wrists rolled back
+athlete: 57
+y_pred[0] = Upper back not tight / elbows out, y_test[0] = Correct
+y_pred[1] = Upper back not tight / elbows out, y_test[1] = Correct
+y_pred[2] = Upper back not tight / elbows out, y_test[2] = Correct
+y_pred[3] = Upper back not tight / elbows out, y_test[3] = Correct
+y_pred[4] = Upper back not tight / elbows out, y_test[4] = Correct
+y_pred[5] = Upper back not tight / elbows out, y_test[5] = Correct
+y_pred[6] = Upper back not tight / elbows out, y_test[6] = Correct
+y_pred[7] = Upper back not tight / elbows out, y_test[7] = Correct
+y_pred[8] = Upper back not tight / elbows out, y_test[8] = Correct
+y_pred[9] = Upper back not tight / elbows out, y_test[9] = Correct
+athlete: 58
+y_pred[0] = Upper back not tight / elbows out, y_test[0] = Upper back not tight / elbows out
+y_pred[1] = Upper back not tight / elbows out, y_test[1] = Upper back not tight / elbows out
+y_pred[2] = Upper back not tight / elbows out, y_test[2] = Upper back not tight / elbows out
+y_pred[3] = Upper back not tight / elbows out, y_test[3] = Upper back not tight / elbows out
+y_pred[4] = Upper back not tight / elbows out, y_test[4] = Upper back not tight / elbows out
+y_pred[5] = Upper back not tight / elbows out, y_test[5] = Upper back not tight / elbows out
+y_pred[6] = Upper back not tight / elbows out, y_test[6] = Upper back not tight / elbows out
+y_pred[7] = Upper back not tight / elbows out, y_test[7] = Upper back not tight / elbows out
+y_pred[8] = Upper back not tight / elbows out, y_test[8] = Upper back not tight / elbows out
+y_pred[9] = Upper back not tight / elbows out, y_test[9] = Upper back not tight / elbows out
+y_pred[10] = Upper back not tight / elbows out, y_test[10] = Upper back not tight / elbows out
+y_pred[11] = Upper back not tight / elbows out, y_test[11] = Upper back not tight / elbows out
+y_pred[12] = Upper back not tight / elbows out, y_test[12] = Upper back not tight / elbows out
+y_pred[13] = Correct, y_test[13] = Upper back not tight / elbows out
+y_pred[14] = Correct, y_test[14] = Upper back not tight / elbows out
+y_pred[15] = Upper back not tight / elbows out, y_test[15] = Upper back not tight / elbows out
+y_pred[16] = Upper back not tight / elbows out, y_test[16] = Upper back not tight / elbows out
+y_pred[17] = Correct, y_test[17] = Upper back not tight / elbows out
+y_pred[18] = Correct, y_test[18] = Upper back not tight / elbows out
+y_pred[19] = Upper back not tight / elbows out, y_test[19] = Upper back not tight / elbows out
+y_pred[20] = Upper back not tight / elbows out, y_test[20] = Upper back not tight / elbows out
+athlete: 59
+y_pred[0] = Upper back not tight / elbows out, y_test[0] = Correct
+y_pred[1] = Upper back not tight / elbows out, y_test[1] = Correct
+y_pred[2] = Upper back not tight / elbows out, y_test[2] = Correct
+y_pred[3] = Upper back not tight / elbows out, y_test[3] = Correct
+y_pred[4] = Upper back not tight / elbows out, y_test[4] = Correct
+y_pred[5] = Upper back not tight / elbows out, y_test[5] = Excessive lower back arch
+y_pred[6] = Upper back not tight / elbows out, y_test[6] = Excessive lower back arch
+y_pred[7] = Upper back not tight / elbows out, y_test[7] = Bounce off of chest
+y_pred[8] = Upper back not tight / elbows out, y_test[8] = Bounce off of chest
+y_pred[9] = Upper back not tight / elbows out, y_test[9] = Bounce off of chest
+y_pred[10] = Upper back not tight / elbows out, y_test[10] = Bounce off of chest
+y_pred[11] = Upper back not tight / elbows out, y_test[11] = Bounce off of chest
+y_pred[12] = Upper back not tight / elbows out, y_test[12] = Bounce off of chest
+y_pred[13] = Upper back not tight / elbows out, y_test[13] = Bounce off of chest
+y_pred[14] = Upper back not tight / elbows out, y_test[14] = Bounce off of chest
+y_pred[15] = Upper back not tight / elbows out, y_test[15] = Bounce off of chest
+y_pred[16] = Upper back not tight / elbows out, y_test[16] = Bounce off of chest
+y_pred[17] = Upper back not tight / elbows out, y_test[17] = Bounce off of chest
+y_pred[18] = Upper back not tight / elbows out, y_test[18] = Bounce off of chest
+y_pred[19] = Upper back not tight / elbows out, y_test[19] = Bounce off of chest
+y_pred[20] = Upper back not tight / elbows out, y_test[20] = Bounce off of chest
+y_pred[21] = Upper back not tight / elbows out, y_test[21] = Bounce off of chest
+y_pred[22] = Upper back not tight / elbows out, y_test[22] = Bounce off of chest
+y_pred[23] = Upper back not tight / elbows out, y_test[23] = Bounce off of chest
+y_pred[24] = Upper back not tight / elbows out, y_test[24] = Bounce off of chest
+y_pred[25] = Upper back not tight / elbows out, y_test[25] = Bounce off of chest
+y_pred[26] = Upper back not tight / elbows out, y_test[26] = Bounce off of chest
+y_pred[27] = Upper back not tight / elbows out, y_test[27] = Bounce off of chest
+athlete: 60
+y_pred[0] = Upper back not tight / elbows out, y_test[0] = Upper back not tight / elbows out
+y_pred[1] = Upper back not tight / elbows out, y_test[1] = Upper back not tight / elbows out
+y_pred[2] = Upper back not tight / elbows out, y_test[2] = Upper back not tight / elbows out
+y_pred[3] = Upper back not tight / elbows out, y_test[3] = Upper back not tight / elbows out
+y_pred[4] = Upper back not tight / elbows out, y_test[4] = Upper back not tight / elbows out
+y_pred[5] = Upper back not tight / elbows out, y_test[5] = Upper back not tight / elbows out
+y_pred[6] = Upper back not tight / elbows out, y_test[6] = Upper back not tight / elbows out
+y_pred[7] = Upper back not tight / elbows out, y_test[7] = Upper back not tight / elbows out
+y_pred[8] = Upper back not tight / elbows out, y_test[8] = Upper back not tight / elbows out
+y_pred[9] = Correct, y_test[9] = Upper back not tight / elbows out
+y_pred[10] = Correct, y_test[10] = Upper back not tight / elbows out
+y_pred[11] = Correct, y_test[11] = Upper back not tight / elbows out
+y_pred[12] = Correct, y_test[12] = Upper back not tight / elbows out
+y_pred[13] = Correct, y_test[13] = Upper back not tight / elbows out
+y_pred[14] = Correct, y_test[14] = Upper back not tight / elbows out
+y_pred[15] = Upper back not tight / elbows out, y_test[15] = Upper back not tight / elbows out
+y_pred[16] = Upper back not tight / elbows out, y_test[16] = Upper back not tight / elbows out
+y_pred[17] = Upper back not tight / elbows out, y_test[17] = Upper back not tight / elbows out
+y_pred[18] = Upper back not tight / elbows out, y_test[18] = Upper back not tight / elbows out
+y_pred[19] = Upper back not tight / elbows out, y_test[19] = Upper back not tight / elbows out
+athlete: 61
+y_pred[0] = Correct, y_test[0] = Upper back not tight / elbows out
+y_pred[1] = Correct, y_test[1] = Correct
+y_pred[2] = Correct, y_test[2] = Correct
+y_pred[3] = Correct, y_test[3] = Correct
+y_pred[4] = Correct, y_test[4] = Upper back not tight / elbows out
+y_pred[5] = Correct, y_test[5] = Upper back not tight / elbows out
+y_pred[6] = Correct, y_test[6] = Upper back not tight / elbows out
+y_pred[7] = Correct, y_test[7] = Upper back not tight / elbows out
+y_pred[8] = Correct, y_test[8] = Upper back not tight / elbows out
+y_pred[9] = Correct, y_test[9] = Upper back not tight / elbows out
+y_pred[10] = Correct, y_test[10] = Upper back not tight / elbows out
+y_pred[11] = Correct, y_test[11] = Upper back not tight / elbows out
+y_pred[12] = Correct, y_test[12] = Upper back not tight / elbows out
+y_pred[13] = Correct, y_test[13] = Upper back not tight / elbows out
+athlete: 62
+y_pred[0] = Upper back not tight / elbows out, y_test[0] = Correct
+y_pred[1] = Upper back not tight / elbows out, y_test[1] = Correct
+y_pred[2] = Upper back not tight / elbows out, y_test[2] = Correct
+y_pred[3] = Upper back not tight / elbows out, y_test[3] = Correct
+y_pred[4] = Upper back not tight / elbows out, y_test[4] = Correct
+y_pred[5] = Upper back not tight / elbows out, y_test[5] = Correct
+y_pred[6] = Upper back not tight / elbows out, y_test[6] = Correct
+y_pred[7] = Upper back not tight / elbows out, y_test[7] = Correct
+y_pred[8] = Upper back not tight / elbows out, y_test[8] = Correct
+y_pred[9] = Upper back not tight / elbows out, y_test[9] = Correct
+y_pred[10] = Upper back not tight / elbows out, y_test[10] = Correct
+y_pred[11] = Upper back not tight / elbows out, y_test[11] = Correct
+y_pred[12] = Upper back not tight / elbows out, y_test[12] = Correct
+y_pred[13] = Upper back not tight / elbows out, y_test[13] = Correct
+y_pred[14] = Upper back not tight / elbows out, y_test[14] = Correct
+y_pred[15] = Upper back not tight / elbows out, y_test[15] = Correct
+y_pred[16] = Upper back not tight / elbows out, y_test[16] = Correct
+y_pred[17] = Upper back not tight / elbows out, y_test[17] = Correct
+y_pred[18] = Upper back not tight / elbows out, y_test[18] = Excessive lower back arch
+y_pred[19] = Upper back not tight / elbows out, y_test[19] = Correct
+y_pred[20] = Upper back not tight / elbows out, y_test[20] = Correct
+y_pred[21] = Upper back not tight / elbows out, y_test[21] = Correct
+y_pred[22] = Upper back not tight / elbows out, y_test[22] = Correct
+y_pred[23] = Upper back not tight / elbows out, y_test[23] = Excessive lower back arch
+y_pred[24] = Upper back not tight / elbows out, y_test[24] = Correct
+y_pred[25] = Upper back not tight / elbows out, y_test[25] = Correct
+y_pred[26] = Upper back not tight / elbows out, y_test[26] = Correct
+y_pred[27] = Upper back not tight / elbows out, y_test[27] = Correct
+y_pred[28] = Upper back not tight / elbows out, y_test[28] = Correct
+y_pred[29] = Upper back not tight / elbows out, y_test[29] = Correct
+y_pred[30] = Upper back not tight / elbows out, y_test[30] = Correct
+y_pred[31] = Upper back not tight / elbows out, y_test[31] = Correct
+y_pred[32] = Upper back not tight / elbows out, y_test[32] = Correct
+y_pred[33] = Upper back not tight / elbows out, y_test[33] = Correct
+y_pred[34] = Upper back not tight / elbows out, y_test[34] = Correct
+y_pred[35] = Upper back not tight / elbows out, y_test[35] = Correct
+y_pred[36] = Upper back not tight / elbows out, y_test[36] = Correct
+y_pred[37] = Upper back not tight / elbows out, y_test[37] = Correct
+y_pred[38] = Upper back not tight / elbows out, y_test[38] = Correct
+athlete: 63
+athlete: 64
+athlete: 65
+y_pred[0] = Correct, y_test[0] = Upper back not tight / elbows out
+y_pred[1] = Correct, y_test[1] = Upper back not tight / elbows out
+y_pred[2] = Correct, y_test[2] = Upper back not tight / elbows out
+y_pred[3] = Correct, y_test[3] = Upper back not tight / elbows out
+y_pred[4] = Correct, y_test[4] = Upper back not tight / elbows out
+y_pred[5] = Correct, y_test[5] = Upper back not tight / elbows out
+y_pred[6] = Correct, y_test[6] = Upper back not tight / elbows out
+y_pred[7] = Correct, y_test[7] = Upper back not tight / elbows out
+y_pred[8] = Correct, y_test[8] = Upper back not tight / elbows out
+y_pred[9] = Correct, y_test[9] = Upper back not tight / elbows out
+y_pred[10] = Correct, y_test[10] = Upper back not tight / elbows out
+y_pred[11] = Correct, y_test[11] = Upper back not tight / elbows out
+y_pred[12] = Correct, y_test[12] = Upper back not tight / elbows out
+athlete: 66
+athlete: 67
+athlete: 68
+athlete: 69
+athlete: 70
+confusion_matrix
+['Jerky rep',
+ 'Did not complete rep',
+ 'Did not lock out',
+ 'Bounce off of chest',
+ 'Upper back not tight / elbows out',
+ 'Correct',
+ 'Golden',
+ 'Glutes not engaged',
+ 'Excessive lower back arch',
+ 'Wrists rolled back',
+ 'Left side came up first',
+ 'Did not touch chest',
+ 'Right side came up first']
+[[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+ [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+ [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+ [0, 0, 0, 0, 21, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+ [0, 0, 0, 0, 222, 110, 0, 9, 0, 24, 0, 0, 0, 0, 0],
+ [0, 0, 0, 0, 119, 52, 0, 22, 0, 0, 0, 0, 0, 0, 0],
+ [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+ [0, 0, 0, 0, 35, 4, 0, 5, 0, 0, 0, 0, 0, 0, 0],
+ [0, 0, 0, 0, 7, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+ [0, 0, 0, 0, 14, 16, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+ [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+ [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+ [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+ [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+ [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]]
+precision array
+[0.0, 0.6082191780821918, 0.2694300518134715, 0.11363636363636363, 0.0, 0.0]
+precision avg: 0.165214265589
+recall array
+[0.5311004784688995, 0.2857142857142857, 0.1388888888888889, 0.0]
+recall avg: 0.238925913268
+[0.3888888888888889,
+ 0.5,
+ 0.0,
+ 0.8,
+ 0.3,
+ 0.4166666666666667,
+ 0.0,
+ 0.25,
+ 0.4444444444444444,
+ 0.0,
+ 1.0,
+ 0.8333333333333334,
+ 0.3333333333333333,
+ 0.0,
+ 0.0,
+ 1.0,
+ 1.0,
+ 0.8571428571428571,
+ 0.88,
+ 0.4642857142857143,
+ 0.96,
+ 0.5384615384615384,
+ 0.25806451612903225,
+ 0.0,
+ 0.0,
+ 0.8095238095238095,
+ 0.0,
+ 0.7,
+ 0.21428571428571427,
+ 0.0,
+ 0.0]
+result_accuracy 0.417691316661
+simple confusion matrix
+[[52, 141], [130, 337]]
+precision array
+[0.2694300518134715, 0.721627408993576]
+precision avg: 0.495528730404
+recall array
+[0.2857142857142857, 0.7050209205020921]
+recall avg: 0.495367603108
+accuracy: 0.589393939394
+PRESS
+precision array
+[0.5, 0.5, 0.5]
+precision avg: 0.5
+recall array
+[0.5, 0.5, 0.5]
+recall avg: 0.5
+conn.total_changes after set del: 30
+conn.total_changes after athlete del: 31
+current_exercise: 0
+moments
+len moments: 23108
+leave one out vaidation
+athlete: 2
+y_pred[0] = Jerky, uncontrolled rep, y_test[0] = Correct
+y_pred[1] = Jerky, uncontrolled rep, y_test[1] = Correct
+y_pred[2] = Jerky, uncontrolled rep, y_test[2] = Correct
+y_pred[3] = Jerky, uncontrolled rep, y_test[3] = Correct
+y_pred[4] = Jerky, uncontrolled rep, y_test[4] = Correct
+y_pred[5] = Jerky, uncontrolled rep, y_test[5] = Correct
+y_pred[6] = Jerky, uncontrolled rep, y_test[6] = Correct
+y_pred[7] = Jerky, uncontrolled rep, y_test[7] = Correct
+y_pred[8] = Jerky, uncontrolled rep, y_test[8] = Correct
+y_pred[9] = Jerky, uncontrolled rep, y_test[9] = Correct
+y_pred[10] = Correct, y_test[10] = Correct
+y_pred[11] = Jerky, uncontrolled rep, y_test[11] = Correct
+y_pred[12] = Correct, y_test[12] = Correct
+y_pred[13] = Jerky, uncontrolled rep, y_test[13] = Correct
+y_pred[14] = Correct, y_test[14] = Correct
+y_pred[15] = Correct, y_test[15] = Correct
+y_pred[16] = Correct, y_test[16] = Wrists rolled back
+y_pred[17] = Jerky, uncontrolled rep, y_test[17] = Wrists rolled back
+y_pred[18] = Jerky, uncontrolled rep, y_test[18] = Wrists rolled back
+y_pred[19] = Correct, y_test[19] = Wrists rolled back
+y_pred[20] = Jerky, uncontrolled rep, y_test[20] = Correct
+y_pred[21] = Jerky, uncontrolled rep, y_test[21] = Correct
+y_pred[22] = Jerky, uncontrolled rep, y_test[22] = Correct
+y_pred[23] = Correct, y_test[23] = Wrists rolled back
+y_pred[24] = Jerky, uncontrolled rep, y_test[24] = Wrists rolled back
+athlete: 3
+y_pred[0] = Jerky, uncontrolled rep, y_test[0] = Jerky, uncontrolled rep
+y_pred[1] = Jerky, uncontrolled rep, y_test[1] = Jerky, uncontrolled rep
+y_pred[2] = Jerky, uncontrolled rep, y_test[2] = Jerky, uncontrolled rep
+y_pred[3] = Jerky, uncontrolled rep, y_test[3] = Jerky, uncontrolled rep
+y_pred[4] = Correct, y_test[4] = Jerky, uncontrolled rep
+y_pred[5] = Jerky, uncontrolled rep, y_test[5] = Jerky, uncontrolled rep
+y_pred[6] = Jerky, uncontrolled rep, y_test[6] = Jerky, uncontrolled rep
+y_pred[7] = Jerky, uncontrolled rep, y_test[7] = Jerky, uncontrolled rep
+y_pred[8] = Jerky, uncontrolled rep, y_test[8] = Jerky, uncontrolled rep
+y_pred[9] = Jerky, uncontrolled rep, y_test[9] = Jerky, uncontrolled rep
+y_pred[10] = Jerky, uncontrolled rep, y_test[10] = Jerky, uncontrolled rep
+y_pred[11] = Jerky, uncontrolled rep, y_test[11] = Jerky, uncontrolled rep
+y_pred[12] = Jerky, uncontrolled rep, y_test[12] = Jerky, uncontrolled rep
+y_pred[13] = Jerky, uncontrolled rep, y_test[13] = Jerky, uncontrolled rep
+y_pred[14] = Jerky, uncontrolled rep, y_test[14] = Jerky, uncontrolled rep
+y_pred[15] = Correct, y_test[15] = Jerky, uncontrolled rep
+y_pred[16] = Correct, y_test[16] = Jerky, uncontrolled rep
+y_pred[17] = Correct, y_test[17] = Jerky, uncontrolled rep
+y_pred[18] = Correct, y_test[18] = Jerky, uncontrolled rep
+y_pred[19] = Correct, y_test[19] = Jerky, uncontrolled rep
+y_pred[20] = Correct, y_test[20] = Jerky, uncontrolled rep
+y_pred[21] = Correct, y_test[21] = Jerky, uncontrolled rep
+y_pred[22] = Correct, y_test[22] = Jerky, uncontrolled rep
+y_pred[23] = Correct, y_test[23] = Jerky, uncontrolled rep
+y_pred[24] = Correct, y_test[24] = Correct
+y_pred[25] = Correct, y_test[25] = Correct
+y_pred[26] = Too much layback, y_test[26] = Correct
+y_pred[27] = Too much layback, y_test[27] = Correct
+y_pred[28] = Too much layback, y_test[28] = Correct
+y_pred[29] = Jerky, uncontrolled rep, y_test[29] = Correct
+y_pred[30] = Too much layback, y_test[30] = Correct
+y_pred[31] = Too much layback, y_test[31] = Correct
+y_pred[32] = Correct, y_test[32] = Correct
+y_pred[33] = Correct, y_test[33] = Correct
+y_pred[34] = Correct, y_test[34] = Correct
+y_pred[35] = Correct, y_test[35] = Jerky, uncontrolled rep
+y_pred[36] = Correct, y_test[36] = Jerky, uncontrolled rep
+y_pred[37] = Correct, y_test[37] = Jerky, uncontrolled rep
+y_pred[38] = Correct, y_test[38] = Jerky, uncontrolled rep
+y_pred[39] = Correct, y_test[39] = Jerky, uncontrolled rep
+y_pred[40] = Correct, y_test[40] = Jerky, uncontrolled rep
+y_pred[41] = Correct, y_test[41] = Jerky, uncontrolled rep
+athlete: 4
+y_pred[0] = Jerky, uncontrolled rep, y_test[0] = Jerky, uncontrolled rep
+y_pred[1] = Jerky, uncontrolled rep, y_test[1] = Jerky, uncontrolled rep
+y_pred[2] = Correct, y_test[2] = Correct
+y_pred[3] = Jerky, uncontrolled rep, y_test[3] = Too much layback
+y_pred[4] = Correct, y_test[4] = Too much layback
+y_pred[5] = Correct, y_test[5] = Too much layback
+y_pred[6] = Correct, y_test[6] = Too much layback
+y_pred[7] = Correct, y_test[7] = Too much layback
+y_pred[8] = Jerky, uncontrolled rep, y_test[8] = Too much layback
+y_pred[9] = Correct, y_test[9] = Correct
+y_pred[10] = Correct, y_test[10] = Correct
+y_pred[11] = Correct, y_test[11] = Correct
+y_pred[12] = Correct, y_test[12] = Jerky, uncontrolled rep
+y_pred[13] = Correct, y_test[13] = Jerky, uncontrolled rep
+y_pred[14] = Wrists rolled back, y_test[14] = Jerky, uncontrolled rep
+y_pred[15] = Wrists rolled back, y_test[15] = Jerky, uncontrolled rep
+athlete: 5
+y_pred[0] = Correct, y_test[0] = Jerky, uncontrolled rep
+y_pred[1] = Correct, y_test[1] = Jerky, uncontrolled rep
+y_pred[2] = Correct, y_test[2] = Jerky, uncontrolled rep
+y_pred[3] = Correct, y_test[3] = Jerky, uncontrolled rep
+y_pred[4] = Correct, y_test[4] = Jerky, uncontrolled rep
+y_pred[5] = Correct, y_test[5] = Jerky, uncontrolled rep
+y_pred[6] = Correct, y_test[6] = Jerky, uncontrolled rep
+y_pred[7] = Correct, y_test[7] = Jerky, uncontrolled rep
+y_pred[8] = Correct, y_test[8] = Jerky, uncontrolled rep
+y_pred[9] = Correct, y_test[9] = Jerky, uncontrolled rep
+y_pred[10] = Correct, y_test[10] = Jerky, uncontrolled rep
+y_pred[11] = Correct, y_test[11] = Jerky, uncontrolled rep
+y_pred[12] = Correct, y_test[12] = Correct
+y_pred[13] = Correct, y_test[13] = Correct
+y_pred[14] = Correct, y_test[14] = Correct
+y_pred[15] = Wrists rolled back, y_test[15] = Correct
+y_pred[16] = Wrists rolled back, y_test[16] = Correct
+y_pred[17] = Wrists rolled back, y_test[17] = Correct
+y_pred[18] = Wrists rolled back, y_test[18] = Wrists rolled back
+y_pred[19] = Wrists rolled back, y_test[19] = Wrists rolled back
+y_pred[20] = Wrists rolled back, y_test[20] = Wrists rolled back
+y_pred[21] = Wrists rolled back, y_test[21] = Wrists rolled back
+y_pred[22] = Correct, y_test[22] = Correct
+y_pred[23] = Wrists rolled back, y_test[23] = Correct
+y_pred[24] = Correct, y_test[24] = Correct
+y_pred[25] = Correct, y_test[25] = Correct
+y_pred[26] = Correct, y_test[26] = Correct
+y_pred[27] = Wrists rolled back, y_test[27] = Jerky, uncontrolled rep
+y_pred[28] = Wrists rolled back, y_test[28] = Jerky, uncontrolled rep
+y_pred[29] = Correct, y_test[29] = Jerky, uncontrolled rep
+y_pred[30] = Correct, y_test[30] = Jerky, uncontrolled rep
+y_pred[31] = Wrists rolled back, y_test[31] = Jerky, uncontrolled rep
+athlete: 6
+y_pred[0] = Correct, y_test[0] = Correct
+y_pred[1] = Correct, y_test[1] = Correct
+y_pred[2] = Didn't use hips, y_test[2] = Correct
+y_pred[3] = Didn't use hips, y_test[3] = Correct
+y_pred[4] = Correct, y_test[4] = Correct
+y_pred[5] = Correct, y_test[5] = Correct
+y_pred[6] = Correct, y_test[6] = Jerky, uncontrolled rep
+y_pred[7] = Didn't use hips, y_test[7] = Jerky, uncontrolled rep
+y_pred[8] = Didn't use hips, y_test[8] = Jerky, uncontrolled rep
+y_pred[9] = Didn't use hips, y_test[9] = Jerky, uncontrolled rep
+athlete: 7
+y_pred[0] = Didn't use hips, y_test[0] = Correct
+y_pred[1] = Didn't use hips, y_test[1] = Correct
+y_pred[2] = Correct, y_test[2] = Jerky, uncontrolled rep
+y_pred[3] = Too much layback, y_test[3] = Jerky, uncontrolled rep
+y_pred[4] = Too much layback, y_test[4] = Jerky, uncontrolled rep
+y_pred[5] = Correct, y_test[5] = Wrists rolled back
+y_pred[6] = Correct, y_test[6] = Wrists rolled back
+y_pred[7] = Correct, y_test[7] = Wrists rolled back
+y_pred[8] = Correct, y_test[8] = Wrists rolled back
+y_pred[9] = Correct, y_test[9] = Wrists rolled back
+y_pred[10] = Correct, y_test[10] = Wrists rolled back
+y_pred[11] = Correct, y_test[11] = Wrists rolled back
+y_pred[12] = Correct, y_test[12] = Wrists rolled back
+y_pred[13] = Correct, y_test[13] = Wrists rolled back
+athlete: 8
+y_pred[0] = Correct, y_test[0] = Didn't use hips
+y_pred[1] = Correct, y_test[1] = Didn't use hips
+y_pred[2] = Correct, y_test[2] = Didn't use hips
+y_pred[3] = Correct, y_test[3] = Didn't use hips
+y_pred[4] = Correct, y_test[4] = Didn't use hips
+y_pred[5] = Correct, y_test[5] = Didn't use hips
+y_pred[6] = Correct, y_test[6] = Didn't use hips
+y_pred[7] = Correct, y_test[7] = Correct
+y_pred[8] = Correct, y_test[8] = Didn't use hips
+y_pred[9] = Correct, y_test[9] = Didn't use hips
+y_pred[10] = Correct, y_test[10] = Didn't use hips
+y_pred[11] = Correct, y_test[11] = Didn't use hips
+y_pred[12] = Correct, y_test[12] = Didn't use hips
+y_pred[13] = Correct, y_test[13] = Didn't use hips
+y_pred[14] = Correct, y_test[14] = Didn't use hips
+y_pred[15] = Correct, y_test[15] = Didn't use hips
+y_pred[16] = Correct, y_test[16] = Too much layback
+y_pred[17] = Correct, y_test[17] = Too much layback
+y_pred[18] = Correct, y_test[18] = Too much layback
+y_pred[19] = Correct, y_test[19] = Didn't use hips
+y_pred[20] = Correct, y_test[20] = Didn't use hips
+y_pred[21] = Correct, y_test[21] = Didn't use hips
+y_pred[22] = Correct, y_test[22] = Correct
+y_pred[23] = Correct, y_test[23] = Didn't use hips
+y_pred[24] = Correct, y_test[24] = Wrists rolled back
+y_pred[25] = Correct, y_test[25] = Wrists rolled back
+athlete: 9
+y_pred[0] = Correct, y_test[0] = Correct
+y_pred[1] = Correct, y_test[1] = Correct
+y_pred[2] = Correct, y_test[2] = Correct
+y_pred[3] = Correct, y_test[3] = Correct
+y_pred[4] = Correct, y_test[4] = Correct
+y_pred[5] = Correct, y_test[5] = Correct
+y_pred[6] = Correct, y_test[6] = Correct
+y_pred[7] = Correct, y_test[7] = Correct
+y_pred[8] = Correct, y_test[8] = Correct
+y_pred[9] = Correct, y_test[9] = Correct
+y_pred[10] = Correct, y_test[10] = Correct
+y_pred[11] = Correct, y_test[11] = Correct
+y_pred[12] = Correct, y_test[12] = Correct
+y_pred[13] = Correct, y_test[13] = Correct
+y_pred[14] = Correct, y_test[14] = Correct
+y_pred[15] = Correct, y_test[15] = Correct
+y_pred[16] = Correct, y_test[16] = Correct
+y_pred[17] = Correct, y_test[17] = Correct
+y_pred[18] = Correct, y_test[18] = Correct
+y_pred[19] = Correct, y_test[19] = Correct
+y_pred[20] = Correct, y_test[20] = Correct
+y_pred[21] = Correct, y_test[21] = Correct
+y_pred[22] = Correct, y_test[22] = Correct
+y_pred[23] = Correct, y_test[23] = Correct
+y_pred[24] = Correct, y_test[24] = Correct
+y_pred[25] = Correct, y_test[25] = Correct
+y_pred[26] = Correct, y_test[26] = Correct
+y_pred[27] = Correct, y_test[27] = Correct
+y_pred[28] = Correct, y_test[28] = Correct
+y_pred[29] = Correct, y_test[29] = Correct
+athlete: 10
+y_pred[0] = Too much layback, y_test[0] = Correct
+y_pred[1] = Jerky, uncontrolled rep, y_test[1] = Correct
+y_pred[2] = Jerky, uncontrolled rep, y_test[2] = Correct
+y_pred[3] = Too much layback, y_test[3] = Correct
+y_pred[4] = Correct, y_test[4] = Correct
+y_pred[5] = Jerky, uncontrolled rep, y_test[5] = Correct
+y_pred[6] = Jerky, uncontrolled rep, y_test[6] = Correct
+y_pred[7] = Jerky, uncontrolled rep, y_test[7] = Correct
+y_pred[8] = Jerky, uncontrolled rep, y_test[8] = Correct
+y_pred[9] = Jerky, uncontrolled rep, y_test[9] = Correct
+y_pred[10] = Jerky, uncontrolled rep, y_test[10] = Correct
+y_pred[11] = Jerky, uncontrolled rep, y_test[11] = Correct
+y_pred[12] = Jerky, uncontrolled rep, y_test[12] = Correct
+y_pred[13] = Jerky, uncontrolled rep, y_test[13] = Correct
+y_pred[14] = Jerky, uncontrolled rep, y_test[14] = Correct
+y_pred[15] = Jerky, uncontrolled rep, y_test[15] = Correct
+y_pred[16] = Jerky, uncontrolled rep, y_test[16] = Correct
+y_pred[17] = Jerky, uncontrolled rep, y_test[17] = Correct
+y_pred[18] = Jerky, uncontrolled rep, y_test[18] = Correct
+y_pred[19] = Jerky, uncontrolled rep, y_test[19] = Correct
+y_pred[20] = Jerky, uncontrolled rep, y_test[20] = Correct
+y_pred[21] = Jerky, uncontrolled rep, y_test[21] = Correct
+y_pred[22] = Jerky, uncontrolled rep, y_test[22] = Correct
+y_pred[23] = Jerky, uncontrolled rep, y_test[23] = Correct
+y_pred[24] = Jerky, uncontrolled rep, y_test[24] = Correct
+y_pred[25] = Jerky, uncontrolled rep, y_test[25] = Correct
+y_pred[26] = Jerky, uncontrolled rep, y_test[26] = Correct
+y_pred[27] = Jerky, uncontrolled rep, y_test[27] = Correct
+y_pred[28] = Jerky, uncontrolled rep, y_test[28] = Correct
+y_pred[29] = Correct, y_test[29] = Correct
+athlete: 11
+athlete: 12
+athlete: 13
+athlete: 14
+athlete: 15
+athlete: 16
+athlete: 17
+athlete: 18
+athlete: 19
+athlete: 20
+athlete: 21
+athlete: 22
+athlete: 23
+athlete: 24
+athlete: 25
+athlete: 26
+athlete: 27
+athlete: 28
+athlete: 29
+athlete: 30
+athlete: 31
+athlete: 32
+athlete: 33
+athlete: 34
+athlete: 35
+athlete: 36
+athlete: 37
+athlete: 38
+athlete: 39
+y_pred[0] = Correct, y_test[0] = Correct
+y_pred[1] = Correct, y_test[1] = Correct
+y_pred[2] = Correct, y_test[2] = Correct
+y_pred[3] = Correct, y_test[3] = Correct
+y_pred[4] = Correct, y_test[4] = Correct
+y_pred[5] = Correct, y_test[5] = Correct
+y_pred[6] = Correct, y_test[6] = Correct
+y_pred[7] = Correct, y_test[7] = Correct
+y_pred[8] = Correct, y_test[8] = Correct
+y_pred[9] = Correct, y_test[9] = Correct
+y_pred[10] = Correct, y_test[10] = Wrists rolled back
+y_pred[11] = Correct, y_test[11] = Wrists rolled back
+y_pred[12] = Correct, y_test[12] = Wrists rolled back
+y_pred[13] = Correct, y_test[13] = Wrists rolled back
+y_pred[14] = Correct, y_test[14] = Wrists rolled back
+y_pred[15] = Too much layback, y_test[15] = Wrists rolled back
+y_pred[16] = Correct, y_test[16] = Wrists rolled back
+y_pred[17] = Correct, y_test[17] = Correct
+y_pred[18] = Correct, y_test[18] = Wrists rolled back
+y_pred[19] = Correct, y_test[19] = Wrists rolled back
+y_pred[20] = Correct, y_test[20] = Wrists rolled back
+y_pred[21] = Correct, y_test[21] = Wrists rolled back
+y_pred[22] = Correct, y_test[22] = Wrists rolled back
+athlete: 40
+y_pred[0] = Correct, y_test[0] = Correct
+y_pred[1] = Correct, y_test[1] = Correct
+y_pred[2] = Correct, y_test[2] = Correct
+y_pred[3] = Correct, y_test[3] = Correct
+y_pred[4] = Correct, y_test[4] = Correct
+y_pred[5] = Correct, y_test[5] = Correct
+y_pred[6] = Correct, y_test[6] = Correct
+y_pred[7] = Correct, y_test[7] = Correct
+y_pred[8] = Correct, y_test[8] = Correct
+y_pred[9] = Correct, y_test[9] = Correct
+y_pred[10] = Correct, y_test[10] = Correct
+y_pred[11] = Correct, y_test[11] = Correct
+y_pred[12] = Correct, y_test[12] = Correct
+y_pred[13] = Correct, y_test[13] = Correct
+y_pred[14] = Correct, y_test[14] = Correct
+athlete: 41
+y_pred[0] = Correct, y_test[0] = Too much layback
+y_pred[1] = Correct, y_test[1] = Too much layback
+y_pred[2] = Too much layback, y_test[2] = Too much layback
+y_pred[3] = Too much layback, y_test[3] = Too much layback
+y_pred[4] = Elbows out, y_test[4] = Too much layback
+y_pred[5] = Correct, y_test[5] = Too much layback
+y_pred[6] = Too much layback, y_test[6] = Too much layback
+y_pred[7] = Too much layback, y_test[7] = Too much layback
+y_pred[8] = Too much layback, y_test[8] = Too much layback
+y_pred[9] = Too much layback, y_test[9] = Too much layback
+y_pred[10] = Correct, y_test[10] = Too much layback
+y_pred[11] = Too much layback, y_test[11] = Too much layback
+y_pred[12] = Too much layback, y_test[12] = Too much layback
+y_pred[13] = Too much layback, y_test[13] = Too much layback
+athlete: 42
+y_pred[0] = Correct, y_test[0] = Elbows out
+y_pred[1] = Correct, y_test[1] = Elbows out
+y_pred[2] = Correct, y_test[2] = Elbows out
+y_pred[3] = Correct, y_test[3] = Elbows out
+y_pred[4] = Correct, y_test[4] = Elbows out
+y_pred[5] = Correct, y_test[5] = Too much layback
+y_pred[6] = Correct, y_test[6] = Too much layback
+y_pred[7] = Correct, y_test[7] = Too much layback
+y_pred[8] = Correct, y_test[8] = Too much layback
+y_pred[9] = Correct, y_test[9] = Too much layback
+y_pred[10] = Correct, y_test[10] = Too much layback
+y_pred[11] = Correct, y_test[11] = Too much layback
+y_pred[12] = Correct, y_test[12] = Too much layback
+y_pred[13] = Correct, y_test[13] = Too much layback
+y_pred[14] = Correct, y_test[14] = Too much layback
+y_pred[15] = Correct, y_test[15] = Too much layback
+y_pred[16] = Correct, y_test[16] = Too much layback
+y_pred[17] = Correct, y_test[17] = Too much layback
+y_pred[18] = Correct, y_test[18] = Too much layback
+y_pred[19] = Correct, y_test[19] = Too much layback
+athlete: 43
+y_pred[0] = Correct, y_test[0] = Correct
+y_pred[1] = Correct, y_test[1] = Correct
+y_pred[2] = Correct, y_test[2] = Correct
+y_pred[3] = Correct, y_test[3] = Correct
+y_pred[4] = Correct, y_test[4] = Correct
+y_pred[5] = Correct, y_test[5] = Correct
+y_pred[6] = Correct, y_test[6] = Correct
+y_pred[7] = Correct, y_test[7] = Correct
+y_pred[8] = Correct, y_test[8] = Correct
+y_pred[9] = Correct, y_test[9] = Correct
+y_pred[10] = Correct, y_test[10] = Correct
+y_pred[11] = Correct, y_test[11] = Correct
+y_pred[12] = Correct, y_test[12] = Correct
+y_pred[13] = Correct, y_test[13] = Correct
+y_pred[14] = Correct, y_test[14] = Correct
+y_pred[15] = Correct, y_test[15] = Correct
+y_pred[16] = Correct, y_test[16] = Correct
+y_pred[17] = Correct, y_test[17] = Correct
+y_pred[18] = Correct, y_test[18] = Correct
+y_pred[19] = Correct, y_test[19] = Correct
+athlete: 44
+y_pred[0] = Correct, y_test[0] = Correct
+y_pred[1] = Correct, y_test[1] = Correct
+y_pred[2] = Correct, y_test[2] = Correct
+y_pred[3] = Correct, y_test[3] = Correct
+y_pred[4] = Correct, y_test[4] = Correct
+y_pred[5] = Correct, y_test[5] = Correct
+y_pred[6] = Correct, y_test[6] = Correct
+y_pred[7] = Correct, y_test[7] = Correct
+y_pred[8] = Correct, y_test[8] = Correct
+y_pred[9] = Correct, y_test[9] = Correct
+y_pred[10] = Correct, y_test[10] = Correct
+y_pred[11] = Correct, y_test[11] = Correct
+y_pred[12] = Correct, y_test[12] = Correct
+y_pred[13] = Correct, y_test[13] = Correct
+y_pred[14] = Correct, y_test[14] = Correct
+y_pred[15] = Correct, y_test[15] = Correct
+y_pred[16] = Correct, y_test[16] = Correct
+y_pred[17] = Correct, y_test[17] = Correct
+y_pred[18] = Correct, y_test[18] = Correct
+y_pred[19] = Correct, y_test[19] = Correct
+athlete: 45
+y_pred[0] = Correct, y_test[0] = Correct
+y_pred[1] = Correct, y_test[1] = Correct
+y_pred[2] = Correct, y_test[2] = Correct
+y_pred[3] = Correct, y_test[3] = Correct
+y_pred[4] = Correct, y_test[4] = Correct
+y_pred[5] = Correct, y_test[5] = Correct
+y_pred[6] = Correct, y_test[6] = Correct
+y_pred[7] = Correct, y_test[7] = Correct
+y_pred[8] = Correct, y_test[8] = Correct
+y_pred[9] = Correct, y_test[9] = Correct
+y_pred[10] = Correct, y_test[10] = Jerky, uncontrolled rep
+y_pred[11] = Correct, y_test[11] = Jerky, uncontrolled rep
+y_pred[12] = Correct, y_test[12] = Jerky, uncontrolled rep
+y_pred[13] = Correct, y_test[13] = Jerky, uncontrolled rep
+y_pred[14] = Correct, y_test[14] = Jerky, uncontrolled rep
+y_pred[15] = Correct, y_test[15] = Correct
+y_pred[16] = Correct, y_test[16] = Correct
+y_pred[17] = Correct, y_test[17] = Correct
+y_pred[18] = Correct, y_test[18] = Correct
+y_pred[19] = Correct, y_test[19] = Correct
+athlete: 46
+y_pred[0] = Correct, y_test[0] = Didn't get under bar
+y_pred[1] = Correct, y_test[1] = Didn't get under bar
+y_pred[2] = Correct, y_test[2] = Didn't get under bar
+y_pred[3] = Correct, y_test[3] = Didn't get under bar
+y_pred[4] = Correct, y_test[4] = Didn't get under bar
+y_pred[5] = Correct, y_test[5] = Correct
+y_pred[6] = Correct, y_test[6] = Correct
+y_pred[7] = Correct, y_test[7] = Correct
+y_pred[8] = Correct, y_test[8] = Correct
+y_pred[9] = Correct, y_test[9] = Correct
+y_pred[10] = Correct, y_test[10] = Didn't get under bar
+y_pred[11] = Correct, y_test[11] = Correct
+y_pred[12] = Correct, y_test[12] = Correct
+y_pred[13] = Correct, y_test[13] = Correct
+y_pred[14] = Correct, y_test[14] = Correct
+y_pred[15] = Correct, y_test[15] = Didn't get under bar
+y_pred[16] = Correct, y_test[16] = Didn't get under bar
+y_pred[17] = Correct, y_test[17] = Didn't get under bar
+y_pred[18] = Correct, y_test[18] = Didn't get under bar
+y_pred[19] = Correct, y_test[19] = Didn't get under bar
+athlete: 47
+y_pred[0] = Correct, y_test[0] = Correct
+y_pred[1] = Correct, y_test[1] = Correct
+y_pred[2] = Correct, y_test[2] = Correct
+y_pred[3] = Correct, y_test[3] = Correct
+y_pred[4] = Correct, y_test[4] = Correct
+y_pred[5] = Correct, y_test[5] = Correct
+y_pred[6] = Correct, y_test[6] = Correct
+y_pred[7] = Correct, y_test[7] = Correct
+y_pred[8] = Correct, y_test[8] = Correct
+y_pred[9] = Correct, y_test[9] = Correct
+y_pred[10] = Correct, y_test[10] = Correct
+y_pred[11] = Correct, y_test[11] = Correct
+y_pred[12] = Correct, y_test[12] = Correct
+y_pred[13] = Correct, y_test[13] = Correct
+y_pred[14] = Correct, y_test[14] = Correct
+y_pred[15] = Correct, y_test[15] = Correct
+y_pred[16] = Correct, y_test[16] = Correct
+y_pred[17] = Correct, y_test[17] = Correct
+y_pred[18] = Correct, y_test[18] = Correct
+y_pred[19] = Correct, y_test[19] = Correct
+athlete: 48
+y_pred[0] = Correct, y_test[0] = Too much layback
+y_pred[1] = Correct, y_test[1] = Too much layback
+y_pred[2] = Correct, y_test[2] = Too much layback
+y_pred[3] = Correct, y_test[3] = Too much layback
+y_pred[4] = Correct, y_test[4] = Too much layback
+y_pred[5] = Correct, y_test[5] = Correct
+y_pred[6] = Correct, y_test[6] = Correct
+y_pred[7] = Correct, y_test[7] = Correct
+y_pred[8] = Correct, y_test[8] = Correct
+y_pred[9] = Correct, y_test[9] = Correct
+y_pred[10] = Correct, y_test[10] = Correct
+y_pred[11] = Correct, y_test[11] = Correct
+y_pred[12] = Correct, y_test[12] = Correct
+y_pred[13] = Correct, y_test[13] = Correct
+y_pred[14] = Correct, y_test[14] = Correct
+y_pred[15] = Correct, y_test[15] = Correct
+y_pred[16] = Correct, y_test[16] = Wrists rolled back
+y_pred[17] = Correct, y_test[17] = Wrists rolled back
+y_pred[18] = Correct, y_test[18] = Wrists rolled back
+y_pred[19] = Correct, y_test[19] = Wrists rolled back
+y_pred[20] = Correct, y_test[20] = Wrists rolled back
+athlete: 49
+y_pred[0] = Correct, y_test[0] = Correct
+y_pred[1] = Correct, y_test[1] = Correct
+y_pred[2] = Correct, y_test[2] = Correct
+y_pred[3] = Correct, y_test[3] = Correct
+y_pred[4] = Correct, y_test[4] = Correct
+y_pred[5] = Correct, y_test[5] = Correct
+y_pred[6] = Correct, y_test[6] = Correct
+y_pred[7] = Correct, y_test[7] = Correct
+y_pred[8] = Correct, y_test[8] = Correct
+y_pred[9] = Correct, y_test[9] = Correct
+y_pred[10] = Correct, y_test[10] = Correct
+y_pred[11] = Correct, y_test[11] = Correct
+y_pred[12] = Correct, y_test[12] = Correct
+y_pred[13] = Correct, y_test[13] = Correct
+y_pred[14] = Correct, y_test[14] = Correct
+y_pred[15] = Correct, y_test[15] = Jerky, uncontrolled rep
+y_pred[16] = Correct, y_test[16] = Jerky, uncontrolled rep
+y_pred[17] = Correct, y_test[17] = Jerky, uncontrolled rep
+y_pred[18] = Correct, y_test[18] = Jerky, uncontrolled rep
+y_pred[19] = Correct, y_test[19] = Jerky, uncontrolled rep
+athlete: 50
+athlete: 51
+athlete: 52
+athlete: 53
+athlete: 54
+athlete: 55
+athlete: 56
+athlete: 57
+athlete: 58
+athlete: 59
+athlete: 60
+athlete: 61
+y_pred[0] = Didn't get under bar, y_test[0] = Correct
+y_pred[1] = Didn't get under bar, y_test[1] = Correct
+y_pred[2] = Didn't get under bar, y_test[2] = Correct
+y_pred[3] = Didn't get under bar, y_test[3] = Correct
+y_pred[4] = Didn't get under bar, y_test[4] = Correct
+y_pred[5] = Didn't get under bar, y_test[5] = Correct
+y_pred[6] = Didn't get under bar, y_test[6] = Correct
+y_pred[7] = Elbows out, y_test[7] = Correct
+y_pred[8] = Elbows out, y_test[8] = Correct
+y_pred[9] = Didn't get under bar, y_test[9] = Correct
+y_pred[10] = Elbows out, y_test[10] = Correct
+y_pred[11] = Elbows out, y_test[11] = Correct
+y_pred[12] = Elbows out, y_test[12] = Correct
+y_pred[13] = Elbows out, y_test[13] = Correct
+y_pred[14] = Elbows out, y_test[14] = Correct
+y_pred[15] = Elbows out, y_test[15] = Correct
+y_pred[16] = Elbows out, y_test[16] = Correct
+y_pred[17] = Elbows out, y_test[17] = Correct
+y_pred[18] = Didn't get under bar, y_test[18] = Correct
+y_pred[19] = Elbows out, y_test[19] = Correct
+y_pred[20] = Elbows out, y_test[20] = Correct
+y_pred[21] = Elbows out, y_test[21] = Correct
+athlete: 62
+athlete: 63
+y_pred[0] = Elbows out, y_test[0] = Didn't get under bar
+y_pred[1] = Elbows out, y_test[1] = Didn't get under bar
+y_pred[2] = Elbows out, y_test[2] = Didn't get under bar
+y_pred[3] = Elbows out, y_test[3] = Didn't get under bar
+y_pred[4] = Elbows out, y_test[4] = Didn't get under bar
+y_pred[5] = Elbows out, y_test[5] = Didn't get under bar
+y_pred[6] = Elbows out, y_test[6] = Didn't get under bar
+y_pred[7] = Elbows out, y_test[7] = Didn't get under bar
+y_pred[8] = Elbows out, y_test[8] = Didn't get under bar
+y_pred[9] = Elbows out, y_test[9] = Didn't get under bar
+y_pred[10] = Elbows out, y_test[10] = Elbows out
+y_pred[11] = Elbows out, y_test[11] = Elbows out
+y_pred[12] = Elbows out, y_test[12] = Elbows out
+y_pred[13] = Elbows out, y_test[13] = Elbows out
+y_pred[14] = Elbows out, y_test[14] = Elbows out
+y_pred[15] = Elbows out, y_test[15] = Elbows out
+y_pred[16] = Elbows out, y_test[16] = Elbows out
+y_pred[17] = Elbows out, y_test[17] = Elbows out
+y_pred[18] = Elbows out, y_test[18] = Elbows out
+y_pred[19] = Elbows out, y_test[19] = Elbows out
+athlete: 64
+y_pred[0] = Correct, y_test[0] = Elbows out
+y_pred[1] = Correct, y_test[1] = Elbows out
+y_pred[2] = Too much layback, y_test[2] = Elbows out
+y_pred[3] = Correct, y_test[3] = Elbows out
+y_pred[4] = Too much layback, y_test[4] = Elbows out
+y_pred[5] = Correct, y_test[5] = Elbows out
+y_pred[6] = Correct, y_test[6] = Elbows out
+y_pred[7] = Correct, y_test[7] = Elbows out
+y_pred[8] = Correct, y_test[8] = Elbows out
+y_pred[9] = Correct, y_test[9] = Elbows out
+y_pred[10] = Correct, y_test[10] = Elbows out
+y_pred[11] = Too much layback, y_test[11] = Elbows out
+y_pred[12] = Correct, y_test[12] = Elbows out
+y_pred[13] = Correct, y_test[13] = Elbows out
+y_pred[14] = Correct, y_test[14] = Elbows out
+athlete: 65
+athlete: 66
+athlete: 67
+athlete: 68
+y_pred[0] = Elbows out, y_test[0] = Correct
+y_pred[1] = Elbows out, y_test[1] = Correct
+y_pred[2] = Elbows out, y_test[2] = Correct
+y_pred[3] = Elbows out, y_test[3] = Correct
+y_pred[4] = Elbows out, y_test[4] = Correct
+y_pred[5] = Elbows out, y_test[5] = Too much layback
+y_pred[6] = Elbows out, y_test[6] = Too much layback
+y_pred[7] = Elbows out, y_test[7] = Too much layback
+y_pred[8] = Elbows out, y_test[8] = Too much layback
+y_pred[9] = Elbows out, y_test[9] = Too much layback
+y_pred[10] = Elbows out, y_test[10] = Too much layback
+y_pred[11] = Elbows out, y_test[11] = Too much layback
+y_pred[12] = Elbows out, y_test[12] = Jerky, uncontrolled rep
+y_pred[13] = Elbows out, y_test[13] = Jerky, uncontrolled rep
+y_pred[14] = Elbows out, y_test[14] = Elbows out
+y_pred[15] = Elbows out, y_test[15] = Correct
+y_pred[16] = Elbows out, y_test[16] = Elbows out
+y_pred[17] = Elbows out, y_test[17] = Correct
+y_pred[18] = Elbows out, y_test[18] = Elbows out
+y_pred[19] = Elbows out, y_test[19] = Elbows out
+y_pred[20] = Elbows out, y_test[20] = Elbows out
+y_pred[21] = Elbows out, y_test[21] = Elbows out
+y_pred[22] = Elbows out, y_test[22] = Jerky, uncontrolled rep
+athlete: 69
+y_pred[0] = Pushed bar away / started too far out, y_test[0] = Elbows out
+y_pred[1] = Pushed bar away / started too far out, y_test[1] = Elbows out
+y_pred[2] = Pushed bar away / started too far out, y_test[2] = Correct
+y_pred[3] = Pushed bar away / started too far out, y_test[3] = Elbows out
+y_pred[4] = Pushed bar away / started too far out, y_test[4] = Elbows out
+y_pred[5] = Wrists rolled back, y_test[5] = Elbows out
+y_pred[6] = Wrists rolled back, y_test[6] = Elbows out
+y_pred[7] = Wrists rolled back, y_test[7] = Elbows out
+y_pred[8] = Wrists rolled back, y_test[8] = Elbows out
+y_pred[9] = Wrists rolled back, y_test[9] = Elbows out
+y_pred[10] = Wrists rolled back, y_test[10] = Elbows out
+y_pred[11] = Wrists rolled back, y_test[11] = Correct
+y_pred[12] = Wrists rolled back, y_test[12] = Elbows out
+y_pred[13] = Wrists rolled back, y_test[13] = Elbows out
+y_pred[14] = Pushed bar away / started too far out, y_test[14] = Elbows out
+y_pred[15] = Pushed bar away / started too far out, y_test[15] = Elbows out
+y_pred[16] = Pushed bar away / started too far out, y_test[16] = Correct
+y_pred[17] = Pushed bar away / started too far out, y_test[17] = Too much layback
+y_pred[18] = Pushed bar away / started too far out, y_test[18] = Too much layback
+y_pred[19] = Jerky, uncontrolled rep, y_test[19] = Too much layback
+y_pred[20] = Pushed bar away / started too far out, y_test[20] = Too much layback
+y_pred[21] = Pushed bar away / started too far out, y_test[21] = Too much layback
+y_pred[22] = Pushed bar away / started too far out, y_test[22] = Too much layback
+y_pred[23] = Pushed bar away / started too far out, y_test[23] = Correct
+y_pred[24] = Pushed bar away / started too far out, y_test[24] = Too much layback
+y_pred[25] = Pushed bar away / started too far out, y_test[25] = Too much layback
+y_pred[26] = Pushed bar away / started too far out, y_test[26] = Too much layback
+y_pred[27] = Pushed bar away / started too far out, y_test[27] = Too much layback
+y_pred[28] = Pushed bar away / started too far out, y_test[28] = Too much layback
+y_pred[29] = Pushed bar away / started too far out, y_test[29] = Elbows out
+y_pred[30] = Pushed bar away / started too far out, y_test[30] = Elbows out
+y_pred[31] = Pushed bar away / started too far out, y_test[31] = Elbows out
+y_pred[32] = Pushed bar away / started too far out, y_test[32] = Elbows out
+y_pred[33] = Jerky, uncontrolled rep, y_test[33] = Elbows out
+y_pred[34] = Pushed bar away / started too far out, y_test[34] = Jerky, uncontrolled rep
+y_pred[35] = Pushed bar away / started too far out, y_test[35] = Elbows out
+y_pred[36] = Too much layback, y_test[36] = Jerky, uncontrolled rep
+athlete: 70
+confusion_matrix
+['Elbows out',
+ 'Pushed bar away / started too far out',
+ 'Chest/Shoulders/Elbows down',
+ 'Did not complete rep',
+ 'Jerky, uncontrolled rep',
+ 'Right side came up first',
+ "Didn't get under bar",
+ 'Correct',
+ 'Golden',
+ 'Wrists rolled back',
+ 'Too much layback',
+ 'Chest down',
+ 'Left side came up first',
+ "Didn't use hips"]
+[[16, 11, 0, 0, 1, 0, 0, 17, 0, 8, 3, 0, 0, 0, 0],
+ [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+ [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+ [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+ [3, 1, 0, 0, 16, 0, 0, 45, 0, 5, 3, 0, 0, 3, 0],
+ [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+ [10, 0, 0, 0, 0, 0, 0, 11, 0, 0, 0, 0, 0, 0, 0],
+ [20, 3, 0, 0, 42, 0, 9, 194, 0, 5, 7, 0, 0, 4, 0],
+ [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+ [0, 0, 0, 0, 3, 0, 0, 30, 0, 4, 1, 0, 0, 0, 0],
+ [8, 10, 0, 0, 3, 0, 0, 31, 0, 0, 9, 0, 0, 0, 0],
+ [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+ [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+ [0, 0, 0, 0, 0, 0, 0, 19, 0, 0, 0, 0, 0, 0, 0],
+ [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]]
+precision array
+[0.2857142857142857,
+ 0.21052631578947367,
+ 0.0,
+ 0.6830985915492958,
+ 0.10526315789473684,
+ 0.14754098360655737,
+ 0.0]
+precision avg: 0.204591904936
+recall array
+[0.2807017543859649,
+ 0.0,
+ 0.24615384615384617,
+ 0.0,
+ 0.5590778097982709,
+ 0.18181818181818182,
+ 0.391304347826087,
+ 0.0]
+recall avg: 0.207381992498
+[0.16,
+ 0.4523809523809524,
+ 0.375,
+ 0.34375,
+ 0.4,
+ 0.0,
+ 0.07692307692307693,
+ 1.0,
+ 0.06666666666666667,
+ 0.4782608695652174,
+ 1.0,
+ 0.6428571428571429,
+ 0.0,
+ 1.0,
+ 1.0,
+ 0.75,
+ 0.45,
+ 1.0,
+ 0.5238095238095238,
+ 0.75,
+ 0.0,
+ 0.5,
+ 0.0,
+ 0.2608695652173913,
+ 0.0]
+result_accuracy 0.449220711897
+simple confusion matrix
+[[194, 90], [153, 118]]
+precision array
+[0.6830985915492958, 0.4354243542435424]
+precision avg: 0.559261472896
+recall array
+[0.5590778097982709, 0.5673076923076923]
+recall avg: 0.563192751053
+accuracy: 0.562162162162

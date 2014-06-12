@@ -27,7 +27,7 @@ def main(argv):
                     [0, 0, 0, 0, 0, 0, 0, 24, 0, 0, 0, 0, 0, 0],
                      [0, 0, 0, 0, 0, 0, 0, 10, 0, 0, 0, 0, 0, 0],
                       [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]])
-   cm = cm.transpose()
+#   cm = cm.transpose()
 #   #print 'cm transpose()'
 #   #pprint.pprint(cm)
    cm = normalize(cm)
@@ -51,7 +51,7 @@ def main(argv):
 
    #squat v1 simple
    cm = np.array([[121, 32], [86, 45]]) 
-   cm = cm.transpose()
+#   cm = cm.transpose()
    #print 'cm transpose()'
    #pprint.pprint(cm)
    cm = normalize(cm)
@@ -82,7 +82,7 @@ def main(argv):
                      [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
                       [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
                        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]])
-   cm = cm.transpose()
+#   cm = cm.transpose()
    #print 'cm transpose()'
    #pprint.pprint(cm)
    cm = normalize(cm)
@@ -96,7 +96,7 @@ def main(argv):
 
    #bench v1 simple
    cm = np.array([[49, 144], [135, 332]])
-   cm = cm.transpose()
+#   cm = cm.transpose()
    #print 'cm transpose()'
    #pprint.pprint(cm)
    cm = normalize(cm)
@@ -126,7 +126,7 @@ def main(argv):
                      [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
                       [0, 0, 0, 0, 0, 0, 0, 19, 0, 0, 0, 0, 0, 0, 0],
                        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]])
-   cm = cm.transpose()
+#   cm = cm.transpose()
    #print 'cm transpose()'
    #pprint.pprint(cm)
    cm = normalize(cm)
@@ -142,7 +142,7 @@ def main(argv):
 
    #press v1 simple
    cm = np.array([[197, 87], [155, 116]])
-   cm = cm.transpose()
+#   cm = cm.transpose()
    #print 'cm transpose()'
    #pprint.pprint(cm)
    cm = normalize(cm)
@@ -173,7 +173,7 @@ def main(argv):
                      [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 85, 8, 0, 0],
                       [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
                        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]])
-   cm = cm.transpose()
+#   cm = cm.transpose()
    #print 'cm transpose()'
    #pprint.pprint(cm)
    cm = normalize(cm)
@@ -190,7 +190,7 @@ def main(argv):
 
    #squat v2 simple
    cm = np.array([[57, 32], [82, 212]])
-   cm = cm.transpose()
+#   cm = cm.transpose()
    #print 'cm transpose()'
    #pprint.pprint(cm)
    cm = normalize(cm)
@@ -222,7 +222,7 @@ def main(argv):
                       [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
                        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
                         [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]])
-   cm = cm.transpose()
+#   cm = cm.transpose()
    #print 'cm transpose()'
    #pprint.pprint(cm)
    cm = normalize(cm)
@@ -239,7 +239,7 @@ def main(argv):
 
    #bench v2 simple
    cm = np.array([[1, 82], [22, 385]])
-   cm = cm.transpose()
+#   cm = cm.transpose()
    #print 'cm transpose()'
    #pprint.pprint(cm)
    cm = normalize(cm)
